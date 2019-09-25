@@ -18,14 +18,14 @@ if (!process.env.environment || process.env.environment === "development") {
 const bruteforce = new ExpressBrute(store);
 
 router
-    .route("/")
+    .route("/:code")
 
     /**
      * @route GET /:code
      * @desc Redirect to long/original URL
      */
 
-    .get("/:code", async (req, res) => {
+    .get(async (req, res) => {
         try {
             const url = await Url.findOne({ urlCode: req.params.code });
 
