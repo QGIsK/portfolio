@@ -21,7 +21,6 @@
 	},
 	"homepage": "https://github.com/QGIsK/BlogApp#readme",
 	"dependencies": {
-		"@mollie/api-client": "^2.3.2",
 		"aws-sdk": "^2.493.0",
 		"axios": "^0.18.0",
 		"bcryptjs": "^2.4.3",

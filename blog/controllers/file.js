@@ -2,7 +2,7 @@ const path = require("path");
 const aws = require("aws-sdk");
 const uuidv4 = require("uuid/v4");
 
-const config = require("../config/");
+const config = require("../../config/");
 
 const Resize = require("../middleware/resizeImage");
 
