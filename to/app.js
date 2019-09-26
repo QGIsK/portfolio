@@ -2,7 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const connectDB = require("./config/db");
+const connectDB = require("./db/");
+const config = require("../config");
 
 const app = express();
 
@@ -21,5 +22,5 @@ app.use(
     require("./routes/")
 );
 
-const PORT = process.env.PORT || 3002;
+const PORT = config.ports.to;
 app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));
