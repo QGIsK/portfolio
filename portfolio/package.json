@@ -1,10 +1,11 @@
 {
-  "name": "admin",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "set DEBUG=http:* & nodemon app.js"
   },
   "author": "Demian",
   "license": "ISC",

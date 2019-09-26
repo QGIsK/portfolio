@@ -1,5 +1,5 @@
 {
-    "name": "url-shortener",
+    "name": "to",
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
@@ -9,15 +9,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/QGIsK/url-shortener.git"
+        "url": "git+https://github.com/QGIsK/personal-website.git"
     },
     "keywords": [],
     "author": "Demian",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/QGIsK/url-shortener/issues"
+        "url": "https://github.com/QGIsK/personal-website/issues"
     },
-    "homepage": "https://github.com/QGIsK/url-shortener#readme",
+    "homepage": "https://github.com/QGIsK/personal-website#readme",
     "dependencies": {
         "config": "^3.1.0",
         "cors": "2.8.5",
