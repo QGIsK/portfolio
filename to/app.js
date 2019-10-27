@@ -21,6 +21,3 @@ app.use(
     }),
     require("./routes/")
 );
-
-const PORT = config.ports.to;
-app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));
