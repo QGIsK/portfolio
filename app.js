@@ -8,7 +8,6 @@ const connectDB = require("./db/");
 
 const app = express();
 
-// Connect to db
 connectDB();
 
 app.use(helmet());
