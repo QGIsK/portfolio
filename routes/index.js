@@ -3,6 +3,8 @@ const expressBrute = require("express-brute");
 
 const router = express.Router();
 
+const redirectController = require("../controllers/redirectController");
+
 if (!process.env.environment || process.env.environment === "development") {
     store = new expressBrute.MemoryStore();
 } else {
@@ -13,7 +15,8 @@ if (!process.env.environment || process.env.environment === "development") {
 
 const bruteforce = new expressBrute(store);
 
-router.use("/r", require("./redirect"));
+router.get("/r/:code", redirectController.index);
+
 router.use("/api", bruteforce.prevent, require("./api"));
 
 module.exports = router;
