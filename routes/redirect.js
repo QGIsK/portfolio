@@ -33,7 +33,7 @@ router
      * @desc    Create short url
      */
 
-    .post(bruteforce.prevent, async (req, res) => {
+    .post(async (req, res) => {
         const { longUrl, shortUrl } = req.body;
 
         // Check if base url is valid
