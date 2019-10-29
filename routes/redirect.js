@@ -5,7 +5,7 @@ const ExpressBrute = require("express-brute");
 
 const router = express.Router();
 
-const Url = require("../../db/models/url");
+const Url = require("../db/models/url");
 
 if (!process.env.environment || process.env.environment === "development") {
     store = new ExpressBrute.MemoryStore();
