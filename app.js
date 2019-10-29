@@ -3,6 +3,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
 const path = require("path");
+const expressSanitizer = require("express-sanitizer");
 const bodyParser = require("body-parser");
 
 const connectDB = require("./db/");
@@ -14,6 +15,7 @@ connectDB();
 app.use(helmet());
 app.use(cors());
 app.use(morgan("dev"));
+app.use(expressSanitizer());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ type: "application/*+json" }));
