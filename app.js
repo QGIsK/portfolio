@@ -2,8 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const connectDB = require("../db/");
-const config = require("../config");
+const connectDB = require("./db/");
+const config = require("./config");
 
 const app = express();
 
