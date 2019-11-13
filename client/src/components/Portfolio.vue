@@ -1,5 +1,5 @@
 <template>
-  <div class="home"></div>
+  <v-app>portfolio</v-app>
 </template>
 
 <script>

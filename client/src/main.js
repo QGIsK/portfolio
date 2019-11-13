@@ -9,8 +9,6 @@ import Vuetify from "vuetify";
 
 import "vuetify/dist/vuetify.min.css";
 
-Vue.use(Vuetify);
-
 Vue.config.productionTip = false;
 Vue.prototype.$http = Axios;
 Vue.prototype.$http.defaults.headers.common["Content-Type"] =
@@ -23,6 +21,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
 /* eslint-disable no-new */
 new Vue({
     el: "#app",
+    Vuetify,
     router,
     store,
     components: {

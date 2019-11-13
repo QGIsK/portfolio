@@ -1,5 +1,8 @@
 <template>
-  <div class="home"></div>
+  <v-app>
+    <Portfolio/>
+    <Contact/>
+  </v-app>
 </template>
 
 <script>
