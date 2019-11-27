@@ -1,6 +1,5 @@
-const express = require("express");
 const expressBrute = require("express-brute");
-
+const express = require("express");
 const router = express.Router();
 
 const redirectController = require("../controllers/redirectController");

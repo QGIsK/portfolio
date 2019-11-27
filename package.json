@@ -1,21 +1,30 @@
 {
-    "name": "to",
-    "version": "1.0.0",
-    "description": "",
+    "name": "personal-website",
+    "version": "1.0.1",
+    "description": "Personal website",
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
-        "server-dev": "npx nodemon app.js",
-        "client-dev": "webpack-dev-server --inline --progress --config client/build/webpack.dev.conf.js",
-        "lint": "eslint --ext .js,.vue src",
-        "dev-build": "node client/build/build.js"
+        "dev:server": "npx nodemon app.js",
+        "dev:client": "webpack-dev-server --inline --progress --config client/build/webpack.dev.conf.js",
+        "dev:lint": "eslint --ext .js,.vue src",
+        "dev:build": "node client/build/build.js"
     },
     "heroku-run-build-script": false,
     "repository": {
         "type": "git",
         "url": "git+https://github.com/QGIsK/personal-website.git"
     },
-    "keywords": [],
+    "keywords": [
+        "Personal",
+        "Website",
+        "Nodejs",
+        "Express",
+        "Vue",
+        "MongoDB",
+        "MEVN",
+        "Portfolioc"
+    ],
     "author": "Demian",
     "license": "ISC",
     "bugs": {
@@ -27,6 +36,7 @@
         "body-parser": "1.19.0",
         "config": "^3.1.0",
         "cors": "2.8.5",
+        "dotenv": "8.2.0",
         "express": "^4.17.1",
         "express-brute": "1.0.1",
         "express-sanitizer": "1.0.5",

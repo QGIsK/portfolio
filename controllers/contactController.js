@@ -1,6 +1,7 @@
-const Contact = require("../db/models/contact");
+const DB = require("../db/");
 const Mail = require("../helpers/mail");
-const Config = require("../config/");
+
+const mailFrom = process.env.MAIL_FROM;
 
 exports.store = async (req, res) => {
     try {
@@ -14,14 +15,14 @@ exports.store = async (req, res) => {
 
         const mailOptions = {
             from,
-            to: Config.mail,
+            to: mailFrom,
             subject,
             text: body
         };
 
         await Mail.send(mailOptions);
 
-        new Contact({
+        new DB.Contact({
             from,
             email,
             subject,

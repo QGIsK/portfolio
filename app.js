@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -6,11 +8,9 @@ const path = require("path");
 const expressSanitizer = require("express-sanitizer");
 const bodyParser = require("body-parser");
 
-const connectDB = require("./db/");
-
 const app = express();
 
-connectDB();
+require("./db/");
 
 app.use(helmet());
 app.use(cors());
@@ -32,5 +32,5 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/views/index.html"));
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));

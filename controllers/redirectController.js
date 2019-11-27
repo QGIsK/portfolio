@@ -1,11 +1,11 @@
 const validUrl = require("valid-url");
 const shortid = require("shortid");
 
-const Url = require("../db/models/url");
+const DB = require("../db/");
 
 exports.index = async (req, res) => {
     try {
-        const url = await Url.findOne({ urlCode: req.params.code });
+        const url = await DB.Url.findOne({ urlCode: req.params.code });
 
         if (url) {
             return res.redirect(url.longUrl);
@@ -21,20 +21,14 @@ exports.store = async (req, res) => {
     try {
         const { longUrl, shortUrl } = req.body;
 
-        console.log(longUrl);
-
-        // Check if base url is valid
         if (!validUrl.isUri(`${req.protocol}://${req.get("host")}`)) {
             return res.status(401).json("Invalid base url");
         }
 
-        // Create Url code
         const urlCode = !shortUrl ? shortid.generate() : shortUrl;
 
-        // Check if longurl is valid
         if (validUrl.isUri(longUrl)) {
-            // Check if url exists in database
-            let url = await Url.findOne({
+            let url = await DB.Url.findOne({
                 longUrl
             });
 
@@ -42,20 +36,18 @@ exports.store = async (req, res) => {
                 return res.json(url);
             }
 
-            // Make short url
             const shortUrl = `${req.protocol}://${req.get(
                 "host"
             )}/r/${urlCode}`;
 
-            url = new Url({
+            url = new DB.Url({
                 longUrl,
                 shortUrl,
                 urlCode,
                 date: new Date()
             });
 
-            // Save db
-            await url.save();
+            await DB.url.save();
 
             return res.json(url);
         }
