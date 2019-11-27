@@ -1,22 +1,9 @@
 <template>
-  <v-app>
-    <Portfolio/>
-    <Contact/>
-  </v-app>
+  <div></div>
 </template>
 
 <script>
-import Contact from "./Contact";
-import Portfolio from "./Portfolio";
-
 export default {
-  name: "Home",
-  components: {
-    Contact,
-    Portfolio
-  },
-  data() {
-    return {};
-  }
+  name: "Hello"
 };
 </script>
