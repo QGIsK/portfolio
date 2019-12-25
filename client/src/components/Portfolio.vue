@@ -1,0 +1,98 @@
+<template>
+  <div class="bg-dark" id="portfolio" style="margin-top:17.5vh">
+    <v-container class="my-5 fill-height">
+      <v-fade-transition mode="out-in">
+        <v-row style="margin-top:-17.5vh">
+          <!-- row -->
+          <v-col cols="2" ml-2>
+            <span></span>
+          </v-col>
+
+          <v-col cols="10" style="margin-bottom: 10vh;">
+            <v-card style=" background:transparent" flat>
+              <v-img
+                src="https://images.unsplash.com/photo-1495305576702-5e9aaa44eab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="grey darken-4"
+              ></v-img>
+              <v-card-title>Portfolio</v-card-title>
+              <v-card-text>Made with vue and nodejs</v-card-text>
+            </v-card>
+          </v-col>
+
+          <!-- row -->
+          <v-col cols="7" class="mx-5" style="margin-bottom: 10vh;">
+            <v-card style=" background:transparent" flat>
+              <v-img
+                src="https://images.unsplash.com/photo-1495305576702-5e9aaa44eab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="grey darken-4"
+              ></v-img>
+              <v-card-title>Portfolio</v-card-title>
+              <v-card-text>Made with vue and nodejs</v-card-text>
+            </v-card>
+          </v-col>
+          <v-col cols="4" class="mx-auto" style="margin-bottom: 10vh;">
+            <v-card style=" background:transparent" flat>
+              <v-img
+                src="https://images.unsplash.com/photo-1495305576702-5e9aaa44eab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="grey darken-4"
+              ></v-img>
+              <v-card-title>Portfolio</v-card-title>
+              <v-card-text>Made with vue and nodejs</v-card-text>
+            </v-card>
+          </v-col>
+
+          <!-- row -->
+
+          <v-col cols="10" class="mx-auto" style="margin-bottom: 10vh;">
+            <v-card style=" background:transparent" flat>
+              <v-img
+                src="https://images.unsplash.com/photo-1495305576702-5e9aaa44eab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="grey darken-4"
+              ></v-img>
+              <v-card-title>Portfolio</v-card-title>
+              <v-card-text>Made with vue and nodejs</v-card-text>
+            </v-card>
+          </v-col>
+
+          <!-- row -->
+
+          <v-col cols="5" class="mx-auto" style="margin-bottom: 10vh;">
+            <v-card style=" background:transparent" flat>
+              <v-img
+                src="https://images.unsplash.com/photo-1495305576702-5e9aaa44eab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="grey darken-4"
+              ></v-img>
+              <v-card-title>Portfolio</v-card-title>
+              <v-card-text>Made with vue and nodejs</v-card-text>
+            </v-card>
+          </v-col>
+          <v-col cols="6" class="mx-auto" style="margin-bottom: 10vh;">
+            <v-card style=" background:transparent" flat>
+              <v-img
+                src="https://images.unsplash.com/photo-1495305576702-5e9aaa44eab2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+                class="grey darken-4"
+              ></v-img>
+              <v-card-title>Portfolio</v-card-title>
+              <v-card-text>Made with vue and nodejs</v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-fade-transition>
+    </v-container>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Portfolio",
+};
+</script>
+
+<style>
+/* .mab {
+  margin-bottom: 20vh !important;
+} */
+.bg-dark {
+  background: #1b1a1a;
+}
+</style>
