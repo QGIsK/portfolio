@@ -8,7 +8,7 @@
       <v-btn color="white" text rounded class="my-2">Linkedin</v-btn>
       <v-col class="lighten-2 py-4 text-center white--text" cols="12">
         <strong>
-          Name Agency
+          Demian 
           &copy;
           {{ new Date().getFullYear() }}
         </strong>
