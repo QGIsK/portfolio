@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const expressSanitizer = require("express-sanitizer");
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
@@ -13,6 +14,7 @@ require("./database/");
 app.use(helmet());
 app.use(cors());
 app.use(morgan("dev"));
+app.use(expressSanitizer());
 
 app.use("/static", express.static("resources/static"));
 app.use("/public", express.static("resources/public"));
@@ -27,7 +29,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", express.json(), require("./app/routes/api"));
+app.use("/api", express.json(), require("./app/routes/"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/resources/views/index.html"));

@@ -11,5 +11,6 @@ mongoose
   .catch(err => console.log(err));
 
 module.exports = {
-  User: require("./models/user"),
+  Contact: require("./models/Contact"),
+  Url: require("./models/Url"),
 };
