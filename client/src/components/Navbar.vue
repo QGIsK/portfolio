@@ -3,7 +3,7 @@
     <v-toolbar flat style="background: #171717">
       <!-- <v-app-bar-nav-icon class="ml-2"></v-app-bar-nav-icon> -->
 
-      <v-toolbar-title style="margin-left:7.5vh">Demian</v-toolbar-title>
+      <v-toolbar-title style="margin-left:7.5vh">Portfolio</v-toolbar-title>
 
       <v-spacer></v-spacer>
       <v-toolbar-items style="margin-right:7.5vh">
