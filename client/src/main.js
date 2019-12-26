@@ -1,5 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
+import Axios from "axios";
 
 import VueParticlesBg from "particles-bg-vue";
 import VueScrollTo from "vue-scrollto";
@@ -28,6 +29,9 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true,
 });
+
+Vue.prototype.$http = Axios;
+Vue.prototype.$http.defaults.headers.common["Content-Type"] = "application/json";
 
 new Vue({
   store,
