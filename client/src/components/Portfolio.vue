@@ -1,14 +1,14 @@
 <template>
   <div class="bg-dark" id="portfolio" style="margin-top:17.5vh">
     <v-container class="my-5 fill-height">
-      <v-fade-transition mode="ease-in">
+      <v-fade-transition mode="out-in">
         <v-row style="margin-top:-17.5vh">
           <!-- row -->
           <v-col cols="2" ml-2>
             <span></span>
           </v-col>
 
-          <v-col cols="8" style="margin-bottom: 10vh;">
+          <v-col cols="8" style="z-index:6; margin-bottom: 10vh;">
             <v-card style=" background:transparent" flat>
               <v-img
                 src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
