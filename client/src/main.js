@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 
+import VueParticlesBg from "particles-bg-vue";
 import VueScrollTo from "vue-scrollto";
 
 import store from "./store";
@@ -11,6 +12,8 @@ import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 
 Vue.config.productionTip = false;
+
+Vue.use(VueParticlesBg);
 
 Vue.use(VueScrollTo, {
   container: "body",

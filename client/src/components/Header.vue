@@ -1,5 +1,12 @@
 <template>
   <div>
+    <particles-bg
+      type="cobweb"
+      :bg="true"
+      num="100"
+      :color="white"
+      style=" z-index:5; max-height: 85vh"
+    />
     <v-container my-5>
       <v-row>
         <v-col cols="6">
