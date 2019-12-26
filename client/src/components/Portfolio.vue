@@ -16,7 +16,7 @@
                 alt="Temp image"
               ></v-img>
               <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with vue and nodejs</v-card-text>
+              <v-card-text>Made with Vue and NodeJS</v-card-text>
             </v-card>
           </v-col>
 
@@ -29,7 +29,7 @@
                 alt="Temp image"
               ></v-img>
               <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with vue and nodejs</v-card-text>
+              <v-card-text>Made with Vue and NodeJS</v-card-text>
             </v-card>
           </v-col>
           <v-col cols="4" class="mx-auto" style="margin-bottom: 10vh;">
@@ -40,7 +40,7 @@
                 alt="Temp image"
               ></v-img>
               <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with vue and nodejs</v-card-text>
+              <v-card-text>Made with Vue and NodeJS</v-card-text>
             </v-card>
           </v-col>
 
@@ -54,7 +54,7 @@
                 alt="Temp image"
               ></v-img>
               <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with vue and nodejs</v-card-text>
+              <v-card-text>Made with Vue and NodeJS</v-card-text>
             </v-card>
           </v-col>
 
@@ -68,7 +68,7 @@
                 alt="Temp image"
               ></v-img>
               <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with vue and nodejs</v-card-text>
+              <v-card-text>Made with Vue and NodeJS</v-card-text>
             </v-card>
           </v-col>
           <v-col cols="6" class="mx-auto" style="margin-bottom: 10vh;">
@@ -79,7 +79,7 @@
                 alt="Temp image"
               ></v-img>
               <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with vue and nodejs</v-card-text>
+              <v-card-text>Made with Vue and NodeJS</v-card-text>
             </v-card>
           </v-col>
         </v-row>

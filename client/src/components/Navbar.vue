@@ -8,8 +8,8 @@
       <v-spacer></v-spacer>
       <v-toolbar-items style="margin-right:7.5vh">
         <v-btn text v-scroll-to="'#portfolio'">Portfolio</v-btn>
-        <v-btn text v-scroll-to="'#about'">About</v-btn>
-        <v-btn text v-scroll-to="'#contact'">Contact</v-btn>
+        <v-btn text v-scroll-to="'#about'" disabled>About</v-btn>
+        <v-btn text v-scroll-to="'#contact'" disabled>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>
