@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const redirectController = require("../controllers/RedirectController");
-const contactController = require("../controllers/ContactController");
+// const contactController = require("../controllers/ContactController");
 
 const rateLimit = require("express-rate-limit");
 
