@@ -10,7 +10,7 @@
         :vertical="mode === 'vertical'"
       >
         {{ text }}
-        <v-btn color flat @click="toggleSnackBar">Close</v-btn>
+        <v-btn color text @click="toggleSnackBar">Close</v-btn>
       </v-snackbar>
     </v-card>
   </div>

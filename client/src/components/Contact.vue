@@ -14,39 +14,48 @@
               <v-text-field
                 v-if="show"
                 ref="name"
-                label="Your name"
+                label="How do I address you?"
                 v-model="from"
                 :rules="[() => !!from || 'This field is required']"
-                placeholder="Your name"
                 required
               ></v-text-field>
+              <!-- placeholder="How do I address you?" -->
               <v-text-field
                 v-if="show"
                 ref="email"
-                label="Your email"
                 v-model="email"
                 :rules="[() => !!email || 'This field is required']"
-                placeholder="Your email"
+                placeholder="How do I contact you?"
                 required
               ></v-text-field>
-              <v-text-field
+              <!-- <v-text-field
                 v-if="show"
-                label="Subject"
+                label="What "
                 ref="subject"
                 v-model="subject"
                 :rules="[() => !!subject || 'This field is required']"
-                placeholder="Contact subject"
+                placeholder
                 required
-              ></v-text-field>
+              ></v-text-field>-->
 
               <v-textarea
                 label="Message"
                 v-if="show"
                 v-model="body"
                 counter
+                placeholder="Tell me about your project"
                 maxlength="500"
                 single-line
               ></v-textarea>
+              <v-subheader style="margin-left: -1.5vh">How long will this take?</v-subheader>
+              <v-slider
+                v-model="time"
+                :tick-labels="timeTicks"
+                :max="4"
+                step="1"
+                ticks="always"
+                tick-size="4"
+              ></v-slider>
             </v-card-text>
             <v-divider class="mt-5"></v-divider>
             <v-card-actions>
@@ -55,7 +64,7 @@
 
               <v-btn
                 color="primary"
-                v-if="!from || !email || !subject || !body"
+                v-if="!from  || !email || !body"
                 disabled
                 text
                 @click="submit"
@@ -86,8 +95,10 @@ export default {
   name: "Contact",
   data: () => ({
     show: true,
+    timeTicks: ["Yesterday", "1 Month", "3 Months", "6 Months", "1 Year"],
     contacted: false,
     white: null,
+    time: "",
     from: "",
     email: "",
     subject: "",
@@ -111,7 +122,7 @@ export default {
       const data = {
         from: this.from,
         email: this.email,
-        subject: this.subject,
+        time: this.timeTicks[this.time],
         body: this.body,
       };
       this.$http({

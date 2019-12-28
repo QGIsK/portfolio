@@ -11,13 +11,15 @@ const contactSchema = new mongoose.Schema({
   },
   subject: {
     type: String,
-    required: true,
+  },
+  time: {
+    type: String,
   },
   body: {
     type: String,
     required: true,
   },
-  time: {
+  created: {
     type: Date,
     default: Date.now,
   },

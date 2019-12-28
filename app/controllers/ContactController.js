@@ -7,17 +7,19 @@ exports.store = async (req, res) => {
   try {
     const from = req.sanitize(req.body.from);
     const email = req.sanitize(req.body.email);
-    const subject = req.sanitize(req.body.subject);
+    const time = req.sanitize(req.body.time);
     const body = req.sanitize(req.body.body);
 
-    if (!from || !email || !subject || !body)
+    console.log(from, time, email, body);
+
+    if (!from || !time || !email || !body)
       return res.status(422).json({ error: "Please provide all fields" });
 
     const mailOptions = {
-      from,
+      from: from,
       to: mailTo,
-      subject,
-      text: body,
+      // subject,
+      text: `time: ${time}, \nMessage: ${body}`,
     };
 
     await Mail.send(mailOptions);
@@ -25,7 +27,7 @@ exports.store = async (req, res) => {
     new DB.Contact({
       from,
       email,
-      subject,
+      time,
       body,
     }).save();
 
