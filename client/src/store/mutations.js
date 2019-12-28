@@ -16,4 +16,9 @@ export default {
     state.token = "";
     state.user = {};
   },
+  toggleSnackBar(state, { type, text }) {
+    state.snackbarActive = !state.snackbarActive;
+    state.snackbarText = text;
+    state.snackbarType = type;
+  },
 };

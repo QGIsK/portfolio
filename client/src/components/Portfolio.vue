@@ -93,12 +93,3 @@ export default {
   name: "Portfolio",
 };
 </script>
-
-<style>
-/* .mab {
-  margin-bottom: 20vh !important;
-} */
-.bg-dark {
-  background: #1b1a1a;
-}
-</style>

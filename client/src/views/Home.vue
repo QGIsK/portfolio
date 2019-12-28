@@ -1,9 +1,8 @@
 <template>
   <div class="home">
-    <div>
-      <Header />
-    </div>
+    <Header />
     <Portfolio />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -12,6 +11,7 @@
 // @ is an alias to /src
 import Header from "@/components/Header.vue";
 import Portfolio from "@/components/Portfolio.vue";
+import Contact from "@/components/Contact.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -19,7 +19,16 @@ export default {
   components: {
     Header,
     Portfolio,
+    Contact,
     Footer,
+  },
+  metaInfo: {
+    title: "Portfolio ",
+    titleTemplate: "%s @ Demiann",
+    htmlAttrs: {
+      lang: "en",
+      amp: true,
+    },
   },
 };
 </script>

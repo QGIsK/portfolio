@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height: 70vh;color:#fff;">
     <particles-bg
       type="cobweb"
       :bg="true"
@@ -9,28 +9,31 @@
     />
     <v-container>
       <v-row>
-        <v-col cols="6"></v-col>
         <v-col cols="6" class="mx-auto">
           <v-card
-            style="text-align:right; z-index:20;margin-right:5em;margin-top: 27.5vh; margin-bottom:15vh; background:transparent; font-size: 1.25em; line-height: 1.5em"
+            style=" z-index:20;margin-right:5em;margin-top: 22.5vh; margin-bottom:15vh; background:transparent; font-size: 1.25em; line-height: 1.5em"
             flat
           >
-            <b>Lorem ipsum</b> dolor sit amet, consectetur
-            <br />
-            <b>adipiscing elit,</b> sed do
-            <b>eiusmod.</b>
-            <br />
-            <b>Lorem ipsum</b> dolor sit amet, consectetur
-            <br />
-            <b>adipiscing elit,</b> sed do
-            <b>eiusmod.</b>
-            <br />
-            <b>Lorem ipsum</b> dolor sit amet, consectetur
-            <br />
-            <b>adipiscing elit,</b> sed do
-            <b>eiusmod.</b>
+            <v-card-title class="headline">About me</v-card-title>
+            <v-card-text class="grey-text">
+              <b>Lorem ipsum</b> dolor sit amet, consectetur
+              <br />
+              <b>adipiscing elit,</b> sed do
+              <b>eiusmod.</b>
+              <br />
+              <b>Lorem ipsum</b> dolor sit amet, consectetur
+              <br />
+              <b>adipiscing elit,</b> sed do
+              <b>eiusmod.</b>
+              <br />
+              <b>Lorem ipsum</b> dolor sit amet, consectetur
+              <br />
+              <b>adipiscing elit,</b> sed do
+              <b>eiusmod.</b>
+            </v-card-text>
           </v-card>
         </v-col>
+        <v-col cols="6"></v-col>
       </v-row>
     </v-container>
     <Footer class="mt-5" />
@@ -48,3 +51,6 @@ export default {
   data: () => ({ white: null }),
 };
 </script>
+
+<style scoped>
+</style>

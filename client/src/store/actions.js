@@ -7,6 +7,12 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
 }
 
 export default {
+  toggleSnackBar({ commit }, { type, text }) {
+    commit("toggleSnackBar", {
+      type,
+      text,
+    });
+  },
   login({ commit }, user) {
     return new Promise((resolve, reject) => {
       commit("auth_request");

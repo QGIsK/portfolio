@@ -7,9 +7,9 @@
 
       <v-spacer></v-spacer>
       <v-toolbar-items style="margin-right:7.5vh">
-        <v-btn text rounded v-scroll-to="'#portfolio'">Portfolio</v-btn>
-        <v-btn text rounded to="/about">About</v-btn>
-        <v-btn text rounded to="/contact">Contact</v-btn>
+        <v-btn text rounded v-scroll-to="'#portfolio'">Home</v-btn>
+        <v-btn text rounded disabled>About</v-btn>
+        <v-btn text rounded v-scroll-to="'#contact'">Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>
