@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const expressSanitizer = require("express-sanitizer");
+const robots = require("express-robots-txt");
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
@@ -11,6 +12,7 @@ const app = express();
 
 require("./database/");
 
+app.use(robots("./robots.txt"));
 app.use(helmet());
 app.use(cors());
 app.use(morgan("dev"));
