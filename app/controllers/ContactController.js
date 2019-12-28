@@ -1,7 +1,7 @@
 const DB = require("../../database");
 const Mail = require("../helpers/mail");
 
-const mailFrom = process.env.MAIL_FROM;
+const mailTo = process.env.MAIL_TO;
 
 exports.store = async (req, res) => {
   try {
@@ -15,7 +15,7 @@ exports.store = async (req, res) => {
 
     const mailOptions = {
       from,
-      to: mailFrom,
+      to: mailTo,
       subject,
       text: body,
     };
