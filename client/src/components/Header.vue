@@ -11,12 +11,14 @@
       <v-row>
         <v-col cols="6">
           <v-card
+            class="ml-3"
             style="z-index:6;margin-top: 27.5vh; margin-bottom:15vh; background:transparent; font-size: 2em; line-height: 1.5em"
             flat
           >
-            <b>Lorem ipsum</b> dolor sit amet, consectetur
-            <b>adipiscing elit,</b> sed do
-            <b>eiusmod.</b>
+            I'm a
+            <b>Web Developer</b>
+            <br />Based in
+            <b>The Netherlands</b>
           </v-card>
         </v-col>
       </v-row>
