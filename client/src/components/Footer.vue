@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-dark">
-    <v-footer style="z-index: 10;" color="transparent darken-1" padless>
+  <div id="footer" class="bg-dark">
+    <v-footer color="transparent darken-1" padless>
       <v-row justify="center" no-gutters>
         <v-btn
           color="white"

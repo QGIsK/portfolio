@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div style="z-index:10;">
     <v-toolbar flat style="cursor:pointer; background: transparent; z-index:10;">
       <!-- <v-app-bar-nav-icon class="ml-2"></v-app-bar-nav-icon> -->
 
       <v-toolbar-title @click="redirect('/');" style="margin-left:7.5vh">Portfolio</v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-toolbar-items style="margin-right:7.5vh">
-        <v-btn text rounded v-scroll-to="'#portfolio'">Home</v-btn>
-        <v-btn text rounded disabled>About</v-btn>
-        <v-btn text rounded v-scroll-to="'#contact'">Contact</v-btn>
+      <v-toolbar-items style="margin-right:7.5vh; z-index:10">
+        <v-btn text rounded v-scroll-to="'#portfolio'" style="z-index:10">Home</v-btn>
+        <v-btn text rounded disabled style="z-index:10">About</v-btn>
+        <v-btn text rounded v-scroll-to="'#footer'" style="z-index:10">Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>

@@ -1,31 +1,15 @@
 <template>
   <div id="contact">
-    <!-- <particles-bg
-      type="cobweb"
-      :bg="true"
-      num="100"
-      :color="white"
-      style=" z-index:5; max-height: 100vh"
-    />-->
     <v-container>
       <v-row>
         <v-col cols="6" class="mx-auto" v-if="!contacted">
           <v-card
             elevation="0"
-            style="z-index:20;margin-top: 12.5vh; margin-bottom:12.5vh; background:transparent; font-size: 1.25em; line-height: 1.5em"
+            style="margin-top: 12.5vh; margin-bottom:12.5vh; background:transparent; font-size: 1.25em; line-height: 1.5em"
           >
             <v-card-title>
               <h2>Contact me</h2>
             </v-card-title>
-            <!-- <v-form> -->
-            <!-- <v-textarea
-                label="Message"
-                counter
-                maxlength="120"
-                full-width
-                single-line
-            ></v-textarea>-->
-            <!-- </v-form> -->
             <v-card-text>
               <v-text-field
                 v-if="show"
