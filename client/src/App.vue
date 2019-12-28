@@ -20,6 +20,7 @@
       </v-btn>
     </v-toolbar>
     -->
+    <Snackbar />
     <transition name="fade">
       <router-view></router-view>
     </transition>
@@ -28,11 +29,12 @@
 
 <script>
 import Navbar from "@/components/Navbar";
+import Snackbar from "@/components/Snackbar";
 
 export default {
   name: "App",
 
-  components: { Navbar },
+  components: { Navbar, Snackbar },
 
   data: () => ({
     //
@@ -57,5 +59,9 @@ export default {
 }
 body {
   font-family: "Comfortaa" !important;
+}
+
+.bg-dark {
+  background: #1b1a1a;
 }
 </style>
