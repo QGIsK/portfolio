@@ -10,8 +10,6 @@ exports.store = async (req, res) => {
     const time = req.sanitize(req.body.time);
     const body = req.sanitize(req.body.body);
 
-    console.log(from, time, email, body);
-
     if (!from || !time || !email || !body)
       return res.status(422).json({ error: "Please provide all fields" });
 
