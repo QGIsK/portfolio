@@ -126,7 +126,7 @@ export default {
         body: this.body,
       };
       this.$http({
-        url: "http://localhost:3000/api/contact",
+        url: "/api/contact",
         data,
         method: "POST",
       })
