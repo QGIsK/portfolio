@@ -1,26 +1,22 @@
 {
-  "name": "project-setup-auth",
+  "name": "personal-website",
   "version": "1.0.0",
-  "description": "Project setup with jwt authentication (JWT & Mongoose)",
+  "description": "Personal website build with nodejs express vue and mongodb",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "npx nodemon app.js",
-    "client": "webpack-dev-server --inline --progress --config client/build/webpack.dev.conf.js",
-    "lint": "eslint --ext .js,.vue src",
-    "build": "node client/build/build.js"
+    "dev": "npx nodemon app.js"
   },
-  "heroku-run-build-script": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QGIsK/project-setup-auth.git"
+    "url": "git+https://github.com/QGIsK/personal-website.git"
   },
   "author": "Demian",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QGIsK/project-setup-auth/issues"
+    "url": "https://github.com/QGIsK/personal-website/issues"
   },
-  "homepage": "https://github.com/QGIsK/project-setup-auth#readme",
+  "homepage": "https://github.com/QGIsK/personal-website#readme",
   "dependencies": {
     "axios": "^0.19.0",
     "bcryptjs": "^2.4.3",

@@ -14,40 +14,34 @@
               <v-text-field
                 v-if="show"
                 ref="name"
-                label="How do I address you?"
+                label="What's your name?"
+                hint="Your first name"
                 v-model="from"
                 :rules="[() => !!from || 'This field is required']"
                 required
               ></v-text-field>
-              <!-- placeholder="How do I address you?" -->
+
               <v-text-field
                 v-if="show"
                 ref="email"
                 v-model="email"
                 :rules="[() => !!email || 'This field is required']"
-                placeholder="How do I contact you?"
+                label="How do I contact you?"
+                hint="Your email"
                 required
               ></v-text-field>
-              <!-- <v-text-field
-                v-if="show"
-                label="What "
-                ref="subject"
-                v-model="subject"
-                :rules="[() => !!subject || 'This field is required']"
-                placeholder
-                required
-              ></v-text-field>-->
 
               <v-textarea
-                label="Message"
                 v-if="show"
                 v-model="body"
                 counter
-                placeholder="Tell me about your project"
+                label="Tell me about your project"
                 maxlength="500"
                 single-line
               ></v-textarea>
+
               <v-subheader style="margin-left: -1.5vh">How long will this take?</v-subheader>
+
               <v-slider
                 v-model="time"
                 :tick-labels="timeTicks"
@@ -64,7 +58,7 @@
 
               <v-btn
                 color="primary"
-                v-if="!from  || !email || !body"
+                v-if="!from || !email || !body"
                 disabled
                 text
                 @click="submit"
@@ -91,6 +85,12 @@
 </template>
 
 <script>
+import Axios from "axios";
+
+if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
+  Axios.baseURL = "http://localhost:3000";
+}
+
 export default {
   name: "Contact",
   data: () => ({
@@ -110,22 +110,20 @@ export default {
       this.email = "";
       this.subject = "";
       this.body = "";
+      this.time = "";
       this.show = false;
       this.$nextTick(() => {
         this.show = true;
       });
     },
     submit() {
-      // Object.keys(this.form).forEach(f => {
-      //   if (!this.form[f]) this.formHasErrors = true;
-      //   this.$refs[f].validate(true);
       const data = {
         from: this.from,
         email: this.email,
         time: this.timeTicks[this.time],
         body: this.body,
       };
-      this.$http({
+      Axios({
         url: "/api/contact",
         data,
         method: "POST",
