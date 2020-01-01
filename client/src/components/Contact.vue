@@ -1,18 +1,27 @@
 <template>
   <div id="contact">
     <v-container>
-      <v-row>
+      <v-col cols="12" v-if="!about">
+        <v-layout justify-center>
+          <v-btn @click="toggle()" outlined>About me</v-btn>
+        </v-layout>
+      </v-col>
+      <v-col cols="12" v-if="about">
+        <v-layout justify-center>
+          <v-btn @click="toggle()" outlined>Contact me</v-btn>
+        </v-layout>
+      </v-col>
+      <v-row v-if="show">
         <v-col cols="6" class="mx-auto" v-if="!contacted">
           <v-card
             elevation="0"
-            style="margin-top: 12.5vh; margin-bottom:12.5vh; background:transparent; font-size: 1.25em; line-height: 1.5em"
+            style="margin-top:10vh; margin-bottom:10vh; background:transparent; font-size: 1.5em; line-height: 1.5em"
           >
             <v-card-title>
-              <h2>Contact me</h2>
+              <h2>Contact</h2>
             </v-card-title>
             <v-card-text>
               <v-text-field
-                v-if="show"
                 ref="name"
                 label="What's your name?"
                 hint="Your first name"
@@ -22,7 +31,6 @@
               ></v-text-field>
 
               <v-text-field
-                v-if="show"
                 ref="email"
                 v-model="email"
                 :rules="[() => !!email || 'This field is required']"
@@ -32,7 +40,6 @@
               ></v-text-field>
 
               <v-textarea
-                v-if="show"
                 v-model="body"
                 counter
                 label="Tell me about your project"
@@ -56,13 +63,9 @@
               <v-btn @click="resetForm" text>Reset form</v-btn>
               <v-spacer></v-spacer>
 
-              <v-btn
-                color="primary"
-                v-if="!from || !email || !body"
-                disabled
-                text
-                @click="submit"
-              >Send</v-btn>
+              <v-btn color="primary" v-if="!from || !email || !body" disabled text @click="submit"
+                >Send</v-btn
+              >
               <v-btn color="primary" v-else text @click="submit">Send</v-btn>
             </v-card-actions>
           </v-card>
@@ -80,12 +83,34 @@
           </v-card>
         </v-col>
       </v-row>
+      <v-row v-else>
+        <v-col cols="6" class="mx-auto">
+          <v-card
+            elevation="0"
+            style="margin-top: 10vh; margin-bottom:10vh; background:transparent; font-size: 1.5em; line-height: 1.5em"
+          >
+            <v-card-title>
+              <h2>About</h2>
+            </v-card-title>
+            <v-card-text>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore sapiente
+              suscipit impedit maiores perspiciatis nihil eveniet fugit illo dicta itaque nulla,
+              dolorum enim ea repudiandae culpa voluptate? In ut repellendus, esse recusandae ab
+              dolorem suscipit labore at rem dolores minima omnis vel voluptatum nisi porro placeat
+              est reprehenderit laboriosam?
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
     </v-container>
+    <About v-if="about" />
   </div>
 </template>
 
 <script>
 import Axios from "axios";
+
+import About from "@/components/About.vue";
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
   Axios.baseURL = "http://localhost:3000";
@@ -93,10 +118,14 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
 
 export default {
   name: "Contact",
+  components: {
+    About,
+  },
   data: () => ({
     show: true,
     timeTicks: ["Yesterday", "1 Month", "3 Months", "6 Months", "1 Year"],
     contacted: false,
+    about: false,
     white: null,
     time: "",
     from: "",
@@ -105,6 +134,10 @@ export default {
     body: "",
   }),
   methods: {
+    toggle() {
+      this.show = !this.show;
+      this.about = !this.about;
+    },
     resetForm() {
       this.from = "";
       this.email = "";
