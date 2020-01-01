@@ -45,6 +45,7 @@ export default {
 <style>
 .theme--dark.v-application {
   background: #171717 !important;
+  font-family: "Comfortaa" !important;
 }
 
 .fade-enter-active,
