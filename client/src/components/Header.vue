@@ -11,7 +11,7 @@
       <v-row>
         <v-col cols="6">
           <v-card
-            class="ml-3"
+            class="ml-5"
             style="z-index:6;margin-top: 27.5vh; margin-bottom:15vh; background:transparent; font-size: 2em; line-height: 1.5em"
             flat
           >
