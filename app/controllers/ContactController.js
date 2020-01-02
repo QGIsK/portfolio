@@ -16,8 +16,8 @@ exports.store = async (req, res) => {
     const mailOptions = {
       // from: from,
       to: mailTo,
-      subject: "Contact Form",
-      text: `From: ${from}, \nTime: ${time}, \nMessage: ${body}`,
+      subject: `${from} - Contact Form`,
+      text: `From: ${email}, \nTime: ${time}, \nMessage: ${body}`,
     };
     new DB.Contact({
       from,
