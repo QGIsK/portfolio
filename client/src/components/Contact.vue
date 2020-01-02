@@ -93,6 +93,9 @@
               <h2>About</h2>
             </v-card-title>
             <v-card-text>
+              <!-- I'm a 17 year old Full Stack Web Developer based in The Netherlands.<br />
+              I've been coding for about 2 years now, mainly using NodeJS Vue Express and MongoDB<br />
+              But also have experience in Python, Django, PHP Laravel, And MySQL -->
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis labore sapiente
               suscipit impedit maiores perspiciatis nihil eveniet fugit illo dicta itaque nulla,
               dolorum enim ea repudiandae culpa voluptate? In ut repellendus, esse recusandae ab
@@ -103,14 +106,11 @@
         </v-col>
       </v-row>
     </v-container>
-    <About v-if="about" />
   </div>
 </template>
 
 <script>
 import Axios from "axios";
-
-import About from "@/components/About.vue";
 
 if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
   Axios.baseURL = "http://localhost:3000";
@@ -118,9 +118,7 @@ if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
 
 export default {
   name: "Contact",
-  components: {
-    About,
-  },
+  components: {},
   data: () => ({
     show: true,
     timeTicks: ["Yesterday", "1 Month", "3 Months", "6 Months", "1 Year"],

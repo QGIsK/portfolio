@@ -1,7 +1,7 @@
 <template>
   <div class="bg-dark" style="margin-top:17.5vh">
     <v-container class="my-5 fill-height">
-      <v-fade-transition mode="out-in">
+      <v-fade-transition mode="out-in" appear>
         <v-row style="margin-top:-17.5vh">
           <v-col id="portfolio" class="mx-auto" cols="8" style="z-index:6; margin-bottom: 10vh;">
             <v-card style="background:transparent" flat>
