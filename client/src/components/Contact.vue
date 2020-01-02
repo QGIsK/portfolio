@@ -41,8 +41,8 @@
 
               <v-textarea
                 v-model="body"
-                counter
                 label="Tell me about your project"
+                counter
                 maxlength="500"
                 single-line
               ></v-textarea>
@@ -79,7 +79,7 @@
             <v-card-title class="mx-auto headline">
               <h2 class="mx-auto">Thanks for Contacting me.</h2>
             </v-card-title>
-            <v-card-text class="text-center">I'll get back to you as soon as I can!</v-card-text>
+            <v-card-text class="text-center">I'll get back to you as soon as I can.</v-card-text>
           </v-card>
         </v-col>
       </v-row>
