@@ -19,9 +19,6 @@ exports.store = async (req, res) => {
       // subject,
       text: `time: ${time}, \nMessage: ${body}`,
     };
-
-    await Mail.send(mailOptions);
-
     new DB.Contact({
       from,
       email,
@@ -29,7 +26,14 @@ exports.store = async (req, res) => {
       body,
     }).save();
 
-    res.status(200).json({ msg: "Email has been send!" });
+    Mail.send(mailOptions)
+      .then(() => {
+        res.status(200).json({ msg: "Email has been send!" });
+      })
+      .catch(e => {
+        console.log(e);
+        res.status(500).json("Server error");
+      });
   } catch (err) {
     console.log(err);
     res.status(500).json("Server error");
