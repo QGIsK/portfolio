@@ -43,7 +43,7 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled>View Website</v-btn>
+                        <v-btn href="https://template-one.demiann.xyz">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
