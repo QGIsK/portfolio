@@ -16,7 +16,9 @@
                     <v-fade-transition>
                       <!-- #036358 -->
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://reviewsbyme.demiann.xyz">View Website</v-btn>
+                        <v-btn href="https://reviewsbyme.demiann.xyz" target="_blank"
+                          >View Website</v-btn
+                        >
                       </v-overlay>
                     </v-fade-transition>
                   </div>
@@ -43,7 +45,9 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://template-one.demiann.xyz">View Website</v-btn>
+                        <v-btn href="https://template-one.demiann.xyz" target="_blank"
+                          >View Website</v-btn
+                        >
                       </v-overlay>
                     </v-fade-transition>
                   </div>
@@ -52,11 +56,6 @@
 
               <v-card-title>Template One</v-card-title>
               <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
-              <v-fade-transition>
-                <v-overlay v-if="hover" absolute color="grey darken">
-                  <v-btn href="https://template-one.demiann.xyz">View Website</v-btn>
-                </v-overlay>
-              </v-fade-transition>
             </v-card>
           </v-col>
 
@@ -72,7 +71,7 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled>View Website</v-btn>
+                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
@@ -97,7 +96,7 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled>View Website</v-btn>
+                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
@@ -122,7 +121,7 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled>View Website</v-btn>
+                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
@@ -145,7 +144,7 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled>View Website</v-btn>
+                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
