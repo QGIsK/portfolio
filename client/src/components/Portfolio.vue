@@ -11,12 +11,15 @@
           <v-col id="portfolio" class="mx-auto" cols="8" style="z-index:6; margin-bottom: 10vh;">
             <v-card style=" background:transparent" flat>
               <v-img
-                src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                src="/public/images/ReviewsByMe.png"
                 class="grey darken-4"
-                alt="Temp image"
+                alt="Image of Reviews By Me"
               ></v-img>
-              <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with Vue and NodeJS</v-card-text>
+              <v-card-title>Reviews by Me</v-card-title>
+              <v-card-text
+                >Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and
+                MongoDB</v-card-text
+              >
             </v-card>
           </v-col>
 
@@ -24,12 +27,12 @@
           <v-col cols="7" class="mx-5" style="margin-bottom: 10vh;">
             <v-card style=" background:transparent" flat>
               <v-img
-                src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                src="/public/images/TemplateOne.png"
                 class="grey darken-4"
-                alt="Temp image"
+                alt="Image of template one"
               ></v-img>
-              <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with Vue and NodeJS</v-card-text>
+              <v-card-title>Template One</v-card-title>
+              <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
             </v-card>
           </v-col>
           <v-col cols="4" class="mx-auto" style="margin-bottom: 10vh;">
@@ -39,8 +42,8 @@
                 class="grey darken-4"
                 alt="Temp image"
               ></v-img>
-              <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with Vue and NodeJS</v-card-text>
+              <v-card-title>This Portfolio</v-card-title>
+              <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
             </v-card>
           </v-col>
 
