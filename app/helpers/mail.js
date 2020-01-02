@@ -17,14 +17,6 @@ let transporter = nodemailer.createTransport({
   logger: true,
 });
 
-transporter.verify(function(error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Server is ready");
-  }
-});
-
 exports.send = mail => {
   return new Promise((resolve, reject) => {
     let mailOptions = mail;
