@@ -8,30 +8,20 @@ let transporter = nodemailer.createTransport({
   secure: true,
   auth: {
     user: EMAIL_USER,
-    pass: EMAIL_PASS, // naturally, replace both with your real credentials or an application-specific password
+    pass: EMAIL_PASS,
   },
   tls: {
-    // do not fail on invalid certs
     rejectUnauthorized: false,
   },
   debug: true,
   logger: true,
 });
 
-// let transporter = nodemailer.createTransport({
-//   host: EMAIL_HOST,
-//   port: EMAIL_PORT,
-//   auth: {
-//     user: EMAIL_USER,
-//     pass: EMAIL_PASS,
-//   },
-// });
-
 transporter.verify(function(error, success) {
   if (error) {
     console.log(error);
   } else {
-    console.log("Server is ready to take our messages");
+    console.log("Server is ready");
   }
 });
 

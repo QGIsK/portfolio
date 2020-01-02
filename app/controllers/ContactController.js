@@ -14,10 +14,10 @@ exports.store = async (req, res) => {
       return res.status(422).json({ error: "Please provide all fields" });
 
     const mailOptions = {
-      from: from,
+      // from: from,
       to: mailTo,
-      // subject,
-      text: `time: ${time}, \nMessage: ${body}`,
+      subject: "Contact Form",
+      text: `From: ${from}, \nTime: ${time}, \nMessage: ${body}`,
     };
     new DB.Contact({
       from,
