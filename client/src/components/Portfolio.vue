@@ -39,6 +39,35 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
+                      src="/public/images/ShadowBot.png"
+                      class="grey darken-4"
+                      alt="Image of template one"
+                    ></v-img>
+                    <v-fade-transition>
+                      <v-overlay v-if="hover" absolute color="grey darken">
+                        <v-btn href="https://shadow.demiann.xyz" target="_blank"
+                          >View Website</v-btn
+                        >
+                      </v-overlay>
+                    </v-fade-transition>
+                  </div>
+                </template>
+              </v-hover>
+
+              <v-card-title>Shadow bot</v-card-title>
+              <v-card-text
+                >Website for the Shadow Discord bot <br />
+                Made with Vue and NodeJS</v-card-text
+              >
+            </v-card>
+          </v-col>
+
+          <v-col cols="10" class="mx-auto" style="margin-bottom: 10vh;">
+            <v-card style="background:transparent" flat>
+              <v-hover>
+                <template v-slot:default="{ hover }">
+                  <div style="position:relative">
+                    <v-img
                       src="/public/images/TemplateOne.png"
                       class="grey darken-4"
                       alt="Image of template one"
@@ -53,31 +82,7 @@
                   </div>
                 </template>
               </v-hover>
-
               <v-card-title>Template One</v-card-title>
-              <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
-            </v-card>
-          </v-col>
-
-          <v-col cols="10" class="mx-auto" style="margin-bottom: 10vh;">
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                      class="grey darken-4"
-                      alt="Temp image"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-              <v-card-title>This Portfolio</v-card-title>
               <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
             </v-card>
           </v-col>
@@ -192,6 +197,35 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
+                      src="/public/images/ShadowBot.png"
+                      class="grey darken-4"
+                      alt="Image of template one"
+                    ></v-img>
+                    <v-fade-transition>
+                      <v-overlay v-if="hover" absolute color="grey darken">
+                        <v-btn href="https://shadow.demiann.xyz" target="_blank"
+                          >View Website</v-btn
+                        >
+                      </v-overlay>
+                    </v-fade-transition>
+                  </div>
+                </template>
+              </v-hover>
+
+              <v-card-title>Shadow bot</v-card-title>
+              <v-card-text
+                >Website for the Shadow Discord bot <br />
+                Made with Vue and NodeJS</v-card-text
+              >
+            </v-card>
+          </v-col>
+
+          <v-col cols="4" class="mx-auto" style="margin-bottom: 10vh;">
+            <v-card style="background:transparent" flat>
+              <v-hover>
+                <template v-slot:default="{ hover }">
+                  <div style="position:relative">
+                    <v-img
                       src="/public/images/TemplateOne.png"
                       class="grey darken-4"
                       alt="Image of template one"
@@ -206,31 +240,7 @@
                   </div>
                 </template>
               </v-hover>
-
               <v-card-title>Template One</v-card-title>
-              <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
-            </v-card>
-          </v-col>
-
-          <v-col cols="4" class="mx-auto" style="margin-bottom: 10vh;">
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                      class="grey darken-4"
-                      alt="Temp image"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-              <v-card-title>This Portfolio</v-card-title>
               <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
             </v-card>
           </v-col>
