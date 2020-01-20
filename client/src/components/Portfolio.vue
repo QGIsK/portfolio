@@ -2,7 +2,7 @@
   <div class="bg-dark" style="margin-top:17.5vh">
     <v-container class="my-5 fill-height">
       <v-fade-transition mode="out-in" appear>
-        <v-row style="margin-top:-5vh" v-if="$vuetify.breakpoint.mdAndDown1">
+        <v-row style="margin-top:-5vh" v-if="$vuetify.breakpoint.mdAndDown">
           <v-col id="portfolio" class="mx-auto" cols="10" style="z-index:6; margin-bottom: 10vh;">
             <v-card style="background:transparent" flat>
               <v-hover>
