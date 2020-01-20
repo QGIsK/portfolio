@@ -9,7 +9,7 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
-                      src="/public/images/ReviewsByMe.png"
+                      src="/public/images/ReviewsByMe.WebP"
                       class="grey darken-4"
                       alt="Image of Reviews By Me"
                     ></v-img>
@@ -39,7 +39,7 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
-                      src="/public/images/ShadowBot.png"
+                      src="/public/images/ShadowBot.WebP"
                       class="grey darken-4"
                       alt="Image of template one"
                     ></v-img>
@@ -68,7 +68,7 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
-                      src="/public/images/TemplateOne.png"
+                      src="/public/images/TemplateOne.WebP"
                       class="grey darken-4"
                       alt="Image of template one"
                     ></v-img>
@@ -167,7 +167,7 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
-                      src="/public/images/ReviewsByMe.png"
+                      src="/public/images/ReviewsByMe.WebP"
                       class="grey darken-4"
                       alt="Image of Reviews By Me"
                     ></v-img>
@@ -197,7 +197,7 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
-                      src="/public/images/ShadowBot.png"
+                      src="/public/images/ShadowBot.WebP"
                       class="grey darken-4"
                       alt="Image of template one"
                     ></v-img>
@@ -226,7 +226,7 @@
                 <template v-slot:default="{ hover }">
                   <div style="position:relative">
                     <v-img
-                      src="/public/images/TemplateOne.png"
+                      src="/public/images/TemplateOne.WebP"
                       class="grey darken-4"
                       alt="Image of template one"
                     ></v-img>
