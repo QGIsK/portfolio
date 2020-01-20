@@ -1,6 +1,68 @@
 <template>
   <div id="contact">
-    <v-container v-if="$vuetify.breakpoint.xm">
+    <v-container v-if="$vuetify.breakpoint.mdAndDown">
+      <v-row>
+        <v-col cols="12" class="mx-auto" v-if="!contacted">
+          <v-card
+            elevation="0"
+            style="margin-top:10vh; margin-bottom:10vh; background:transparent; font-size: 1.5em; line-height: 1.5em"
+          >
+            <v-card-title>
+              <h2>Contact</h2>
+            </v-card-title>
+            <v-card-text v-if="show">
+              <v-text-field
+                ref="name"
+                label="What's your name?"
+                hint="Your first name"
+                v-model="from"
+                :rules="[() => !!from || 'This field is required']"
+                required
+              ></v-text-field>
+
+              <v-text-field
+                ref="email"
+                v-model="email"
+                :rules="[() => !!email || 'This field is required']"
+                label="How do I contact you?"
+                hint="Your email"
+                required
+              ></v-text-field>
+
+              <v-textarea
+                v-model="body"
+                label="Tell me about your project"
+                counter
+                maxlength="500"
+                single-line
+              ></v-textarea>
+
+              <v-subheader style="margin-left: -1.5vh">What's your deadline like?</v-subheader>
+
+              <v-slider
+                v-model="time"
+                :tick-labels="smallTicks"
+                :max="4"
+                step="1"
+                ticks="always"
+                tick-size="4"
+              ></v-slider>
+            </v-card-text>
+            <v-divider class="mt-5"></v-divider>
+            <v-card-actions>
+              <v-btn @click="resetForm" text>Reset form</v-btn>
+              <v-spacer></v-spacer>
+
+              <v-btn color="primary" v-if="!from || !email || !body" disabled text @click="submit"
+                >Send</v-btn
+              >
+              <v-btn color="primary" v-else text @click="submit">Send</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container v-else>
       <v-row>
         <v-col cols="6" class="mx-auto" v-if="!contacted">
           <v-card
@@ -70,68 +132,6 @@
               <h2 class="mx-auto">Thanks for Contacting me.</h2>
             </v-card-title>
             <v-card-text class="text-center">I'll get back to you as soon as I can.</v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-container v-else>
-      <v-row>
-        <v-col cols="12" class="mx-auto" v-if="!contacted">
-          <v-card
-            elevation="0"
-            style="margin-top:10vh; margin-bottom:10vh; background:transparent; font-size: 1.5em; line-height: 1.5em"
-          >
-            <v-card-title>
-              <h2>Contact</h2>
-            </v-card-title>
-            <v-card-text v-if="show">
-              <v-text-field
-                ref="name"
-                label="What's your name?"
-                hint="Your first name"
-                v-model="from"
-                :rules="[() => !!from || 'This field is required']"
-                required
-              ></v-text-field>
-
-              <v-text-field
-                ref="email"
-                v-model="email"
-                :rules="[() => !!email || 'This field is required']"
-                label="How do I contact you?"
-                hint="Your email"
-                required
-              ></v-text-field>
-
-              <v-textarea
-                v-model="body"
-                label="Tell me about your project"
-                counter
-                maxlength="500"
-                single-line
-              ></v-textarea>
-
-              <v-subheader style="margin-left: -1.5vh">What's your deadline like?</v-subheader>
-
-              <v-slider
-                v-model="time"
-                :tick-labels="smallTicks"
-                :max="4"
-                step="1"
-                ticks="always"
-                tick-size="4"
-              ></v-slider>
-            </v-card-text>
-            <v-divider class="mt-5"></v-divider>
-            <v-card-actions>
-              <v-btn @click="resetForm" text>Reset form</v-btn>
-              <v-spacer></v-spacer>
-
-              <v-btn color="primary" v-if="!from || !email || !body" disabled text @click="submit"
-                >Send</v-btn
-              >
-              <v-btn color="primary" v-else text @click="submit">Send</v-btn>
-            </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
