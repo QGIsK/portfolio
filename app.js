@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const expressSanitizer = require("express-sanitizer");
+const subdomain = require("express-subdomain");
 const robots = require("express-robots-txt");
 const express = require("express");
 const helmet = require("helmet");
@@ -31,7 +32,11 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", express.json(), require("./app/routes/"));
+if (process.env.NODE_ENV === "production") {
+  app.use(subdomain("api", require("./app/routes")));
+} else {
+  app.use("/api", express.json(), require("./app/routes/"));
+}
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/resources/views/index.html"));
