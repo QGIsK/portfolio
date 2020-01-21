@@ -18,8 +18,6 @@ export default {
   name: "home",
   data: () => ({}),
 
-  
-
   components: {
     Header,
     Portfolio,
@@ -27,8 +25,7 @@ export default {
     Footer,
   },
   metaInfo: {
-    title: "Portfolio ",
-    titleTemplate: "%s @ Demiann",
+    title: "Portfolio | Demian - Full-stack Web Developer",
     htmlAttrs: {
       lang: "en",
       amp: true,
