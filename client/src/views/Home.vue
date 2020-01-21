@@ -24,12 +24,5 @@ export default {
     Contact,
     Footer,
   },
-  metaInfo: {
-    title: "Portfolio | Demian - Full-stack Web Developer",
-    htmlAttrs: {
-      lang: "en",
-      amp: true,
-    },
-  },
 };
 </script>
