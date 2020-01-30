@@ -1,5 +1,5 @@
 {
-  "name": "personal-website",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "Personal website build with nodejs express vue and mongodb",
   "main": "app.js",
