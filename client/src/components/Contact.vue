@@ -140,12 +140,6 @@
 </template>
 
 <script>
-import Axios from "axios";
-
-if (!process.env.NODE_ENV || process.env.NODE_ENV == "development") {
-  Axios.baseURL = "http://localhost:3000";
-}
-
 export default {
   name: "Contact",
   components: {},
@@ -184,8 +178,8 @@ export default {
         time: this.timeTicks[this.time],
         body: this.body,
       };
-      Axios({
-        url: "/api/contact",
+      this.$http({
+        url: "/contact",
         data,
         method: "POST",
       })

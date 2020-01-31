@@ -31,7 +31,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", express.json(), require("./app/routes/"));
+// app.use("/api", express.json(), require("./app/routes/"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "/resources/views/index.html"));
