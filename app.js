@@ -10,7 +10,7 @@ const cors = require("cors");
 
 const app = express();
 
-require("./database/");
+// require("./database/");
 
 app.use(robots("./robots.txt"));
 app.use(helmet());
