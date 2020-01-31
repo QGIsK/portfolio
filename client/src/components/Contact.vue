@@ -60,6 +60,17 @@
             </v-card-actions>
           </v-card>
         </v-col>
+        <v-col cols="12" class="mx-auto" text v-else>
+          <v-card
+            elevation="0"
+            style="background: transparent; margin-top:25vh; margin-bottom: 25vh"
+          >
+            <v-card-title class="mx-auto headline">
+              <h2 class="mx-auto">Thanks for Contacting me.</h2>
+            </v-card-title>
+            <v-card-text class="text-center">I'll get back to you as soon as I can.</v-card-text>
+          </v-card>
+        </v-col>
       </v-row>
     </v-container>
     <v-container v-else>
@@ -149,7 +160,7 @@ export default {
     smallTicks: ["7D", "1M", "3M", "6M", "1Y"],
     contacted: false,
     white: null,
-    time: "",
+    time: 0,
     from: "",
     email: "",
     subject: "",
@@ -165,7 +176,7 @@ export default {
       this.email = "";
       this.subject = "";
       this.body = "";
-      this.time = "";
+      this.time = "7d";
       this.show = false;
       this.$nextTick(() => {
         this.show = true;
