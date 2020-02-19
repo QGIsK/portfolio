@@ -1,23 +1,22 @@
 const express = require("express");
 const router = express.Router();
 
-const redirectController = require("../controllers/RedirectController");
-const contactController = require("../controllers/ContactController");
+const DB = require("../../database/");
 
-const rateLimit = require("express-rate-limit");
+router.get("/:code", async (req, res, next) => {
+  try {
+    const url = await DB.Url.findOne({ urlCode: req.params.code });
 
-const normalLimiter = rateLimit({
-  windowMs: 5 * 60 * 1000, // 5 minutes
-  max: 75,
+    console.log(url);
+
+    if (url) {
+      return res.redirect(url.longUrl);
+    }
+
+    return res.status(404).json("No url found");
+  } catch (err) {
+    res.status(500).json("Server error");
+  }
 });
-
-const contactLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 60 minutes
-  max: 2,
-});
-
-// router.post("/shorten", redirectController.store);
-router.get("/r/:code", normalLimiter, redirectController.index);
-router.post("/contact", contactLimiter, contactController.store);
 
 module.exports = router;
