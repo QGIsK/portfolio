@@ -11,6 +11,7 @@ const cors = require("cors");
 const app = express();
 
 // require("./database/");
+const DB = require("./database/");
 
 app.use(robots("./robots.txt"));
 app.use(helmet());
@@ -31,10 +32,22 @@ app.use((req, res, next) => {
   next();
 });
 
-// app.use("/api", express.json(), require("./app/routes/"));
-
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/resources/views/index.html"));
+});
+
+app.get("/:code", async (req, res) => {
+  try {
+    const url = await DB.Url.findOne({ urlCode: req.params.code });
+
+    if (url) {
+      return res.redirect(url.longUrl);
+    }
+
+    return res.status(404).json("No url found");
+  } catch (err) {
+    res.status(500).json("Server error");
+  }
 });
 
 const PORT = process.env.PORT || 3000;
