@@ -1,7 +1,7 @@
 const validUrl = require("valid-url");
 const shortid = require("shortid");
 
-const DB = require("../../database");
+const DB = require("./../../database");
 
 exports.index = async (req, res) => {
   try {
