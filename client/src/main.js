@@ -7,6 +7,7 @@ import VueScrollTo from "vue-scrollto";
 import VueMeta from "vue-meta";
 
 import router from "./router";
+import store from "./store/";
 
 import vuetify from "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
@@ -43,6 +44,7 @@ else Vue.prototype.$http.defaults.baseURL = "http://localhost:3000/api";
 Vue.prototype.$http.defaults.headers.common["Content-Type"] = "application/json";
 
 new Vue({
+  store,
   router,
   vuetify,
   render: h => h(App),
