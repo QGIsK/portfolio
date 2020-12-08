@@ -37,8 +37,7 @@ Vue.use(VueScrollTo, {
 
 Vue.prototype.$http = Axios;
 
-if (process.env.NODE_ENV === "production")
-  Vue.prototype.$http.defaults.baseURL = "https://demiann.xyz/api/";
+if (process.env.NODE_ENV === "production") Vue.prototype.$http.defaults.baseURL = "/api/";
 else Vue.prototype.$http.defaults.baseURL = "http://localhost:3000/api";
 
 Vue.prototype.$http.defaults.headers.common["Content-Type"] = "application/json";
