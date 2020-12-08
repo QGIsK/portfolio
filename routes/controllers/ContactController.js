@@ -1,5 +1,5 @@
 const DB = require("./../../database");
-const Mail = require("./../helpers/mail");
+const Mail = require("./../helpers/Mail");
 
 const mailTo = process.env.MAIL_TO;
 
