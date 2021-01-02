@@ -5,29 +5,21 @@
       :bg="true"
       num="100"
       :color="white"
-      style=" z-index:1; max-height: 90vh"
+      style="z-index: 1; max-height: 90vh"
     />
     <v-container my-5>
-      <v-row v-if="$vuetify.breakpoint.sm">
-        <v-col cols="6">
+      <v-row>
+        <v-col :cols="$vuetify.breakpoint.sm ? 6 : 12">
           <v-card
             class="ml-5"
-            style="z-index:6;margin-top: 27.5vh; margin-bottom:15vh; background:transparent; font-size: 2em; line-height: 1.5em"
-            flat
-          >
-            I'm a
-            <b>Web Developer</b>
-            <br />Based in
-            <b>The Netherlands</b>
-          </v-card>
-        </v-col>
-      </v-row>
-
-      <v-row v-else>
-        <v-col cols="12">
-          <v-card
-            class="ml-5"
-            style="z-index:6;margin-top: 27.5vh; margin-bottom:15vh; background:transparent; font-size: 2em; line-height: 1.5em"
+            style="
+              z-index: 2;
+              margin-top: 27.5vh;
+              margin-bottom: 15vh;
+              background: transparent;
+              font-size: 2em;
+              line-height: 1.5em;
+            "
             flat
           >
             I'm a
