@@ -4,23 +4,17 @@ import Axios from "axios";
 
 import VueParticlesBg from "particles-bg-vue";
 import VueScrollTo from "vue-scrollto";
-import VueMeta from "vue-meta";
 
 import router from "./router";
 import store from "./store/";
 
 import vuetify from "./plugins/vuetify";
-import "roboto-fontface/css/roboto/roboto-fontface.css";
+// import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 
 Vue.config.productionTip = false;
 
 Vue.use(VueParticlesBg);
-
-Vue.use(VueMeta, {
-  // optional pluginOptions
-  refreshOnceOnNavigation: true,
-});
 
 Vue.use(VueScrollTo, {
   container: "body",
