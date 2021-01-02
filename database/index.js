@@ -6,7 +6,7 @@ mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
+    // useFindAndModify: false,
   })
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
@@ -14,5 +14,4 @@ mongoose
 module.exports = {
   Contact: require("./models/Contact"),
   Url: require("./models/Url"),
-  User: require("./models/User")
 };
