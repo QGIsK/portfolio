@@ -24,8 +24,10 @@
     "express-rate-limit": "5.0.0",
     "express-robots-txt": "^0.4.1",
     "express-sanitizer": "^1.0.5",
+    "express-subdomain": "^1.0.5",
     "helmet": "^3.18.0",
     "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
     "mongoose": "^5.8.3",
     "mongoose-timestamp": "0.6.0",
     "morgan": "^1.9.1",
@@ -36,6 +38,12 @@
   "engines": {
     "node": ">= 8.0.0",
     "npm": ">= 6.0.0"
+  },
+  "_moduleAliases": {
+    "@database": "database/",
+    "@helpers": "routes/helpers",
+    "@routes": "routes/",
+    "something": "src/foo"
   },
   "browserslist": [
     "> 1%",

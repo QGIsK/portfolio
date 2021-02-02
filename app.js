@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("module-alias/register");
 
 const expressSanitizer = require("express-sanitizer");
 const robots = require("express-robots-txt");
@@ -6,11 +7,11 @@ const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cors = require("cors");
+const subdomain = require("express-subdomain");
 
 const app = express();
 
-// require("./database/");
-const DB = require("./database/");
+require("@database/");
 
 app.use(robots("./robots.txt"));
 app.use(helmet());
@@ -29,21 +30,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/go/:code", async (req, res) => {
-  try {
-    const url = await DB.Url.findOne({ urlCode: req.params.code });
-
-    if (url) {
-      return res.redirect(url.longUrl);
-    }
-
-    return res.status(404).json("No url found");
-  } catch (err) {
-    res.status(500).json("Server error");
-  }
-});
-
-app.use("/api", require("./routes/"));
+app.use(subdomain("api", require("@routes/api")));
+app.use(subdomain("go", require("@routes/redirector")));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));
