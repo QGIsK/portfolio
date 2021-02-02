@@ -1,26 +1,26 @@
 <template>
-  <div class="bg-dark" style="margin-top:17.5vh">
+  <div class="bg-dark" style="margin-top: 17.5vh">
     <v-container class="my-5 fill-height">
       <v-fade-transition mode="out-in" appear>
-        <v-row style="margin-top:-17.5vh">
+        <v-row style="margin-top: -17.5vh">
           <v-col
             class="mx-auto"
             :cols="$vuetify.breakpoint.mdAndDown ? 10 : 8"
-            style="z-index: 6; margin-bottom: 10vh;"
+            style="z-index: 6; margin-bottom: 10vh"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
+                  <div style="position: relative">
                     <v-img
-                      src="/public/images/ReviewsByMe.WebP"
+                      src="https://api.demiann.dev/static/images/ReviewsByMe.WebP"
                       class="grey darken-4"
                       alt="Image of Reviews By Me"
                     ></v-img>
                     <v-fade-transition>
                       <!-- #036358 -->
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://reviewsbyme.demiann.xyz" target="_blank"
+                        <v-btn href="https://reviewsbyme.demiann.dev" target="_blank"
                           >View Website</v-btn
                         >
                       </v-overlay>
@@ -40,20 +40,20 @@
           <v-col
             :cols="$vuetify.breakpoint.mdAndDown ? 10 : 7"
             class="mx-auto"
-            style="margin-bottom: 10vh;"
+            style="margin-bottom: 10vh"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
+                  <div style="position: relative">
                     <v-img
-                      src="/public/images/ShadowBot.WebP"
+                      src="https://api.demiann.dev/static/images/ShadowBot.WebP"
                       class="grey darken-4"
                       alt="Image of template one"
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://shadow.demiann.xyz" target="_blank"
+                        <v-btn href="https://shadow.demiann.dev" target="_blank"
                           >View Website</v-btn
                         >
                       </v-overlay>
@@ -73,20 +73,20 @@
           <v-col
             :cols="$vuetify.breakpoint.mdAndDown ? 10 : 4"
             class="mx-auto"
-            style="margin-bottom: 10vh;"
+            style="margin-bottom: 10vh"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
+                  <div style="position: relative">
                     <v-img
-                      src="/public/images/TemplateOne.WebP"
+                      src="https://api.demiann.dev/static/images/TemplateOne.WebP"
                       class="grey darken-4"
                       alt="Image of template one"
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://template-one.demiann.xyz" target="_blank"
+                        <v-btn href="https://template-one.demiann.dev" target="_blank"
                           >View Website</v-btn
                         >
                       </v-overlay>
@@ -104,12 +104,12 @@
           <v-col
             :cols="$vuetify.breakpoint.mdAndDown ? 10 : 8"
             class="mx-auto"
-            style="margin-bottom: 10vh;"
+            style="margin-bottom: 10vh"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
+                  <div style="position: relative">
                     <v-img
                       src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                       class="grey darken-4"
@@ -133,12 +133,12 @@
           <v-col
             :cols="$vuetify.breakpoint.mdAndDown ? 10 : 5"
             class="mx-auto"
-            style="margin-bottom: 10vh;"
+            style="margin-bottom: 10vh"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
+                  <div style="position: relative">
                     <v-img
                       src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                       class="grey darken-4"
@@ -160,12 +160,12 @@
           <v-col
             :cols="$vuetify.breakpoint.mdAndDown ? 10 : 6"
             class="mx-auto"
-            style="margin-bottom: 10vh;"
+            style="margin-bottom: 10vh"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
+                  <div style="position: relative">
                     <v-img
                       src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                       class="grey darken-4"
