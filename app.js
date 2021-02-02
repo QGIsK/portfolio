@@ -26,6 +26,7 @@ app.use(
   })
 );
 
+//Temp solution untill we have a permanent space -- serving as a cdn
 app.use("/static", express.static("resources/"));
 
 app.use((req, res, next) => {
