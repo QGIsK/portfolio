@@ -26,6 +26,8 @@ app.use(
   })
 );
 
+app.use("/static", express.static("resources/"));
+
 app.use((req, res, next) => {
   next();
 });
