@@ -5,7 +5,6 @@ const robots = require("express-robots-txt");
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
-const path = require("path");
 const cors = require("cors");
 
 const app = express();
@@ -20,9 +19,6 @@ app.use(morgan("dev"));
 app.use(expressSanitizer());
 app.use(express.json());
 
-app.use("/static", express.static("resources/static"));
-app.use("/public", express.static("resources/public"));
-
 app.use(
   express.urlencoded({
     extended: true,
@@ -33,13 +29,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/resources/views/index.html"));
-});
-
-app.use("/api", require("./routes/"));
-
-app.get("/:code", async (req, res) => {
+app.get("/go/:code", async (req, res) => {
   try {
     const url = await DB.Url.findOne({ urlCode: req.params.code });
 
@@ -52,6 +42,8 @@ app.get("/:code", async (req, res) => {
     res.status(500).json("Server error");
   }
 });
+
+app.use("/api", require("./routes/"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));

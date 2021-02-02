@@ -3,19 +3,19 @@ const shortid = require("shortid");
 
 const DB = require("./../../database");
 
-exports.index = async (req, res) => {
-  try {
-    const url = await DB.Url.findOne({ urlCode: req.params.code });
+// exports.index = async (req, res) => {
+//   try {
+//     const url = await DB.Url.findOne({ urlCode: req.params.code });
 
-    if (url) {
-      return res.redirect(url.longUrl);
-    }
+//     if (url) {
+//       return res.redirect(url.longUrl);
+//     }
 
-    return res.status(404).json("No url found");
-  } catch (err) {
-    res.status(500).json("Server error");
-  }
-};
+//     return res.status(404).json("No url found");
+//   } catch (err) {
+//     res.status(500).json("Server error");
+//   }
+// };
 
 exports.store = async (req, res) => {
   try {
