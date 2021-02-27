@@ -13,25 +13,10 @@ const app = express();
 
 require("@database/");
 
-const whitelist = [
-  "http://demiann.dev",
-  "http://www.demiann.dev",
-  "https://todays.services",
-  "https://www.todays.services",
-];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
 app.use(robots("./robots.txt"));
 app.use(helmet());
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(morgan("dev"));
 app.use(expressSanitizer());
 app.use(express.json());

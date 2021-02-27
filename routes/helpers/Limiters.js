@@ -14,7 +14,7 @@ exports.File = rateLimit({
 
 exports.Contact = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour window
-  max: 3, // start blocking after 120 requests
+  max: 2, // start blocking after 2 requests
   message: "Too many attempts from this IP, please try again later",
 });
 
