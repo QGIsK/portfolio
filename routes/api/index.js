@@ -7,8 +7,8 @@ const Controller = require("./controllers/ContactController");
 const cors = require("cors");
 
 const whitelist = [
-  "http://demiann.dev",
-  "http://www.demiann.dev",
+  "https://demiann.dev",
+  "https://www.demiann.dev",
   "https://todays.services",
   "https://www.todays.services",
 ];
