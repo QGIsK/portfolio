@@ -45,7 +45,7 @@ export default {
         mdDown: 10,
         mdUp: 8,
         link: "https://bassenmetlasse.nl",
-        image: "",
+        image: "https://api.demiann.dev/static/images/BassenMetLasse.WebP",
       },
       {
         name: "Reviews by Me",
