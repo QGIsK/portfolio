@@ -44,7 +44,8 @@
   "_moduleAliases": {
     "@database": "database/",
     "@helpers": "helpers/",
-    "@routes": "routes/"
+    "@routes": "routes/",
+    "@middleware": "middleware/"
   },
   "browserslist": [
     "> 1%",
