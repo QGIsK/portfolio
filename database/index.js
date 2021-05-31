@@ -14,4 +14,6 @@ mongoose
 module.exports = {
   Contact: require("./models/Contact"),
   Url: require("./models/Url"),
+  PorfolioItems: require("./models/PorfolioItems"),
+  Admin: require("./models/Admin"),
 };
