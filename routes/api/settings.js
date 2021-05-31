@@ -3,6 +3,8 @@ const router = express.Router();
 
 const controller = require("./controllers/SettingsController");
 
-router.route("/").get(controller.index).post(controller.store);
+const { ensureAuthenticated } = require("@middleware/auth");
+
+router.route("/").get(controller.index).post(ensureAuthenticated, controller.store);
 
 module.exports = router;
