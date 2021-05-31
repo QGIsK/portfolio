@@ -13,7 +13,6 @@ const app = express();
 
 require("@database/");
 
-
 app.use(robots("./robots.txt"));
 app.use(helmet());
 app.use(cors());
@@ -34,8 +33,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(subdomain("api", require("@routes/api")));
-app.use(subdomain("go", require("@routes/redirector")));
+if (process.env.NODE_ENV === "development") {
+  app.use("/api", require("@routes/api"));
+  app.use("/go", require("@routes/redirector"));
+} else {
+  app.use(subdomain("api", require("@routes/api")));
+  app.use(subdomain("go", require("@routes/redirector")));
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));

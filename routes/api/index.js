@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const { Contact } = require("@helpers/Limiters");
-const Controller = require("./controllers/ContactController");
+const { Contact, Limiter, Auth } = require("@helpers/Limiters");
+const contactController = require("./controllers/ContactController");
 
 const cors = require("cors");
 
@@ -23,8 +23,11 @@ const corsOptions = {
   },
 };
 
-router.use("*", cors(corsOptions));
+if (process.env.NODE_ENV != "development") router.use("*", cors(corsOptions));
 
-router.post("/contact", Contact, Controller.store);
+router.use("/auth", Auth, require("./auth"));
+router.use("/general-settings", Limiter, require("./settings"));
+
+router.post("/contact", Contact, contactController.store);
 
 module.exports = router;
