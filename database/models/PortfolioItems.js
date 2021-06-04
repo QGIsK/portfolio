@@ -8,29 +8,39 @@ const PortfolioItemsSchema = new mongoose.Schema({
   },
   size: {
     mdUp: {
-      default: 10,
+      default: 8,
       type: Number,
       required: true,
     },
     mdDown: {
-      default: 5,
+      default: 10,
       type: Number,
       required: true,
     },
   },
-  image: {
-    default: "https://api.demiann.dev/static/images/Placeholder.WebP",
+  name: {
     type: String,
+    default: "",
+    required: true,
+  },
+  about: {
+    type: String,
+    default: "Made with NodeJS And VueJS",
+    required: true,
+  },
+  image: {
+    type: String,
+    default: "https://api.demiann.dev/static/images/Placeholder.WebP",
     required: true,
   },
   url: {
-    default: "#",
     type: String,
+    default: "#",
     required: true,
   },
   order: {
-    default: null,
     type: Number,
+    default: null,
     required: true,
   },
 });
