@@ -20,7 +20,7 @@ const auth = async () => {
         .then(() => {
           console.log("Admin seeded");
 
-          process.exit(1);
+          process.exit(0);
         });
 };
 
