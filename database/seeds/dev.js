@@ -34,7 +34,7 @@ const items = [
     about: "Is Made with Vue, Express, NodeJS and MongoDB",
     order: 4,
     image: "https://api.demiann.dev/static/images/TemplateOne.WebP",
-    size: { mdUp: 4, mdDown: 10 },
+    size: { mdUp: 8, mdDown: 10 },
   },
 ];
 
