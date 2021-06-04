@@ -2,7 +2,7 @@ const DB = require("@database");
 
 exports.index = async (req, res) => {
   try {
-    const portfolioItems = await DB.PortfolioItems.find({});
+    const portfolioItems = await DB.PortfolioItems.find({ shown: true }).sort({ order: 1 });
 
     res.status(200).json({ portfolioItems });
   } catch (err) {
