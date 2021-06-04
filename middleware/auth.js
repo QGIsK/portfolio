@@ -5,32 +5,30 @@ const { JWT_SECRET } = process.env;
 
 module.exports = {
   ensureAuthenticated: async function (req, res, next) {
-    try {
-      let token =
-        req.headers["x-access-token"] ||
-        req.headers["authorization"] ||
-        req.query.bearer ||
-        req.query.authorization;
-      if (token) {
-        if (token.startsWith("Bearer ")) {
-          token = token.slice(7, token.length);
-        }
-        jwt.verify(token, JWT_SECRET, async (err, decoded) => {
-          if (err) {
-            return res.status(403).json({ message: "Forbidden access" });
-          }
-          const user = await db.User.findById(decoded.id).select(select.user);
+    let token =
+      req.headers["x-access-token"] ||
+      req.headers["authorization"] ||
+      req.query.bearer ||
+      req.query.authorization;
 
-          if (!user) return res.status(403).json({ message: "Forbidden access" });
-
-          req.user = user;
-        });
+    if (token) {
+      if (token.startsWith("Bearer ")) {
+        token = token.slice(7, token.length);
       }
+      jwt.verify(token, JWT_SECRET, async (err, decoded) => {
+        if (err) {
+          return res.status(403).json({ message: "Forbidden access" });
+        }
+        const admin = await db.Admin.findById(decoded.id);
 
+        if (!admin) return res.status(403).json({ message: "Forbidden access" });
+
+        req.admin = admin;
+        console.log("hi");
+        return next();
+      });
+    } else {
       return res.status(403).json({ message: "Forbidden access" });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json({ message: "Server error" });
     }
   },
 };
