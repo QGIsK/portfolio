@@ -6,7 +6,7 @@ const { JWT_SECRET } = process.env;
 exports.login = async (req, res) => {
   let { email, password } = req.body;
   try {
-    if (!password || !email)
+    if (!email || !password)
       return res.status(403).json({ message: "Please fill in all fields correctly." });
 
     const foundAdmin = await DB.Admin.findOne({
@@ -33,7 +33,7 @@ exports.login = async (req, res) => {
       }
     );
 
-    const admin = await DB.Admin.findById(foundAdmin.id).select("name email");
+    const admin = await DB.Admin.findById(foundAdmin._id).select("name email");
 
     res.status(200).json({
       token,
