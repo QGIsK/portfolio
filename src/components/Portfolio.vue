@@ -4,9 +4,9 @@
       <v-fade-transition mode="out-in" appear>
         <v-row style="margin-top: -17.5vh">
           <v-col
-            v-for="(item, index) in portfolioItems"
+            v-for="(item, index) in items"
             :key="index"
-            :cols="$vuetify.breakpoint.mdAndDown ? `${item.mdDown}` : `${item.mdUp}`"
+            :cols="$vuetify.breakpoint.mdAndDown ? `${item.size.mdDown}` : `${item.size.mdUp}`"
             class="mx-auto"
             style="margin-bottom: 10vh; z-index: 6"
           >
@@ -17,7 +17,7 @@
                     <v-img :src="item.image" class="grey darken-4" :alt="item.name"></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn :href="item.link" target="_blank">View Website</v-btn>
+                        <v-btn :href="item.url" target="_blank">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
@@ -35,6 +35,8 @@
 
 <script>
 /* eslint-disable */
+import { mapGetters } from "vuex";
+
 export default {
   name: "Portfolio",
   data: () => ({
@@ -90,5 +92,10 @@ export default {
       // },
     ],
   }),
+  computed: {
+    ...mapGetters({
+      items: "items",
+    }),
+  },
 };
 </script>
