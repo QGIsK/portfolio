@@ -28,7 +28,7 @@ exports.store = async (req, res) => {
 
     Mail.send(mailOptions)
       .then(() => {
-        res.status(200).json({ msg: "Email has been send!" });
+        res.status(200).json({ message: "Email has been send!" });
       })
       .catch(e => {
         console.log(e);

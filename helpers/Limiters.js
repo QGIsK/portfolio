@@ -19,7 +19,7 @@ exports.Contact = rateLimit({
 });
 
 exports.Limiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour window
+  windowMs: 30 * 60 * 1000, // 1 hour window
   max: 120, // start blocking after 120 requests
   message: "Too many attempts from this IP, please try again later",
 });
