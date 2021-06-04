@@ -5,7 +5,7 @@
       :bg="true"
       num="100"
       :color="white"
-      style="z-index: 1; max-height: 90vh"
+      style="z-index: 1; max-height: 80vh"
     />
     <v-container my-5>
       <v-row>

@@ -25,7 +25,11 @@ export default new Vuex.Store({
         .then(res => {
           commit("setSettings", { items: res.data.portfolioItems });
         })
-        .finally(() => commit("setStatus", ""));
+        .finally(() => {
+          setTimeout(() => {
+            commit("setStatus", "");
+          }, 350);
+        });
     },
   },
   mutations: {
