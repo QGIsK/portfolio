@@ -19,8 +19,8 @@
         <div class="sk-cube sk-cube8"></div>
         <div class="sk-cube sk-cube9"></div>
       </div>
-      <h2 class="display-1 text-center">Demiann</h2>
-      <h2 class="subtitle-1 text-center">Loading....</h2>
+      <!-- <h2 class="display-1 text-center">Demiann</h2>
+      <h2 class="subtitle-1 text-center">Loading....</h2> -->
     </div>
     <div v-else>
       <!-- <transition name="fade"> -->
@@ -79,11 +79,11 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
-// Spinner by https://tobiasahlin.com/spinkit/
+// Cube grid by https://tobiasahlin.com/spinkit/
 .sk-cube-grid {
   width: 40px;
   height: 40px;
-  margin: 35vh auto 5vh auto;
+  margin: 45vh auto 5vh auto;
 }
 
 .sk-cube-grid .sk-cube {
