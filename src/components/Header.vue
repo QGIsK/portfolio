@@ -1,11 +1,5 @@
 <template>
   <div>
-    <v-card>
-      <v-snackbar v-model="show" color="blue-grey" shaped :timeout="-1" right="right">
-        This wesbite uses cookies. <v-btn text to="/policy/cookie-statement">Read More</v-btn>
-        <v-btn color text @click="toggleSnackBar">Close</v-btn>
-      </v-snackbar>
-    </v-card>
     <particles-bg
       type="cobweb"
       :bg="true"
@@ -42,11 +36,7 @@
 <script>
 export default {
   name: "Header",
-  data: () => ({ white: null, show: true }),
-  methods: {
-    toggleSnackBar() {
-      this.show = !this.show;
-    },
-  },
+  data: () => ({ white: null }),
+  methods: {},
 };
 </script>
