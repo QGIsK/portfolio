@@ -30,12 +30,8 @@ Vue.use(VueScrollTo, {
 });
 
 Vue.prototype.$http = Axios;
-
 Vue.prototype.$http.defaults.headers.common["Content-Type"] = "application/json";
-
-process.env.NODE_ENV == "development"
-  ? (Vue.prototype.$http.defaults.baseURL = "https://api.demiann.dev/api")
-  : (Vue.prototype.$http.defaults.baseURL = "https://api.demiann.dev/");
+Vue.prototype.$http.defaults.baseURL = "https://api.demiann.dev/";
 
 new Vue({
   store,
