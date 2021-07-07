@@ -37,5 +37,6 @@
 export default {
   name: "Header",
   data: () => ({ white: null }),
+  methods: {},
 };
 </script>

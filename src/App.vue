@@ -1,5 +1,11 @@
 <template>
   <v-app>
+    <v-card>
+      <v-snackbar v-model="show" color="blue-grey" shaped :timeout="-1" right="right">
+        This wesbite uses cookies. <v-btn text to="/policy/cookie-statement">Read More</v-btn>
+        <v-btn color text @click="toggleSnackBar">Close</v-btn>
+      </v-snackbar>
+    </v-card>
     <Snackbar />
     <transition name="fade">
       <router-view></router-view>
@@ -13,9 +19,14 @@ import Snackbar from "@/components/Snackbar";
 export default {
   name: "App",
 
-  components: {  Snackbar },
+  components: { Snackbar },
 
-  data: () => ({}),
+  data: () => ({ show: true }),
+  methods: {
+    toggleSnackBar() {
+      this.show = !this.show;
+    },
+  },
 };
 </script>
 

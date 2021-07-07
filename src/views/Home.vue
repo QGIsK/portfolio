@@ -23,6 +23,7 @@
       <h2 class="subtitle-1 text-center">Loading....</h2> -->
     </div>
     <div v-else>
+     
       <!-- <transition name="fade"> -->
       <Navbar />
       <Header />
