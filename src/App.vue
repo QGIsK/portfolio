@@ -1,11 +1,11 @@
 <template>
   <v-app>
-    <!-- <v-card>
+    <v-card>
       <v-snackbar v-model="show" color="blue-grey" shaped :timeout="-1" right="right">
-        This website uses cookies. <v-btn text to="/policy/cookie-statement">Read More</v-btn>
+        This website may use cookies. <v-btn text to="/policy/cookie-statement">Read More</v-btn>
         <v-btn color text @click="toggleSnackBar">Close</v-btn>
       </v-snackbar>
-    </v-card> -->
+    </v-card>
     <Snackbar />
     <transition name="fade">
       <router-view></router-view>
