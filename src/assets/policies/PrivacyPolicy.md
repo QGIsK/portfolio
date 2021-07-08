@@ -116,4 +116,4 @@ For questions, product information or information about the website itself, plea
 
 This privacy statement was created using a document from Rocket Lawyer (https://www.rocketlawyer.com/nl/nl).
 
-This privacy statement applies since  until further notice.
+This privacy statement applies since July 8th 2021 until further notice.
