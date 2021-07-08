@@ -40,10 +40,22 @@ For the purpose of proper management of the site, the controller may at any time
 
 #Article 6 - Collection of data
 
-1. Your personal data will be collected by Demian Mooibroek and (an) external processor(s) .
-2. Personal data means any information relating to an identified or identifiable natural person (‘data subject’).
-3. An identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.
-4. The personal data that are collected on the website are used mainly by the controller in order to maintain a (commercial) relationship with you and if applicable in order to process your orders. They are recorded in an (electronic) register.
+##Contacting
+###What data is collected
+After contacting, Demiann.dev may collect and store your name, email address, message and time.
+
+###How Data is Used
+We store your contact information so we can get back in touch with you, this includes the given name, email address, message and time.
+
+###Sharing Data
+We use the given data to send an email.
+
+##Analytics
+###Plausible Analytics
+We use the open source Plausible Analytics self-hosted through our analytics.demiann.dev domain to count website visits, downloads, etc. No cookies are used and no personal data—not even an IP address or browser user agent—is stored. For more information, see the <a href="https://plausible.io/data-policy">Plausible Data Policy</a>
+
+###Storing data
+The personal data that are collected on the website are used mainly by the controller in order to maintain a (commercial) relationship with you and if applicable in order to process your orders. They are recorded in an (electronic) register.
 
 #Article 7 - Your rights regarding information
 
@@ -70,16 +82,23 @@ The collected data are used and retained for the duration determined by law.
 
 #Article 11 - Cookies
 
-1. A cookie is a small text file placed on the hard drive of your electronic device upon visiting our website. A cookie contains data so you can be recognized as a visitor when you are visiting our website. It enables us to adjust to your needs and it facilitates you to log in on our website. When you visit our website, we inform you about the use of cookies. By continuing to use our website you accept its use, unless we ask permission by other means. Your consent is valid for a period of thirteen months.
-2. We use the following types of cookies on our website:
+##What is a cookie
+A cookie is a small text file placed on the hard drive of your electronic device upon visiting our website. A cookie contains data so you can be recognized as a visitor when you are visiting our website. It enables us to adjust to your needs and it facilitates you to log in on our website. When you visit our website, we inform you about the use of cookies. By continuing to use our website you accept its use, unless we ask permission by other means. Your consent is valid for a period of thirteen months.
 
-- Functional cookies: like session and login cookies to collect session and login information.
-- Anonymised Analytic cookies: to obtain information regarding the visits to our website, like numbers of visitors, popular pages and topics. In this way we can adjust our communication and information to the needs of our visitors. We cannot see who visits our sites or from which personal device the visit has taken place.
+##We use the following types of cookies on our website:
 
-3. Specifically, we use the following cookies on our website:
-   No other cookies
-4. When you visit our website, cookies from the controller and / or third parties may be installed on your equipment.
-5. For more information about using, managing and deleting cookies for each electronic device, we invite you to consult the following link:  https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post / cookies # faq
+###Cloudflare
+
+Stores cookies to log behavioral elements and analyze potential threats. For more information, see the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy & Security Policy</a>
+
+###Functional cookies
+like session and login cookies to collect session and login information.
+
+When you visit our website, cookies from the controller and / or third parties may be installed on your equipment.
+
+###For more information
+about using, managing and deleting cookies for each electronic device
+we invite you to consult the following <a href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies#faq">link</a>
 
 #Article 12 - Imagery and products offered
 
