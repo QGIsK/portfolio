@@ -7,6 +7,8 @@ const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const cors = require("cors");
+const xss = require("xss-clean");
+const mongoSanitize = require("express-mongo-sanitize");
 const subdomain = require("express-subdomain");
 
 const app = express();
@@ -19,6 +21,10 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(expressSanitizer());
 app.use(express.json());
+
+// sanitize request data
+app.use(xss());
+app.use(mongoSanitize());
 
 app.use(
   express.urlencoded({

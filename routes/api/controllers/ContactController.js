@@ -1,4 +1,3 @@
-const DB = require("@database");
 const Mail = require("@helpers/Mail");
 
 const mailTo = process.env.MAIL_TO;
@@ -19,12 +18,6 @@ exports.store = async (req, res) => {
       subject: `${from} - Contact Form`,
       text: `From: ${email}, \nTime: ${time}, \nMessage: ${body}`,
     };
-    new DB.Contact({
-      from,
-      email,
-      time,
-      body,
-    }).save();
 
     Mail.send(mailOptions)
       .then(() => {
