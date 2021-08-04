@@ -4,6 +4,10 @@ const router = express.Router();
 const { Contact, Limiter, Auth } = require("@helpers/Limiters");
 const contactController = require("./controllers/ContactController");
 
+const validate = require("../../middleware/validate");
+
+const contactValidation = require("../../validations/contact.validation");
+
 const cors = require("cors");
 
 const whitelist = [
@@ -14,7 +18,7 @@ const whitelist = [
 ];
 
 const corsOptions = {
-  origin: function (origin, callback) {
+  origin: function(origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -28,6 +32,6 @@ if (process.env.NODE_ENV != "development") router.use("*", cors(corsOptions));
 router.use("/auth", Auth, require("./auth"));
 router.use("/general-settings", Limiter, require("./settings"));
 
-router.post("/contact", Contact, contactController.store);
+router.post("/contact", Contact, validate(contactValidation.contact), contactController.store);
 
 module.exports = router;

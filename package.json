@@ -36,6 +36,7 @@
     "express-subdomain": "^1.0.5",
     "helmet": "^3.18.0",
     "html-loader": "1.0.0",
+    "joi": "^17.4.2",
     "jsonwebtoken": "^8.5.1",
     "markdown-loader": "5.0.0",
     "module-alias": "^2.2.2",
