@@ -23,7 +23,6 @@
       <h2 class="subtitle-1 text-center">Loading....</h2> -->
     </div>
     <div v-else>
-     
       <!-- <transition name="fade"> -->
       <Navbar />
       <Header />
@@ -36,11 +35,11 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
-import Header from "@/components/Header.vue";
-import Portfolio from "@/components/Portfolio.vue";
-import Contact from "@/components/Contact.vue";
-import Footer from "@/components/Footer.vue";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header.vue";
+import Portfolio from "../components/Portfolio.vue";
+import Contact from "../components/Contact.vue";
+import Footer from "../components/Footer.vue";
 import { mapGetters } from "vuex";
 
 export default {
