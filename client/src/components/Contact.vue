@@ -62,7 +62,7 @@
               <v-btn color="primary" v-if="!from || !email || !body" disabled text @click="submit"
                 >Send</v-btn
               >
-              <v-btn color="primary" v-else text @click="submit">Send</v-btn>
+              <v-btn color="primary" v-else text :disabled="sending" @click="submit">Send</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -96,6 +96,7 @@ export default {
     email: "",
     subject: "",
     body: "",
+    sending: false,
   }),
   methods: {
     toggle() {
@@ -114,6 +115,7 @@ export default {
       });
     },
     submit() {
+      this.sending = true;
       const data = {
         from: this.from,
         email: this.email,
@@ -134,7 +136,6 @@ export default {
           this.$store.dispatch("toggleSnackBar", payload);
 
           this.show = false;
-
           this.contacted = true;
         })
         .catch(() => {
@@ -143,8 +144,8 @@ export default {
             text: "Please check all fields and try again.",
           };
           this.$store.dispatch("toggleSnackBar", payload);
+          this.sending = false;
         });
-      // });
     },
   },
 };
