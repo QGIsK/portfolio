@@ -4,7 +4,7 @@
   "description": "Personal website build with nodejs express vue and mongodb",
   "main": "app.js",
   "scripts": {
-    "start:server": "node app.js",
+    "start": "node app.js",
     "dev:server": "npx nodemon app.js",
     "dev:client": "vue-cli-service serve ./client/src/main.js",
     "build:client": "vue-cli-service build ./client/src/main.js --dest _static",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QGIsK/personal-website.git"
+    "url": "git+https://github.com/QGIsK/portfolio.git"
   },
   "author": "Demian",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QGIsK/personal-website/issues"
+    "url": "https://github.com/QGIsK/portfolio/issues"
   },
-  "homepage": "https://github.com/QGIsK/personal-website#readme",
+  "homepage": "https://github.com/QGIsK/portfolio#readme",
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "axios": "^0.21.1",
