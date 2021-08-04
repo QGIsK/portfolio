@@ -91,7 +91,6 @@ export default {
     timeTicks: ["7 Days", "1 Month", "3 Months", "6 Months", "1 Year"],
     smallTicks: ["7D", "1M", "3M", "6M", "1Y"],
     contacted: false,
-    white: null,
     time: 0,
     from: "",
     email: "",

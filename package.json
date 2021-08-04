@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Personal website build with nodejs express vue and mongodb",
   "main": "app.js",
   "scripts": {
@@ -42,8 +42,8 @@
     "mongoose": "^5.8.3",
     "mongoose-timestamp": "0.6.0",
     "morgan": "^1.9.1",
-    "nodemailer": "^6.4.2",
     "particles-bg-vue": "^1.2.3",
+    "nodemailer": "^6.4.16",
     "shortid": "^2.2.15",
     "valid-url": "^1.0.9",
     "vue": "^2.6.11",
