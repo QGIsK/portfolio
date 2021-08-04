@@ -1,17 +1,19 @@
 require("dotenv").config();
+require("module-alias/register");
 
 const expressSanitizer = require("express-sanitizer");
 const robots = require("express-robots-txt");
 const express = require("express");
 const helmet = require("helmet");
 const morgan = require("morgan");
-const path = require("path");
 const cors = require("cors");
+const xss = require("xss-clean");
+const mongoSanitize = require("express-mongo-sanitize");
+const subdomain = require("express-subdomain");
 
 const app = express();
 
-// require("./database/");
-const DB = require("./database/");
+require("@database/");
 
 app.use(robots("./robots.txt"));
 app.use(helmet());
@@ -20,8 +22,9 @@ app.use(morgan("dev"));
 app.use(expressSanitizer());
 app.use(express.json());
 
-app.use("/static", express.static("resources/static"));
-app.use("/public", express.static("resources/public"));
+// sanitize request data
+app.use(xss());
+app.use(mongoSanitize());
 
 app.use(
   express.urlencoded({
@@ -29,29 +32,20 @@ app.use(
   })
 );
 
+//Temp solution untill we have a permanent space -- serving as a cdn
+app.use("/static", express.static("resources/"));
+
 app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/resources/views/index.html"));
-});
-
-app.use("/api", require("./routes/"));
-
-app.get("/:code", async (req, res) => {
-  try {
-    const url = await DB.Url.findOne({ urlCode: req.params.code });
-
-    if (url) {
-      return res.redirect(url.longUrl);
-    }
-
-    return res.status(404).json("No url found");
-  } catch (err) {
-    res.status(500).json("Server error");
-  }
-});
+if (process.env.NODE_ENV === "development") {
+  app.use("/api", require("@routes/api"));
+  app.use("/go", require("@routes/redirector"));
+} else {
+  app.use(subdomain("api", require("@routes/api")));
+  app.use(subdomain("go", require("@routes/redirector")));
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, _ => console.log(`Listening on port ${PORT}`));

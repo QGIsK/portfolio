@@ -9,7 +9,6 @@ import router from "./router";
 import store from "./store/";
 
 import vuetify from "./plugins/vuetify";
-// import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "@mdi/font/css/materialdesignicons.css";
 
 Vue.config.productionTip = false;
@@ -31,11 +30,8 @@ Vue.use(VueScrollTo, {
 });
 
 Vue.prototype.$http = Axios;
-
-if (process.env.NODE_ENV === "production") Vue.prototype.$http.defaults.baseURL = "/api/";
-else Vue.prototype.$http.defaults.baseURL = "http://localhost:3000/api";
-
 Vue.prototype.$http.defaults.headers.common["Content-Type"] = "application/json";
+Vue.prototype.$http.defaults.baseURL = "https://api.demiann.dev/";
 
 new Vue({
   store,

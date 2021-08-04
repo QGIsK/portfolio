@@ -1,186 +1,30 @@
 <template>
-  <div class="bg-dark" style="margin-top:17.5vh">
+  <div class="bg-dark" style="margin-top: 17.5vh">
     <v-container class="my-5 fill-height">
       <v-fade-transition mode="out-in" appear>
-        <v-row style="margin-top:-17.5vh">
+        <v-row style="margin-top: -17.5vh">
           <v-col
+            v-for="(item, index) in items"
+            :key="index"
+            :cols="$vuetify.breakpoint.mdAndDown ? `${item.size.mdDown}` : `${item.size.mdUp}`"
             class="mx-auto"
-            :cols="$vuetify.breakpoint.mdAndDown ? 10 : 8"
-            style="z-index: 6; margin-bottom: 10vh;"
+            style="margin-bottom: 10vh; z-index: 6"
           >
-            <v-card style="background:transparent" flat>
+            <v-card style="background: transparent" flat>
               <v-hover>
                 <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="/public/images/ReviewsByMe.WebP"
-                      class="grey darken-4"
-                      alt="Image of Reviews By Me"
-                    ></v-img>
+                  <div style="position: relative">
+                    <v-img :src="item.image" class="grey darken-4" :alt="item.name"></v-img>
                     <v-fade-transition>
-                      <!-- #036358 -->
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://reviewsbyme.demiann.xyz" target="_blank"
-                          >View Website</v-btn
-                        >
+                        <v-btn :href="item.url" target="_blank">View Website</v-btn>
                       </v-overlay>
                     </v-fade-transition>
                   </div>
                 </template>
               </v-hover>
-              <v-card-title>Reviews by Me</v-card-title>
-              <v-card-text
-                >Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and
-                MongoDB</v-card-text
-              >
-            </v-card>
-          </v-col>
-
-          <!-- row -->
-          <v-col
-            :cols="$vuetify.breakpoint.mdAndDown ? 10 : 7"
-            class="mx-auto"
-            style="margin-bottom: 10vh;"
-          >
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="/public/images/ShadowBot.WebP"
-                      class="grey darken-4"
-                      alt="Image of template one"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://shadow.demiann.xyz" target="_blank"
-                          >View Website</v-btn
-                        >
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-
-              <v-card-title>Shadow bot</v-card-title>
-              <v-card-text
-                >Website for the Shadow Discord bot <br />
-                Made with Vue and NodeJS</v-card-text
-              >
-            </v-card>
-          </v-col>
-
-          <v-col
-            :cols="$vuetify.breakpoint.mdAndDown ? 10 : 4"
-            class="mx-auto"
-            style="margin-bottom: 10vh;"
-          >
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="/public/images/TemplateOne.WebP"
-                      class="grey darken-4"
-                      alt="Image of template one"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="https://template-one.demiann.xyz" target="_blank"
-                          >View Website</v-btn
-                        >
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-              <v-card-title>Template One</v-card-title>
-              <v-card-text>Is Made with Vue, Express, NodeJS and MongoDB</v-card-text>
-            </v-card>
-          </v-col>
-
-          <!-- row -->
-
-          <v-col
-            :cols="$vuetify.breakpoint.mdAndDown ? 10 : 8"
-            class="mx-auto"
-            style="margin-bottom: 10vh;"
-          >
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                      class="grey darken-4"
-                      alt="Temp image"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-              <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with Vue and NodeJS</v-card-text>
-            </v-card>
-          </v-col>
-
-          <!-- row -->
-
-          <v-col
-            :cols="$vuetify.breakpoint.mdAndDown ? 10 : 5"
-            class="mx-auto"
-            style="margin-bottom: 10vh;"
-          >
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                      class="grey darken-4"
-                      alt="Temp image"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-              <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with Vue and NodeJS</v-card-text>
-            </v-card>
-          </v-col>
-
-          <v-col
-            :cols="$vuetify.breakpoint.mdAndDown ? 10 : 6"
-            class="mx-auto"
-            style="margin-bottom: 10vh;"
-          >
-            <v-card style="background:transparent" flat>
-              <v-hover>
-                <template v-slot:default="{ hover }">
-                  <div style="position:relative">
-                    <v-img
-                      src="https://images.unsplash.com/photo-1468366141642-e5ea3a6738f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
-                      class="grey darken-4"
-                      alt="Temp image"
-                    ></v-img>
-                    <v-fade-transition>
-                      <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn href="#" disabled target="_blank">View Website</v-btn>
-                      </v-overlay>
-                    </v-fade-transition>
-                  </div>
-                </template>
-              </v-hover>
-              <v-card-title>Portfolio</v-card-title>
-              <v-card-text>Made with Vue and NodeJS</v-card-text>
+              <v-card-title>{{ item.name }}</v-card-title>
+              <v-card-text v-html="item.about"></v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -191,8 +35,67 @@
 
 <script>
 /* eslint-disable */
+import { mapGetters } from "vuex";
+
 export default {
   name: "Portfolio",
-  data: () => ({}),
+  data: () => ({
+    portfolioItems: [
+      {
+        name: "Bassen Met Lasse",
+        about: "Website for Bassen Met Lasse, Made with VueJS and NodeJS",
+        mdDown: 10,
+        mdUp: 8,
+        link: "https://www.bassenmetlasse.nl",
+        image: "https://api.demiann.dev/static/images/BassenMetLasse.WebP",
+      },
+      {
+        name: "Reviews by Me",
+        about:
+          "Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and MongoDB",
+        mdDown: 10,
+        mdUp: 7,
+        link: "https://reviewsbyme.demiann.dev",
+        image: "https://api.demiann.dev/static/images/ReviewsByMe.WebP",
+      },
+      {
+        name: "Shadow bot",
+        about: "Website for the Shadow Discord bot <br />Made with Vue and NodeJS",
+        mdDown: 10,
+        mdUp: 4,
+        link: "https://shadow.demiann.dev",
+        image: "https://api.demiann.dev/static/images/ShadowBot.WebP",
+      },
+      {
+        name: "Template One",
+        about: "Is Made with Vue, Express, NodeJS and MongoDB",
+        mdDown: 10,
+        mdUp: 8,
+        link: "https://template-one.demiann.dev",
+        image: "https://api.demiann.dev/static/images/TemplateOne.WebP",
+      },
+      // {
+      //   name: "Template One",
+      //   about: "Is Made with Vue, Express, NodeJS and MongoDB",
+      //   mdDown: 10,
+      //   mdUp: 5,
+      //   link: "https://shadow.demiann.dev",
+      //   image: "https://api.demiann.dev/static/images/TemplateOne.WebP",
+      // },
+      // {
+      //   name: "Template One",
+      //   about: "Is Made with Vue, Express, NodeJS and MongoDB",
+      //   mdDown: 10,
+      //   mdUp: 6,
+      //   link: "https://shadow.demiann.dev",
+      //   image: "https://api.demiann.dev/static/images/TemplateOne.WebP",
+      // },
+    ],
+  }),
+  computed: {
+    ...mapGetters({
+      items: "items",
+    }),
+  },
 };
 </script>

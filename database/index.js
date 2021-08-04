@@ -12,6 +12,7 @@ mongoose
   .catch(err => console.log(err));
 
 module.exports = {
-  Contact: require("./models/Contact"),
   Url: require("./models/Url"),
+  PortfolioItems: require("./models/PortfolioItems"),
+  Admin: require("./models/Admin"),
 };

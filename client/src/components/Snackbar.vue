@@ -1,14 +1,7 @@
 <template>
   <div>
     <v-card>
-      <v-snackbar
-        v-model="show"
-        :color="type"
-        right="right"
-        :timeout="timeout"
-        top="top"
-        :vertical="mode === 'vertical'"
-      >
+      <v-snackbar v-model="show" :color="type" right="right" :timeout="timeout" top="top">
         {{ text }}
         <v-btn color text @click="toggleSnackBar">Close</v-btn>
       </v-snackbar>
@@ -21,8 +14,6 @@ export default {
   name: "snackbar",
   data() {
     return {
-      mode: "",
-      color: "success",
       timeout: 3000,
     };
   },

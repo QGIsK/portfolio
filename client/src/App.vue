@@ -1,25 +1,11 @@
 <template>
   <v-app>
-    <Navbar />
-    <!-- <v-toolbar flat style="background: #171717">
-
-      <v-toolbar-title class="ml-5">Title</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon class="mx-3">
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon class="mx-3">
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon class="mx-3">
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-    </v-toolbar>
-    -->
+    <v-card>
+      <v-snackbar v-model="show" color="blue-grey" shaped :timeout="-1" right="right">
+        This website may use cookies. <v-btn text to="/policy/cookie-statement">Read More</v-btn>
+        <v-btn color text @click="toggleSnackBar">Close</v-btn>
+      </v-snackbar>
+    </v-card>
     <Snackbar />
     <transition name="fade">
       <router-view></router-view>
@@ -28,17 +14,19 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar";
-import Snackbar from "@/components/Snackbar";
+import Snackbar from "./components/Snackbar";
 
 export default {
   name: "App",
 
-  components: { Navbar, Snackbar },
+  components: { Snackbar },
 
-  data: () => ({
-    //
-  }),
+  data: () => ({ show: true }),
+  methods: {
+    toggleSnackBar() {
+      this.show = !this.show;
+    },
+  },
 };
 </script>
 
@@ -50,16 +38,13 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  /* transition: opacity 0.2s; */
   transition-property: opacity;
   transition-timing-function: ease-in-out;
   transition-duration: 250ms;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
-}
-body {
-  font-family: "Comfortaa" !important;
 }
 
 .bg-dark {
