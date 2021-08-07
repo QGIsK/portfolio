@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QGIsK/personal-website.git"
+    "url": "git+https://github.com/QGIsK/portfolio.git"
   },
   "author": "Demian",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QGIsK/personal-website/issues"
+    "url": "https://github.com/QGIsK/portfolio/issues"
   },
-  "homepage": "https://github.com/QGIsK/personal-website#readme",
+  "homepage": "https://github.com/QGIsK/portfolio#readme",
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "axios": "^0.21.1",

@@ -1,15 +1,16 @@
-require('dotenv').config();
-require('module-alias/register');
+require("dotenv").config();
+require("module-alias/register");
 
-const expressSanitizer = require('express-sanitizer');
-const robots = require('express-robots-txt');
-const express = require('express');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const cors = require('cors');
-const xss = require('xss-clean');
-const mongoSanitize = require('express-mongo-sanitize');
-const subdomain = require('express-subdomain');
+const expressSanitizer = require("express-sanitizer");
+const robots = require("express-robots-txt");
+const express = require("express");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const cors = require("cors");
+const path = require("path");
+const xss = require("xss-clean");
+const mongoSanitize = require("express-mongo-sanitize");
+const subdomain = require("express-subdomain");
 
 const app = express();
 
@@ -32,9 +33,6 @@ app.use(
   })
 );
 
-// Temp solution untill we have a permanent space -- serving as a cdn
-app.use('/static', express.static('resources/'));
-
 app.use((req, res, next) => {
   next();
 });
@@ -46,6 +44,14 @@ if (process.env.NODE_ENV === 'development') {
   app.use(subdomain('api', require('@routes/api')));
   app.use(subdomain('go', require('@routes/redirector')));
 }
+
+app.use("/static", express.static("resources/"));
+app.use("/css", express.static("_static/css"));
+app.use("/js", express.static("_static/js"));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/_static/index.html"));
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

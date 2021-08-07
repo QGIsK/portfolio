@@ -29,9 +29,15 @@ const routes = [
     name: 'PrivacyPolicy',
     component: PrivacyPolicy,
   },
+  {
+    path: "*",
+    name: "404",
+    redirect: "/",
+  },
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes,
 });
 
