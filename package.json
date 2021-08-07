@@ -7,7 +7,7 @@
     "start": "node app.js",
     "dev:server": "cross-env NODE_ENV=development nodemon app.js",
     "dev:client": "vue-cli-service serve ./client/src/main.js",
-    "build:client": "vue-cli-service build ./client/src/main.js --dest _static",
+    "build": "vue-cli-service build ./client/src/main.js --dest _static",
     "seed:auth": "node ./database/seeds/auth.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
