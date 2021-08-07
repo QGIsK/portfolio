@@ -38,10 +38,11 @@
     }
   },
   "rules": {
-    "no-console": "error",
+    "no-console": 0,
     "func-names": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
-    "security/detect-object-injection": "off"
+    "security/detect-object-injection": "off",
+    "global-require":"off"
   }
 }
