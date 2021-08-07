@@ -1,0 +1,32 @@
+name: Lint and Prettier
+on: pull_request
+
+jobs:
+  run:
+    name: Lint with ESLint and Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Prettier
+        run: npm run prettier:fix
+
+      - name: Run eslint
+        run: npm run lint:fix
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: Demian
+          author_email: devaccdemiann@gmail.com
+          message: 'Run: eslint and prettier'
+          add: '.'
