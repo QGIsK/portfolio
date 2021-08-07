@@ -1,4 +1,5 @@
 node_modules
 _static
-bin
+resources/images
 client
+bin
