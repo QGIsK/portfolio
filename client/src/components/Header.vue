@@ -1,12 +1,6 @@
 <template>
   <div>
-    <particles-bg
-      type="cobweb"
-      :bg="true"
-      num="100"
-      :color="white"
-      style="z-index: 1; max-height: 80vh"
-    />
+    <particles-bg type="cobweb" :bg="true" num="100" style="z-index: 1; max-height: 80vh" />
     <v-container my-5>
       <v-row>
         <v-col :cols="$vuetify.breakpoint.sm ? 6 : 12">
@@ -35,8 +29,7 @@
 
 <script>
 export default {
-  name: "Header",
-  data: () => ({ white: null }),
+  name: 'Header',
   methods: {},
 };
 </script>

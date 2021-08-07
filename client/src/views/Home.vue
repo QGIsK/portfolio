@@ -5,7 +5,6 @@
         type="cobweb"
         :bg="true"
         num="100"
-        :color="white"
         style="z-index: 1; max-height: 100vh"
       />
       <div class="sk-cube-grid">
