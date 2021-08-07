@@ -37,11 +37,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/api', require('@routes/api'));
+
 if (process.env.NODE_ENV === 'development') {
-  app.use('/api', require('@routes/api'));
   app.use('/go', require('@routes/redirector'));
 } else {
-  app.use(subdomain('api', require('@routes/api')));
   app.use(subdomain('go', require('@routes/redirector')));
 }
 
