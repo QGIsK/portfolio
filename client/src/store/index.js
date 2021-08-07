@@ -1,33 +1,33 @@
-import Vue from "vue";
-import Vuex from "vuex";
-import Axios from "axios";
+import Vue from 'vue';
+import Vuex from 'vuex';
+import Axios from 'axios';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
     snackbarActive: false,
-    snackbarText: "",
-    snackbarType: "",
-    status: "",
+    snackbarText: '',
+    snackbarType: '',
+    status: '',
     items: [],
   },
   actions: {
     toggleSnackBar({ commit }, { type, text }) {
-      commit("toggleSnackBar", {
+      commit('toggleSnackBar', {
         type,
         text,
       });
     },
     getGeneralSettings({ commit }) {
-      commit("setStatus", "loading");
-      Axios.get("/general-settings")
-        .then(res => {
-          commit("setSettings", { items: res.data.portfolioItems });
+      commit('setStatus', 'loading');
+      Axios.get('/general-settings')
+        .then((res) => {
+          commit('setSettings', { items: res.data.portfolioItems });
         })
         .finally(() => {
           setTimeout(() => {
-            commit("setStatus", "");
+            commit('setStatus', '');
           }, 350);
         });
     },
@@ -46,10 +46,10 @@ export default new Vuex.Store({
     },
   },
   getters: {
-    snackbarActive: state => state.snackbarActive,
-    snackbarText: state => state.snackbarText,
-    snackbarType: state => state.snackbarType,
-    status: state => state.status,
-    items: state => state.items,
+    snackbarActive: (state) => state.snackbarActive,
+    snackbarText: (state) => state.snackbarText,
+    snackbarType: (state) => state.snackbarType,
+    status: (state) => state.status,
+    items: (state) => state.items,
   },
 });

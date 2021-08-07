@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-mongoose.set("debug", process.env.MONGO_DEBUG);
+mongoose.set('debug', process.env.MONGO_DEBUG);
 
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -8,11 +8,11 @@ mongoose
     useUnifiedTopology: true,
     // useFindAndModify: false,
   })
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log(err));
+  .then(() => console.log('MongoDB Connected'))
+  .catch((err) => console.log(err));
 
 module.exports = {
-  Url: require("./models/Url"),
-  PortfolioItems: require("./models/PortfolioItems"),
-  Admin: require("./models/Admin"),
+  Url: require('./models/Url'),
+  PortfolioItems: require('./models/PortfolioItems'),
+  Admin: require('./models/Admin'),
 };

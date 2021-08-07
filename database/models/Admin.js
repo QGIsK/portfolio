@@ -1,6 +1,6 @@
-//dependencies
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+// dependencies
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const AdminSchema = mongoose.Schema({
   name: {
@@ -17,24 +17,24 @@ const AdminSchema = mongoose.Schema({
   },
 });
 
-AdminSchema.pre("save", function (next) {
-  let admin = this;
+AdminSchema.pre('save', function (next) {
+  const admin = this;
 
-  if (admin.isModified("email")) {
+  if (admin.isModified('email')) {
     admin.email = admin.email.toLowerCase();
   }
 
-  if (admin.isModified("password")) {
+  if (admin.isModified('password')) {
     admin.password = bcrypt.hashSync(admin.password, 10);
   }
 
   next();
 });
 
-AdminSchema.methods.comparePassword = function (plaintext, callback) {
+AdminSchema.methods.comparePassword = function (plaintext) {
   return bcrypt.compareSync(plaintext, this.password);
 };
 
-const Admin = mongoose.model("Admin", AdminSchema);
+const Admin = mongoose.model('Admin', AdminSchema);
 
 module.exports = Admin;

@@ -1,0 +1,48 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": ["airbnb-base", "plugin:security/recommended", "plugin:prettier/recommended", "plugin:import/recommended"],
+  "plugins": [ "security", "prettier", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@root",
+            "./"
+          ],
+          [
+            "@database",
+            "./database"
+          ],
+          [
+            "@helpers",
+            "./helpers"
+          ],[
+            "@routes",
+            "./routes"
+          ],[
+            "@middleware",
+            "./middleware"
+          ],
+          [
+            "@components",
+            "./client/src/components"
+          ]
+        ]
+      }
+    }
+  },
+  "rules": {
+    "no-console": 0,
+    "func-names": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "security/detect-object-injection": "off",
+    "global-require":"off"
+  }
+}

@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const PortfolioItemsSchema = new mongoose.Schema({
   shown: {
@@ -20,22 +20,22 @@ const PortfolioItemsSchema = new mongoose.Schema({
   },
   name: {
     type: String,
-    default: "",
+    default: '',
     required: true,
   },
   about: {
     type: String,
-    default: "Made with NodeJS And VueJS",
+    default: 'Made with NodeJS And VueJS',
     required: true,
   },
   image: {
     type: String,
-    default: "https://api.demiann.dev/static/images/Placeholder.WebP",
+    default: 'https://api.demiann.dev/static/images/Placeholder.WebP',
     required: true,
   },
   url: {
     type: String,
-    default: "#",
+    default: '#',
     required: true,
   },
   order: {
@@ -45,4 +45,4 @@ const PortfolioItemsSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("PortfolioItems", PortfolioItemsSchema);
+module.exports = mongoose.model('PortfolioItems', PortfolioItemsSchema);
