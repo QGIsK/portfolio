@@ -1,14 +1,14 @@
 require('dotenv').config();
 require('module-alias/register');
 
-const expressSanitizer = require('express-sanitizer');
 const robots = require('express-robots-txt');
 const express = require('express');
 const helmet = require('helmet');
-const morgan = require('morgan');
 const cors = require('cors');
 const path = require('path');
+const compression = require('compression');
 const xss = require('xss-clean');
+const morgan = require('@helpers/morgan');
 const mongoSanitize = require('express-mongo-sanitize');
 const subdomain = require('express-subdomain');
 
@@ -16,22 +16,32 @@ const app = express();
 
 require('@database/');
 
-app.use(robots('./robots.txt'));
+// set security HTTP headers
 app.use(helmet());
-app.use(cors());
-app.use(morgan('dev'));
-app.use(expressSanitizer());
+
+// parse json request body
 app.use(express.json());
+
+// parse urlencoded request body
+app.use(express.urlencoded({ extended: true }));
 
 // sanitize request data
 app.use(xss());
 app.use(mongoSanitize());
 
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
+// gzip compression
+app.use(compression());
+
+// enable cors
+app.use(cors());
+app.options('*', cors());
+
+app.use(robots('./robots.txt'));
+
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan.successHandler);
+  app.use(morgan.errorHandler);
+}
 
 app.use((req, res, next) => {
   next();

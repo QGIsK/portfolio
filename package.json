@@ -28,6 +28,7 @@
     "@mdi/font": "^3.6.95",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "core-js": "^3.4.3",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -58,6 +59,7 @@
     "vue-scrollto": "^2.20.0",
     "vuetify": "^2.4.0",
     "vuex": "^3.4.0",
+    "winston": "^3.3.3",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
