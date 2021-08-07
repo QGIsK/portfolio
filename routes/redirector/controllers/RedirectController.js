@@ -1,7 +1,7 @@
-const validUrl = require("valid-url");
-const shortid = require("shortid");
+const validUrl = require('valid-url');
+const shortid = require('shortid');
 
-const DB = require("@database");
+const DB = require('@database');
 
 exports.index = async (req, res) => {
   try {
@@ -11,9 +11,9 @@ exports.index = async (req, res) => {
       return res.redirect(url.longUrl);
     }
 
-    return res.status(404).json("No url found");
+    return res.status(404).json('No url found');
   } catch (err) {
-    res.status(500).json("Server error");
+    res.status(500).json('Server error');
   }
 };
 
@@ -21,8 +21,8 @@ exports.store = async (req, res) => {
   try {
     const { longUrl, shortUrl } = req.body;
 
-    if (!validUrl.isUri(`${req.protocol}://${req.get("host")}`)) {
-      return res.status(401).json("Invalid base url");
+    if (!validUrl.isUri(`${req.protocol}://${req.get('host')}`)) {
+      return res.status(401).json('Invalid base url');
     }
 
     const urlCode = !shortUrl ? shortid.generate() : shortUrl;
@@ -36,11 +36,11 @@ exports.store = async (req, res) => {
         return res.json(url);
       }
 
-      const shortUrl = `${req.protocol}://${req.get("host")}/api/r/${urlCode}`;
+      const shortUrlDOC = `${req.protocol}://${req.get('host')}/api/r/${urlCode}`;
 
       url = new DB.Url({
         longUrl,
-        shortUrl,
+        shortUrl: shortUrlDOC,
         urlCode,
         date: new Date(),
       });
@@ -49,9 +49,9 @@ exports.store = async (req, res) => {
 
       return res.json(url);
     }
-    res.status(401).json("Invalid long url");
+    res.status(401).json('Invalid long url');
   } catch (err) {
     console.log(err);
-    res.status(500).json("Server error");
+    res.status(500).json('Server error');
   }
 };

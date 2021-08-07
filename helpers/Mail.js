@@ -1,8 +1,8 @@
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 
 const { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS } = process.env;
 
-let transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   host: EMAIL_HOST,
   port: EMAIL_PORT,
   secure: true,
@@ -17,13 +17,13 @@ let transporter = nodemailer.createTransport({
   logger: true,
 });
 
-exports.send = mail => {
+exports.send = (mail) => {
   return new Promise((resolve, reject) => {
-    let mailOptions = mail;
-    transporter.sendMail(mailOptions, e => {
+    const mailOptions = mail;
+    transporter.sendMail(mailOptions, (e) => {
       if (e) reject(e);
       else {
-        console.log("Email send");
+        console.log('Email send');
         resolve();
       }
     });

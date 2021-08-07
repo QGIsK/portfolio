@@ -1,4 +1,4 @@
-const DB = require("@database");
+const DB = require('@database');
 
 exports.index = async (req, res) => {
   try {
@@ -7,8 +7,8 @@ exports.index = async (req, res) => {
     res.status(200).json({ portfolioItems });
   } catch (err) {
     console.log(err);
-    res.status(500).json("Server error");
+    res.status(500).json('Server error');
   }
 };
 
-exports.store = async (req, res) => {};
+exports.store = async () => {};
