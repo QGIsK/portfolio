@@ -1,6 +1,7 @@
 const nodemailer = require('nodemailer');
+const logger = require('./logger');
 
-const { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS } = process.env;
+const { EMAIL_DEBUG, EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS } = process.env;
 
 const transporter = nodemailer.createTransport({
   host: EMAIL_HOST,
@@ -13,19 +14,22 @@ const transporter = nodemailer.createTransport({
   tls: {
     rejectUnauthorized: false,
   },
-  debug: true,
-  logger: true,
+  debug: EMAIL_DEBUG,
+  logger: EMAIL_DEBUG,
 });
+
+transporter
+  .verify()
+  .then(() => logger.info('Connected to email server'))
+  .catch(() => logger.warn('Unable to connect to email server. Make sure you have configured the SMTP options in .env'));
 
 exports.send = (mail) => {
   return new Promise((resolve, reject) => {
     const mailOptions = mail;
     transporter.sendMail(mailOptions, (e) => {
-      if (e) reject(e);
-      else {
-        console.log('Email send');
-        resolve();
-      }
+      if (e) return reject(e);
+      logger.info('Email has been send');
+      resolve();
     });
   });
 };

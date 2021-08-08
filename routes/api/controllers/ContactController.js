@@ -1,4 +1,5 @@
 const Mail = require('@helpers/Mail');
+const logger = require('@helpers/logger');
 
 const mailTo = process.env.MAIL_TO;
 
@@ -20,11 +21,11 @@ exports.store = async (req, res) => {
         res.status(200).json({ message: 'Email has been send!' });
       })
       .catch((e) => {
-        console.log(e);
+        logger.warn(e);
         res.status(500).json('Server error');
       });
-  } catch (err) {
-    console.log(err);
+  } catch (e) {
+    logger.warn(e);
     res.status(500).json('Server error');
   }
 };

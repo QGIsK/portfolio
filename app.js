@@ -11,6 +11,7 @@ const xss = require('xss-clean');
 const morgan = require('@helpers/morgan');
 const mongoSanitize = require('express-mongo-sanitize');
 const subdomain = require('express-subdomain');
+const logger = require('@helpers/logger');
 
 const app = express();
 
@@ -64,4 +65,4 @@ app.get('*', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+app.listen(PORT, () => logger.info(`Listening on port ${PORT}`));

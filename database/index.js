@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const logger = require('@helpers/logger');
 
 mongoose.set('debug', process.env.MONGO_DEBUG);
 
@@ -8,8 +9,11 @@ mongoose
     useUnifiedTopology: true,
     // useFindAndModify: false,
   })
-  .then(() => console.log('MongoDB Connected'))
-  .catch((err) => console.log(err));
+  .then(() => logger.info('MongoDB connected'))
+  .catch((err) => {
+    logger.warn(err);
+    process.exit(1);
+  });
 
 module.exports = {
   Url: require('./models/Url'),
