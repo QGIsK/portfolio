@@ -1,5 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
+const path = require('path');
 const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
@@ -47,15 +48,23 @@ passport.use('jwt', jwtStrategy);
 
 // limit repeated failed requests to auth endpoints
 if (config.env === 'production') {
-  app.use('/v1/auth', authLimiter);
+  app.use('/api/auth', authLimiter);
 }
 
 // v1 api routes
-app.use('/v1', routes);
+app.use('/api/', routes);
 
 // send back a 404 error for any unknown api request
-app.use((req, res, next) => {
+app.use('/api', (req, res, next) => {
   next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
+});
+
+app.use('/static', express.static('_static/'));
+app.use('/css', express.static('_dist/css'));
+app.use('/js', express.static('_dist/js'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(`${__dirname}/_dist/index.html`));
 });
 
 // convert error to ApiError, if needed
