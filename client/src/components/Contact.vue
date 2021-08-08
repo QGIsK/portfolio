@@ -73,7 +73,7 @@ export default {
     show: true,
     timeTicks: ['7 Days', '1 Month', '3 Months', '6 Months', '1 Year', 'More than 1 Year'],
     smallTicks: ['7D', '1M', '3M', '6M', '1Y', '1Y+'],
-    time: this.timeTicks[0],
+    time: '7 Days',
     contacted: false,
     from: '',
     email: '',
