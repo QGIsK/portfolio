@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "snackbar",
+  name: 'snackbar',
   data() {
     return {
       timeout: 3000,
@@ -24,10 +24,10 @@ export default {
       },
       set() {
         let payload = {
-          type: "",
-          text: "",
+          type: '',
+          text: '',
         };
-        this.$store.dispatch("toggleSnackBar", payload);
+        this.$store.dispatch('toggleSnackBar', payload);
       },
     },
     text: {
@@ -44,10 +44,10 @@ export default {
   methods: {
     toggleSnackBar() {
       let payload = {
-        type: "",
-        text: "",
+        type: '',
+        text: '',
       };
-      this.$store.dispatch("toggleSnackBar", payload);
+      this.$store.dispatch('toggleSnackBar', payload);
     },
   },
 };

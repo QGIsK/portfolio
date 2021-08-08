@@ -1,9 +1,10 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "jest": true
   },
-  "extends": ["airbnb-base", "plugin:security/recommended", "plugin:prettier/recommended", "plugin:import/recommended"],
-  "plugins": [ "security", "prettier", "import"],
+  "extends": ["airbnb-base", "plugin:jest/recommended", "plugin:security/recommended", "plugin:prettier/recommended", "plugin:import/recommended"],
+  "plugins": ["jest", "security", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2018
   },
@@ -16,18 +17,38 @@
             "./"
           ],
           [
-            "@database",
-            "./database"
+            "@config",
+            "./src/config"
           ],
           [
-            "@helpers",
-            "./helpers"
+            "@controllers",
+            "./src/controllers"
+          ],
+          [
+            "@docs",
+            "./src/docs"
+          ],
+          [
+            "@middlewares",
+            "./src/middlewares"
+          ],[
+            "@models",
+            "./src/models"
           ],[
             "@routes",
-            "./routes"
-          ],[
-            "@middleware",
-            "./middleware"
+            "./src/routes"
+          ],
+          [
+            "@services",
+            "./src/services"
+          ],
+          [
+            "@utils",
+            "./src/utils"
+          ],
+          [
+            "@validations",
+            "./src/validations"
           ],
           [
             "@validations",
@@ -42,11 +63,11 @@
     }
   },
   "rules": {
-    "no-console": 0,
+    "no-console": "error",
     "func-names": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
-    "security/detect-object-injection": "off",
-    "global-require":"off"
+    "jest/expect-expect": "off",
+    "security/detect-object-injection": "off"
   }
 }

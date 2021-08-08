@@ -1,12 +1,7 @@
 <template>
   <div class="home">
     <div v-if="status == 'loading'">
-      <particles-bg
-        type="cobweb"
-        :bg="true"
-        num="100"
-        style="z-index: 1; max-height: 100vh"
-      />
+      <particles-bg type="cobweb" :bg="true" num="100" style="z-index: 1; max-height: 100vh" />
       <div class="sk-cube-grid">
         <div class="sk-cube sk-cube1"></div>
         <div class="sk-cube sk-cube2"></div>
@@ -34,15 +29,15 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar";
-import Header from "../components/Header.vue";
-import Portfolio from "../components/Portfolio.vue";
-import Contact from "../components/Contact.vue";
-import Footer from "../components/Footer.vue";
-import { mapGetters } from "vuex";
+import Navbar from '../components/Navbar';
+import Header from '../components/Header.vue';
+import Portfolio from '../components/Portfolio.vue';
+import Contact from '../components/Contact.vue';
+import Footer from '../components/Footer.vue';
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "home",
+  name: 'home',
 
   data: () => ({}),
 
@@ -55,13 +50,13 @@ export default {
   },
 
   created() {
-    this.$store.dispatch("getGeneralSettings");
+    this.$store.dispatch('getGeneralSettings');
   },
 
   computed: {
     ...mapGetters({
-      status: "status",
-      items: "items",
+      status: 'status',
+      items: 'items',
     }),
   },
 };

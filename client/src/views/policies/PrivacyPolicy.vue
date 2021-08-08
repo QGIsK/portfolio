@@ -6,17 +6,17 @@
 </template>
 
 <script>
-import ReadMe from "../../components/policies/Readme";
-import ReadMD from "../../assets/policies/PrivacyPolicy.md";
+import ReadMe from '../../components/policies/Readme';
+import ReadMD from '../../assets/policies/PrivacyPolicy.md';
 export default {
-  name: "PrivacyPolicy",
+  name: 'PrivacyPolicy',
   components: {
     ReadMe,
   },
   data() {
     return {
-      title: "Privacy Policy",
-      data: "",
+      title: 'Privacy Policy',
+      data: '',
     };
   },
   created() {

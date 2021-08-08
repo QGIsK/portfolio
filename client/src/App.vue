@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import Snackbar from "./components/Snackbar";
+import Snackbar from './components/Snackbar';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: { Snackbar },
 
@@ -33,7 +33,7 @@ export default {
 <style>
 .theme--dark.v-application {
   background: #171717 !important;
-  font-family: "Comfortaa" !important;
+  font-family: 'Comfortaa' !important;
 }
 
 .fade-enter-active,
