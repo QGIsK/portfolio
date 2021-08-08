@@ -10,6 +10,7 @@ const passport = require('passport');
 const httpStatus = require('http-status');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
+const csp = require('./config/csp');
 const { jwtStrategy } = require('./config/passport');
 const { authLimiter, contactLimiter } = require('./middlewares/rateLimiter');
 const routes = require('./routes/api');
@@ -30,20 +31,8 @@ app.use(
   })
 );
 
-const scriptSrcUrls = ['https://analytics.demiann.dev/js/plausible.js'];
-const styleSrcUrls = [
-  'https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css',
-  'https://fonts.googleapis.com/css?family=Comfortaa',
-];
-
-const contentSecurityPolicy = [
-  `script-src 'unsafe-eval'  'self' ${scriptSrcUrls.join(' ')}`,
-  `style-src 'unsafe-inline' 'self' ${styleSrcUrls.join(' ')}`,
-  `object-src 'none'`,
-].join(';');
-
 app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', contentSecurityPolicy);
+  res.setHeader('Content-Security-Policy', csp);
   next();
 });
 
