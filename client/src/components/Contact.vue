@@ -5,13 +5,7 @@
         <v-col :cols="$vuetify.breakpoint.mdAndDown ? 12 : 8" class="mx-auto" v-if="!contacted">
           <v-card
             elevation="0"
-            style="
-              margin-top: 10vh;
-              margin-bottom: 10vh;
-              background: transparent;
-              font-size: 1.5em;
-              line-height: 1.5em;
-            "
+            style="margin-top: 10vh; margin-bottom: 10vh; background: transparent; font-size: 1.5em; line-height: 1.5em"
           >
             <v-card-title>
               <h2>Contact</h2>
@@ -35,13 +29,7 @@
                 required
               ></v-text-field>
 
-              <v-textarea
-                v-model="body"
-                label="Tell me about your project"
-                counter
-                maxlength="500"
-                single-line
-              ></v-textarea>
+              <v-textarea v-model="text" label="Tell me about your project" counter maxlength="500" single-line></v-textarea>
 
               <v-subheader style="margin-left: -1.5vh">What's your deadline like?</v-subheader>
 
@@ -59,18 +47,13 @@
               <v-btn @click="resetForm" text>Reset form</v-btn>
               <v-spacer></v-spacer>
 
-              <v-btn color="primary" v-if="!from || !email || !body" disabled text @click="submit"
-                >Send</v-btn
-              >
+              <v-btn color="primary" v-if="!from || !email || !text" disabled text @click="submit">Send</v-btn>
               <v-btn color="primary" v-else text :disabled="sending" @click="submit">Send</v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
         <v-col cols="12" class="mx-auto" text v-else>
-          <v-card
-            elevation="0"
-            style="background: transparent; margin-top: 25vh; margin-bottom: 25vh"
-          >
+          <v-card elevation="0" style="background: transparent; margin-top: 25vh; margin-bottom: 25vh">
             <v-card-title class="mx-auto headline">
               <h2 class="mx-auto">Thanks for Contacting me.</h2>
             </v-card-title>
@@ -84,18 +67,18 @@
 
 <script>
 export default {
-  name: "Contact",
+  name: 'Contact',
   components: {},
   data: () => ({
     show: true,
-    timeTicks: ["7 Days", "1 Month", "3 Months", "6 Months", "1 Year"],
-    smallTicks: ["7D", "1M", "3M", "6M", "1Y"],
+    timeTicks: ['7 Days', '1 Month', '3 Months', '6 Months', '1 Year', 'More than 1 Year'],
+    smallTicks: ['7D', '1M', '3M', '6M', '1Y', '1Y+'],
+    time: this.timeTicks[0],
     contacted: false,
-    time: 0,
-    from: "",
-    email: "",
-    subject: "",
-    body: "",
+    from: '',
+    email: '',
+    subject: '',
+    text: '',
     sending: false,
   }),
   methods: {
@@ -104,11 +87,12 @@ export default {
       this.about = !this.about;
     },
     resetForm() {
-      this.from = "";
-      this.email = "";
-      this.subject = "";
-      this.body = "";
-      this.time = "7d";
+      this.from = '';
+      this.email = '';
+      this.subject = '';
+      this.text = '';
+      this.time = this.timeTicks[0];
+
       this.show = false;
       this.$nextTick(() => {
         this.show = true;
@@ -120,30 +104,30 @@ export default {
         from: this.from,
         email: this.email,
         time: this.timeTicks[this.time],
-        body: this.body,
+        text: this.text,
       };
       this.$http({
-        url: "/contact",
+        url: '/contact',
         data,
-        method: "POST",
+        method: 'POST',
       })
         .then(() => {
           this.resetForm();
           let payload = {
-            type: "green",
-            text: "Message has been send!",
+            type: 'green',
+            text: 'Message has been send!',
           };
-          this.$store.dispatch("toggleSnackBar", payload);
+          this.$store.dispatch('toggleSnackBar', payload);
 
           this.show = false;
           this.contacted = true;
         })
         .catch(() => {
           let payload = {
-            type: "red",
-            text: "Please check all fields and try again.",
+            type: 'red',
+            text: 'Please check all fields and try again.',
           };
-          this.$store.dispatch("toggleSnackBar", payload);
+          this.$store.dispatch('toggleSnackBar', payload);
           this.sending = false;
         });
     },
