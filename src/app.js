@@ -2,6 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const path = require('path');
 const xss = require('xss-clean');
+const robots = require('express-robots-txt');
 const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
@@ -10,7 +11,7 @@ const httpStatus = require('http-status');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
 const { jwtStrategy } = require('./config/passport');
-const { authLimiter } = require('./middlewares/rateLimiter');
+const { authLimiter, contactLimiter } = require('./middlewares/rateLimiter');
 const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
@@ -42,6 +43,8 @@ app.use(compression());
 app.use(cors());
 app.options('*', cors());
 
+app.use(robots('./robots.txt'));
+
 // jwt authentication
 app.use(passport.initialize());
 passport.use('jwt', jwtStrategy);
@@ -49,6 +52,7 @@ passport.use('jwt', jwtStrategy);
 // limit repeated failed requests to auth endpoints
 if (config.env === 'production') {
   app.use('/api/auth', authLimiter);
+  app.use('/api/contact', contactLimiter);
 }
 
 // v1 api routes
@@ -59,12 +63,12 @@ app.use('/api', (req, res, next) => {
   next(new ApiError(httpStatus.NOT_FOUND, 'Not found'));
 });
 
-app.use('/static', express.static('_static/'));
-app.use('/css', express.static('_dist/css'));
-app.use('/js', express.static('_dist/js'));
+app.use('/static', express.static(path.join(__dirname, '../_static/')));
+app.use('/css', express.static(path.join(__dirname, '../_dist/css')));
+app.use('/js', express.static(path.join(__dirname, '../_dist/js')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(`${__dirname}/_dist/index.html`));
+  res.sendFile(path.join(`${__dirname}/../_dist/index.html`));
 });
 
 // convert error to ApiError, if needed
