@@ -43,6 +43,7 @@ app.use(compression());
 app.use(cors());
 app.options('*', cors());
 
+// use robots file
 app.use(robots('./robots.txt'));
 
 // jwt authentication
