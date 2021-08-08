@@ -6,17 +6,17 @@
 </template>
 
 <script>
-import ReadMe from "../../components/policies/Readme";
-import ReadMD from "../../assets/policies/Disclaimer.md";
+import ReadMe from '../../components/policies/Readme';
+import ReadMD from '../../assets/policies/Disclaimer.md';
 export default {
-  name: "Disclaimer",
+  name: 'Disclaimer',
   components: {
     ReadMe,
   },
   data() {
     return {
-      title: "Disclaimer",
-      data: "",
+      title: 'Disclaimer',
+      data: '',
     };
   },
   created() {

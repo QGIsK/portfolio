@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container mt-5vh" style="position:relative">
+    <div class="container mt-5vh" style="position: relative">
       <FloatingHomeBTN />
       <h2 class="display-2">
         {{ title }}
@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import FloatingHomeBTN from "./FloatingHomeButton";
+import FloatingHomeBTN from './FloatingHomeButton';
 
 export default {
-  name: "Readme",
+  name: 'Readme',
   components: {
     FloatingHomeBTN,
   },
-  props: ["title", "data"],
+  props: ['title', 'data'],
 };
 </script>
 

@@ -35,44 +35,43 @@
 
 <script>
 /* eslint-disable */
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
 
 export default {
-  name: "Portfolio",
+  name: 'Portfolio',
   data: () => ({
     portfolioItems: [
       {
-        name: "Bassen Met Lasse",
-        about: "Website for Bassen Met Lasse, Made with VueJS and NodeJS",
+        name: 'Bassen Met Lasse',
+        about: 'Website for Bassen Met Lasse, Made with VueJS and NodeJS',
         mdDown: 10,
         mdUp: 8,
-        link: "https://www.bassenmetlasse.nl",
-        image: "https://api.demiann.dev/static/images/BassenMetLasse.WebP",
+        link: 'https://www.bassenmetlasse.nl',
+        image: 'https://api.demiann.dev/static/images/BassenMetLasse.WebP',
       },
       {
-        name: "Reviews by Me",
-        about:
-          "Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and MongoDB",
+        name: 'Reviews by Me',
+        about: 'Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and MongoDB',
         mdDown: 10,
         mdUp: 7,
-        link: "https://reviewsbyme.demiann.dev",
-        image: "https://api.demiann.dev/static/images/ReviewsByMe.WebP",
+        link: 'https://reviewsbyme.demiann.dev',
+        image: 'https://api.demiann.dev/static/images/ReviewsByMe.WebP',
       },
       {
-        name: "Shadow bot",
-        about: "Website for the Shadow Discord bot <br />Made with Vue and NodeJS",
+        name: 'Shadow bot',
+        about: 'Website for the Shadow Discord bot <br />Made with Vue and NodeJS',
         mdDown: 10,
         mdUp: 4,
-        link: "https://shadow.demiann.dev",
-        image: "https://api.demiann.dev/static/images/ShadowBot.WebP",
+        link: 'https://shadow.demiann.dev',
+        image: 'https://api.demiann.dev/static/images/ShadowBot.WebP',
       },
       {
-        name: "Template One",
-        about: "Is Made with Vue, Express, NodeJS and MongoDB",
+        name: 'Template One',
+        about: 'Is Made with Vue, Express, NodeJS and MongoDB',
         mdDown: 10,
         mdUp: 8,
-        link: "https://template-one.demiann.dev",
-        image: "https://api.demiann.dev/static/images/TemplateOne.WebP",
+        link: 'https://template-one.demiann.dev',
+        image: 'https://api.demiann.dev/static/images/TemplateOne.WebP',
       },
       // {
       //   name: "Template One",
@@ -94,7 +93,7 @@ export default {
   }),
   computed: {
     ...mapGetters({
-      items: "items",
+      items: 'items',
     }),
   },
 };
