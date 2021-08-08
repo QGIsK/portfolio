@@ -46,12 +46,6 @@ if (process.env.NODE_ENV !== 'test') {
 
 app.use('/api', require('@routes/api'));
 
-if (process.env.NODE_ENV === 'development') {
-  app.use('/go', require('@routes/redirector'));
-} else {
-  app.use(subdomain('go', require('@routes/redirector')));
-}
-
 app.use('/static', express.static('static/'));
 app.use('/css', express.static('_dist/css'));
 app.use('/js', express.static('_dist/js'));

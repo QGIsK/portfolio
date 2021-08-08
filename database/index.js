@@ -11,12 +11,11 @@ mongoose
   })
   .then(() => logger.info('MongoDB connected'))
   .catch((err) => {
-    logger.warn(err);
+    logger.error(err);
     process.exit(1);
   });
 
 module.exports = {
-  Url: require('./models/Url'),
   PortfolioItems: require('./models/PortfolioItems'),
   Admin: require('./models/Admin'),
 };
