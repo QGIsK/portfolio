@@ -40,7 +40,11 @@ app.use(mongoSanitize());
 app.use(compression());
 
 // enable cors
-app.use(cors());
+app.use(
+  cors({
+    origin: ['www.demiann.dev', 'demiann.dev', 'https://analytics.demiann.dev'],
+  })
+);
 app.options('*', cors());
 
 // use robots file
