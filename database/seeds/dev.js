@@ -9,7 +9,7 @@ const items = [
     name: 'Bassen Met Lasse',
     about: 'Website for Bassen Met Lasse, Made with VueJS and NodeJS',
     order: 1,
-    image: 'https://api.demiann.dev/static/images/BassenMetLasse.WebP',
+    image: '/static/images/BassenMetLasse.WebP',
     size: { mdUp: 8, mdDown: 10 },
   },
   {
@@ -17,7 +17,7 @@ const items = [
     name: 'Reviews by Me',
     about: 'Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and MongoDB',
     order: 2,
-    image: 'https://api.demiann.dev/static/images/ReviewsByMe.WebP',
+    image: '/static/images/ReviewsByMe.WebP',
     size: { mdUp: 7, mdDown: 10 },
   },
   {
@@ -25,7 +25,7 @@ const items = [
     name: 'Shadow bot',
     about: 'Website for the Shadow Discord bot <br />Made with Vue and NodeJS',
     order: 3,
-    image: 'https://api.demiann.dev/static/images/ShadowBot.WebP',
+    image: '/static/images/ShadowBot.WebP',
     size: { mdUp: 4, mdDown: 10 },
   },
   {
@@ -33,7 +33,7 @@ const items = [
     name: 'Template One',
     about: 'Is Made with Vue, Express, NodeJS and MongoDB',
     order: 4,
-    image: 'https://api.demiann.dev/static/images/TemplateOne.WebP',
+    image: '/static/images/TemplateOne.WebP',
     size: { mdUp: 8, mdDown: 10 },
   },
 ];

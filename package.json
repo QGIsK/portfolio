@@ -92,8 +92,8 @@
     "@helpers": "helpers/",
     "@routes": "routes/",
     "@middleware": "middleware/",
-    "@components": "client/src/components/",
-    "@validations": "client/src/validations/"
+    "@validations": "validations/",
+    "@components": "client/src/components/"
   },
   "browserslist": [
     "> 1%",

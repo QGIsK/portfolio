@@ -30,7 +30,7 @@ const PortfolioItemsSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    default: 'https://api.demiann.dev/static/images/Placeholder.WebP',
+    default: '/static/images/Placeholder.WebP',
     required: true,
   },
   url: {
