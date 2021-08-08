@@ -24,7 +24,27 @@ if (config.env !== 'test') {
 }
 
 // set security HTTP headers
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+);
+
+const scriptSrcUrls = ['https://analytics.demiann.dev/js/plausible.js'];
+const styleSrcUrls = [
+  'https://cdn.jsdelivr.net/npm/font-awesome@4.x/css/font-awesome.min.css',
+  'https://fonts.googleapis.com/css?family=Comfortaa',
+];
+
+const contentSecurityPolicy = [
+  `script-src 'unsafe-eval' 'unsafe-inline' 'self' ${scriptSrcUrls.join(' ')}`,
+  `style-src 'unsafe-inline' 'self' ${styleSrcUrls.join(' ')}`,
+].join(';');
+
+app.use((req, res, next) => {
+  res.setHeader('Content-Security-Policy', contentSecurityPolicy);
+  next();
+});
 
 // parse json request body
 app.use(express.json());
@@ -40,11 +60,7 @@ app.use(mongoSanitize());
 app.use(compression());
 
 // enable cors
-app.use(
-  cors({
-    origin: ['www.demiann.dev', 'demiann.dev', 'https://analytics.demiann.dev'],
-  })
-);
+app.use(cors());
 app.options('*', cors());
 
 // use robots file
