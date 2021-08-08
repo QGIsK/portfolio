@@ -1,5 +1,3 @@
 node_modules
-_static
-resources/images
-client
-bin
+_dist
+static/

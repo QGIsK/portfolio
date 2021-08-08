@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
-const CookieStatement = () => import('../views/policies/CookieStatement.vue');
-const Disclaimer = () => import('../views/policies/Disclaimer.vue');
-const PrivacyPolicy = () => import('../views/policies/PrivacyPolicy.vue');
+import Home from '../views/Home.vue';
+import CookieStatement from '../views/policies/CookieStatement.vue';
+import Disclaimer from '../views/policies/Disclaimer.vue';
+import PrivacyPolicy from '../views/policies/PrivacyPolicy.vue';
 
 Vue.use(VueRouter);
 
