@@ -20,7 +20,6 @@ module.exports = {
         if (!admin) return res.status(403).json({ message: 'Forbidden access' });
 
         req.admin = admin;
-        console.log('hi');
         return next();
       });
     } else {

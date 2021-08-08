@@ -1,16 +1,16 @@
 require('dotenv').config();
 require('module-alias/register');
 
-const robots = require('express-robots-txt');
-const express = require('express');
-const helmet = require('helmet');
 const cors = require('cors');
 const path = require('path');
-const compression = require('compression');
 const xss = require('xss-clean');
-const morgan = require('@helpers/morgan');
+const helmet = require('helmet');
+const express = require('express');
+const compression = require('compression');
+const robots = require('express-robots-txt');
 const mongoSanitize = require('express-mongo-sanitize');
-const subdomain = require('express-subdomain');
+
+const morgan = require('@helpers/morgan');
 const logger = require('@helpers/logger');
 
 const app = express();
