@@ -5,6 +5,7 @@ const config = require('@config/config');
 // const authRoute = require('./auth.route');
 // const userRoute = require('./user.route');
 const contactRoute = require('./contact.route');
+const settingsRoute = require('./settings.route');
 
 const router = express.Router();
 
@@ -21,6 +22,7 @@ const defaultRoutes = [
     path: '/contact',
     route: contactRoute,
   },
+  { path: 'settings', route: settingsRoute },
 ];
 
 const devRoutes = [
