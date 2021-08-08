@@ -55,12 +55,12 @@ if (process.env.NODE_ENV === 'development') {
   app.use(subdomain('go', require('@routes/redirector')));
 }
 
-app.use('/static', express.static('resources/'));
-app.use('/css', express.static('_static/css'));
-app.use('/js', express.static('_static/js'));
+app.use('/static', express.static('static/'));
+app.use('/css', express.static('_dist/css'));
+app.use('/js', express.static('_dist/js'));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(`${__dirname}/_static/index.html`));
+  res.sendFile(path.join(`${__dirname}/_dist/index.html`));
 });
 
 const PORT = process.env.PORT || 3000;
