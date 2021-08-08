@@ -34,4 +34,4 @@ jobs:
           author_name: Demian
           author_email: devaccdemiann@gmail.com
           message: 'Rebuild Client Side'
-          add: '_static'
+          add: '_dist'
