@@ -25,6 +25,18 @@ const sendEmail = async (to, subject, text) => {
 
 /**
  * Send reset password email
+ * @param {object} body
+ * @returns {Promise}
+ */
+const sendContactEmail = async (body) => {
+  const subject = `Contact Request from ${body.from}`;
+  const text = `Hey, You have a new Contact request!\n From: ${body.from}\n Deadline estimate: ${body.time}\n Description: ${body.text} `;
+
+  await sendEmail(config.email.to, subject, text);
+};
+
+/**
+ * Send reset password email
  * @param {string} to
  * @param {string} token
  * @returns {Promise}
@@ -56,6 +68,7 @@ If you did not create an account, then ignore this email.`;
 module.exports = {
   transport,
   sendEmail,
+  sendContactEmail,
   sendResetPasswordEmail,
   sendVerificationEmail,
 };
