@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.5.0",
+  "version": "1.2.0",
   "description": "Portfolio website",
   "main": "src/index.js",
   "repository": "https://github.com/qgisk/portfolio.git",
