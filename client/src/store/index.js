@@ -22,14 +22,13 @@ export default new Vuex.Store({
     },
     getGeneralSettings({ commit }) {
       commit('setStatus', 'loading');
-      Axios.get('/general-settings')
+      Axios.get('/settings')
         .then((res) => {
-          commit('setSettings', { items: res.data.portfolioItems });
+          commit('setSettings', { items: res.data.items });
+          commit('setStatus', 'success');
         })
-        .finally(() => {
-          setTimeout(() => {
-            commit('setStatus', '');
-          }, 350);
+        .catch(() => {
+          commit('toggleSnackBar', { type: 'red', text: 'An error has occured while loading, Please try again later.' });
         });
     },
   },

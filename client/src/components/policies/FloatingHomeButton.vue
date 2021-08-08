@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "FloatingHomeBTN",
+  name: 'FloatingHomeBTN',
   methods: {
     redirect(path) {
       this.$router.push(path);

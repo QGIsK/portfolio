@@ -6,17 +6,17 @@
 </template>
 
 <script>
-import ReadMe from "../../components/policies/Readme";
-import ReadMD from "../../assets/policies/CookieStatement.md";
+import ReadMe from '../../components/policies/Readme';
+import ReadMD from '../../assets/policies/CookieStatement.md';
 export default {
-  name: "CookieStatement",
+  name: 'CookieStatement',
   components: {
     ReadMe,
   },
   data() {
     return {
-      title: "Cookie Verklaring",
-      data: "",
+      title: 'Cookie Verklaring',
+      data: '',
     };
   },
   created() {
