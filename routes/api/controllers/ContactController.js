@@ -4,10 +4,7 @@ const mailTo = process.env.MAIL_TO;
 
 exports.store = async (req, res) => {
   try {
-    const from = req.sanitize(req.body.from);
-    const email = req.sanitize(req.body.email);
-    const time = req.sanitize(req.body.time);
-    const body = req.sanitize(req.body.body);
+    const { from, email, time, body } = req.body;
 
     if (!from || !time || !email || !body) return res.status(422).json({ error: 'Please provide all fields' });
 
