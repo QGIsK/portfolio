@@ -30,6 +30,10 @@
             "./middleware"
           ],
           [
+            "@validations",
+            "./validations"
+          ],
+          [
             "@components",
             "./client/src/components"
           ]

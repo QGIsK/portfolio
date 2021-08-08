@@ -44,10 +44,6 @@ if (process.env.NODE_ENV !== 'test') {
   app.use(morgan.errorHandler);
 }
 
-app.use((req, res, next) => {
-  next();
-});
-
 app.use('/api', require('@routes/api'));
 
 if (process.env.NODE_ENV === 'development') {
