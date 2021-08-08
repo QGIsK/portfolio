@@ -5,6 +5,6 @@ const contactController = require('@controllers/contact.controller');
 
 const router = express.Router();
 
-router.post('/contact', validate(contactValidation.contact), contactController.sendContactRequest);
+router.post('/', validate(contactValidation.contact), contactController.sendContactRequest);
 
 module.exports = router;
