@@ -22,7 +22,7 @@ const defaultRoutes = [
     path: '/contact',
     route: contactRoute,
   },
-  { path: 'settings', route: settingsRoute },
+  { path: '/settings', route: settingsRoute },
 ];
 
 const devRoutes = [
