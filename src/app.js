@@ -37,8 +37,9 @@ const styleSrcUrls = [
 ];
 
 const contentSecurityPolicy = [
-  `script-src 'unsafe-eval' 'unsafe-inline' 'self' ${scriptSrcUrls.join(' ')}`,
+  `script-src 'unsafe-eval'  'self' ${scriptSrcUrls.join(' ')}`,
   `style-src 'unsafe-inline' 'self' ${styleSrcUrls.join(' ')}`,
+  `object-src 'none'`,
 ].join(';');
 
 app.use((req, res, next) => {
