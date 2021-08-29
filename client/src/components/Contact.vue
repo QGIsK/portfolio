@@ -66,6 +66,10 @@
 </template>
 
 <script>
+import { setCookie, getCookie } from '../services/cookie';
+
+const contactCookie = 'contacted';
+
 export default {
   name: 'Contact',
   components: {},
@@ -81,6 +85,11 @@ export default {
     text: '',
     sending: false,
   }),
+  mounted() {
+    const contacted = getCookie(contactCookie);
+
+    this.contacted = !!contacted;
+  },
   methods: {
     toggle() {
       this.show = !this.show;
@@ -117,6 +126,9 @@ export default {
             type: 'green',
             text: 'Message has been send!',
           };
+
+          setCookie(contactCookie, true, 604800);
+
           this.$store.dispatch('toggleSnackBar', payload);
 
           this.show = false;
