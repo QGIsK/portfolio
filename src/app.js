@@ -27,14 +27,14 @@ if (config.env !== 'test') {
 // set security HTTP headers
 app.use(
   helmet({
-    contentSecurityPolicy: false,
+    contentSecurityPolicy: false
   })
 );
 
-app.use((req, res, next) => {
-  res.setHeader('Content-Security-Policy', csp);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Content-Security-Policy', csp);
+//   next();
+// });
 
 // parse json request body
 app.use(express.json());
