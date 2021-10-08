@@ -1,71 +1,7 @@
 {
-  "env": {
-    "node": true
-  },
-  "extends": ["airbnb-base",  "plugin:security/recommended", "plugin:prettier/recommended", "plugin:import/recommended"],
-  "plugins": [ "security", "prettier"],
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
-  "settings": {
-    "import/resolver": {
-      "alias": {
-        "map": [
-          [
-            "@root",
-            "./"
-          ],
-          [
-            "@config",
-            "./src/config"
-          ],
-          [
-            "@controllers",
-            "./src/controllers"
-          ],
-          [
-            "@middlewares",
-            "./src/middlewares"
-          ],[
-            "@models",
-            "./src/models"
-          ],[
-            "@routes",
-            "./src/routes"
-          ],
-          [
-            "@services",
-            "./src/services"
-          ],
-          [
-            "@utils",
-            "./src/utils"
-          ],
-          [
-            "@validations",
-            "./src/validations"
-          ],
-          [
-            "@validations",
-            "./validations"
-          ],
-          [
-            "@components",
-            "./client/src/components"
-          ]
-        ]
-      }
-    }
-  },
+  "extends": ["plugin:adonis/typescriptApp", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "no-console": "error",
-    "comma-dangle": [
-      "warning",
-      "never"
-    ],
-    "func-names": "off",
-    "no-underscore-dangle": "off",
-    "consistent-return": "off",
-    "security/detect-object-injection": "off"
+    "prettier/prettier": ["error"]
   }
 }
