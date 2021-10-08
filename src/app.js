@@ -31,10 +31,10 @@ app.use(
   })
 );
 
-// app.use((req, res, next) => {
-//   res.setHeader('Content-Security-Policy', csp);
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader('Content-Security-Policy', csp);
+  next();
+});
 
 // parse json request body
 app.use(express.json());

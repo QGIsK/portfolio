@@ -59,6 +59,10 @@
   },
   "rules": {
     "no-console": "error",
+    "comma-dangle": [
+      "warning",
+      "never"
+    ],
     "func-names": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
