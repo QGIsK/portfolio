@@ -20,6 +20,22 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
+Route.get('/', async ({ view }) => {
+  return view.render('index')
+}).as('index')
+
+Route.get('/policies/cookiestatement', async ({ view }) => {
+  return view.render('policies/cookiestatement')
+}).as('cookiestatement')
+
+Route.get('/policies/disclaimer', async ({ view }) => {
+  return view.render('policies/disclaimer')
+}).as('disclaimer')
+
+Route.get('/policies/privacypolicy', async ({ view }) => {
+  return view.render('policies/privacypolicy')
+}).as('privacypolicy')
+
+Route.get('*', async ({ view }) => {
+  return view.render('index')
+}).as('not_found')

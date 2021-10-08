@@ -46,6 +46,7 @@ Encore.setPublicPath('/assets')
 |
 */
 Encore.addEntry('app', './resources/js/app.js')
+Encore.addEntry('policies', './resources/scss/policies.scss')
 
 /*
 |--------------------------------------------------------------------------
@@ -182,9 +183,8 @@ Encore.enableSassLoader()
 |
 */
 Encore.enableVueLoader(() => {}, {
-  version: 2,
+  version: 3,
   runtimeCompilerBuild: false,
-  useJsx: false,
 })
 
 /*

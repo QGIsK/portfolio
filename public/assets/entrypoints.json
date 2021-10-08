@@ -4,6 +4,14 @@
       "js": [
         "http://localhost:8080/assets/app.js"
       ]
+    },
+    "policies": {
+      "css": [
+        "http://localhost:8080/assets/policies.css"
+      ],
+      "js": [
+        "http://localhost:8080/assets/policies.js"
+      ]
     }
   }
 }

@@ -1,3 +1,6 @@
 {
-  "assets/app.js": "http://localhost:8080/assets/app.js"
+  "assets/app.js": "http://localhost:8080/assets/app.js",
+  "assets/policies.css": "http://localhost:8080/assets/policies.css",
+  "assets/policies.js": "http://localhost:8080/assets/policies.js",
+  "assets/resources_js_views_Home_vue.js": "http://localhost:8080/assets/resources_js_views_Home_vue.js"
 }
