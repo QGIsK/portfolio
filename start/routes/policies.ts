@@ -1,11 +1,9 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/policies/cookiestatement', ({ view }) => view.render('policies/cookiestatement')).as(
-  'cookiestatement'
-)
+Route.group(() => {
+  Route.on('cookiestatement').render('policies/cookiestatement').as('policies.cookiestatement')
 
-Route.get('/policies/disclaimer', ({ view }) => view.render('policies/disclaimer')).as('disclaimer')
+  Route.on('disclaimer').render('policies/disclaimer').as('policies.disclaimer')
 
-Route.get('/policies/privacypolicy', ({ view }) => view.render('policies/privacypolicy')).as(
-  'privacypolicy'
-)
+  Route.on('privacypolicy').render('policies/privacypolicy').as('policies.privacypolicy')
+}).prefix('/policy')

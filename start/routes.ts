@@ -18,10 +18,9 @@
 |
 */
 import Route from '@ioc:Adonis/Core/Route'
+import Env from '@ioc:Adonis/Core/Env'
 
 import './routes/policies'
 import './routes/auth'
 
-Route.get('/', ({ view }) => view.render('index')).as('index')
-
-Route.get('*', ({ view }) => view.render('index')).as('not_found')
+Route.on('/').render('index')
