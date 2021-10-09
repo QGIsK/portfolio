@@ -19,7 +19,9 @@
     "@adonisjs/core",
     "@adonisjs/view",
     "@adonisjs/lucid",
-    "@adonisjs/auth"
+    "@adonisjs/auth",
+    "@adonisjs/drive-s3",
+    "@adonisjs/shield"
   ],
   "aceProviders": ["@adonisjs/repl"],
   "metaFiles": [

@@ -17,7 +17,9 @@
       "@adonisjs/repl",
       "@adonisjs/view",
       "@adonisjs/lucid",
-      "@adonisjs/auth"
+      "@adonisjs/auth",
+      "@adonisjs/drive-s3",
+      "@adonisjs/shield"
     ]
   }
 }
