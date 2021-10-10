@@ -18,7 +18,7 @@ jobs:
         run: npm install
 
       - name: Run Prettier
-        run: npm run prettier
+        run: npm run format
 
       - name: Run eslint
         run: npm run lint
