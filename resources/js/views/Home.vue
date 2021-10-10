@@ -35,6 +35,21 @@
       />
     </div>
   </section>
+
+  <section class="contact bg-main pt-5">
+    <div class="row container mx-auto">
+      <h3 class="text-white">Contact</h3>
+      <div class="col-auto w-100">
+        <label for="" class="col-form-label text-white">What's your name?</label>
+        <input
+          type="text"
+          id=""
+          class="is-invalid form-control"
+          aria-describedby="passwordHelpInline"
+        />
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>
@@ -80,11 +95,5 @@ h3 {
 #portfolio > .row > div:first-child {
   margin-top: -17.5vh;
   z-index: 10;
-}
-
-#portfolio {
-  img {
-    cursor: pointer;
-  }
 }
 </style>
