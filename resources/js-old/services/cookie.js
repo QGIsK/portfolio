@@ -1,5 +1,3 @@
-/* eslint-disable no-return-assign */
-/* eslint-disable no-undef */
 /**
  * @param {string} name
  * @returns

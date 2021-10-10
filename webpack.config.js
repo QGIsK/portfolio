@@ -1,6 +1,8 @@
 const { join } = require('path')
 const Encore = require('@symfony/webpack-encore')
 
+const { VuetifyLoaderPlugin } = require('vuetify-loader')
+
 /*
 |--------------------------------------------------------------------------
 | Encore runtime environment
@@ -183,7 +185,7 @@ Encore.enableSassLoader()
 |
 */
 Encore.enableVueLoader(() => {}, {
-  version: 3,
+  version: 2,
   runtimeCompilerBuild: false,
 })
 
@@ -203,6 +205,7 @@ config.infrastructureLogging = {
 }
 config.stats = 'errors-warnings'
 
+Encore.addPlugin(new VuetifyLoaderPlugin())
 /*
 |--------------------------------------------------------------------------
 | Export config
