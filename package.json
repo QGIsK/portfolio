@@ -2,6 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">16.0.0"
+  },
   "scripts": {
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
