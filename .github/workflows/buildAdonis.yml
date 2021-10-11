@@ -25,10 +25,7 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build --ignore-ts-errors
-
-      - name: Upload to cdn
-        run: node ace publish:assets
+        run: npm run build
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
