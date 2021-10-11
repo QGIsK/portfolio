@@ -6,7 +6,7 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches:
-      - master
+      - adonis
     paths:
       - 'client/**'
 
@@ -21,8 +21,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
 
+      - name: Move to working dir
+        run: cd client
+        
       - name: Install dependencies
         run: npm install
 
@@ -34,5 +37,5 @@ jobs:
         with:
           author_name: Demian
           author_email: devaccdemiann@gmail.com
-          message: 'Rebuild Client Side'
-          add: '_dist'
+          message: 'Rebuild Client'
+          add: 'build'
