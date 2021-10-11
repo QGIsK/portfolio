@@ -1,11 +1,11 @@
 name: Build Adonis Project
 
 # Controls when the workflow will run
-on: 
-  workflow_dispatch: 
+on:
+  workflow_dispatch:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: 
+    branches:
       - adonis
 
 jobs:
@@ -23,9 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        
+
       - name: Build Project
         run: npm run build
+
+      - name: Upload to cdn
+        run: node ace publish:assets
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7

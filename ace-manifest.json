@@ -1,5 +1,17 @@
 {
   "commands": {
+    "publish:assets": {
+      "settings": {
+        "loadApp": false,
+        "stayAlive": false
+      },
+      "commandPath": "./commands/PublishAssets",
+      "commandName": "publish:assets",
+      "description": "Publish assets to a remote s3 or digital ocean bucket",
+      "args": [],
+      "aliases": [],
+      "flags": []
+    },
     "dump:rcfile": {
       "settings": {},
       "commandPath": "@adonisjs/core/build/commands/DumpRc",

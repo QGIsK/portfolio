@@ -32,8 +32,12 @@ Encore.setOutputPath('./public/assets')
 | relative from the "public" directory.
 |
 */
-Encore.setPublicPath('/assets')
-
+if (Encore.isProduction()) {
+  Encore.setPublicPath('https://cdn.demiann.dev/assets')
+  Encore.setManifestKeyPrefix('assets/')
+} else {
+  Encore.setPublicPath('/assets')
+}
 /*
 |--------------------------------------------------------------------------
 | Entrypoints
@@ -48,7 +52,6 @@ Encore.setPublicPath('/assets')
 |
 */
 Encore.addEntry('app', './resources/js/app.js')
-Encore.addEntry('policies', './resources/scss/policies.scss')
 
 /*
 |--------------------------------------------------------------------------

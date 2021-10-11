@@ -1,1 +1,0 @@
-{"version":3,"file":"PortfolioController.js","sourceRoot":"","sources":["../../../../app/Controllers/Http/PortfolioController.ts"],"names":[],"mappings":";;;;;AACA,mGAAoD;AAEpD,MAAqB,mBAAmB;IAC/B,KAAK,CAAC,KAAK;QAChB,MAAM,KAAK,GAAG,MAAM,uBAAa,CAAC,KAAK,EAAE,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC,OAAO,CAAC,OAAO,EAAE,KAAK,CAAC,CAAA;QAE7E,OAAO,KAAK,CAAA;IACd,CAAC;CACF;AAND,sCAMC"}
