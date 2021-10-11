@@ -9,7 +9,7 @@ exports.default = Env_1.default.rules({
     PORT: Env_1.default.schema.number(),
     APP_KEY: Env_1.default.schema.string(),
     APP_NAME: Env_1.default.schema.string(),
-    DRIVE_DISK: Env_1.default.schema.enum(['local']),
+    DRIVE_DISK: Env_1.default.schema.enum(['local', 's3']),
     NODE_ENV: Env_1.default.schema.enum(['development', 'production', 'testing']),
     MAIL_FROM: Env_1.default.schema.string(),
     MAIL_TO: Env_1.default.schema.string(),
