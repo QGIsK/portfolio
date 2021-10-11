@@ -22,15 +22,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
-
-      - name: Move to working dir
-        run: cd client
         
       - name: Install dependencies
-        run: npm install
+        run: cd client && npm install
 
       - name: Build Project
-        run: npm run build
+        run: cd client && npm run build
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
@@ -38,4 +35,4 @@ jobs:
           author_name: Demian
           author_email: devaccdemiann@gmail.com
           message: 'Rebuild Client'
-          add: 'build'
+          add: 'client/dist'
