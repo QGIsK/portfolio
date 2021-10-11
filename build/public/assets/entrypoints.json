@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "app": {
+      "css": [
+        "https://cdn.demiann.dev/assets/app.ca2af57d.css"
+      ],
+      "js": [
+        "https://cdn.demiann.dev/assets/app.72ffd8ef.js"
+      ]
+    }
+  }
+}
