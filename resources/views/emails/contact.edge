@@ -1,0 +1,14 @@
+@layout('layouts/email')
+
+@section('body')
+    <div class="card">
+        <div class="card-title">You have a new contact request</div>
+        <div class="card-text">
+            Name: {{payload.from}}
+            <br>
+            Email: {{payload.email}}
+            <br>
+            text: {{payload.text}}
+        </div>
+    </div>
+@end

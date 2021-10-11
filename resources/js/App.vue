@@ -16,12 +16,12 @@
 <script>
 import Snackbar from './components/Snackbar'
 
-import { VApp, VCard, VSnackbar } from 'vuetify/lib'
+import { VApp, VCard, VSnackbar, VBtn } from 'vuetify/lib'
 
 export default {
   name: 'App',
 
-  components: { Snackbar, VApp, VCard, VSnackbar },
+  components: { Snackbar, VApp, VCard, VSnackbar, VBtn },
 
   data: () => ({ show: true }),
   methods: {

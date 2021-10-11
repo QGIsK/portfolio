@@ -19,7 +19,8 @@
       "@adonisjs/lucid",
       "@adonisjs/auth",
       "@adonisjs/drive-s3",
-      "@adonisjs/shield"
+      "@adonisjs/shield",
+      "@adonisjs/mail"
     ]
   }
 }

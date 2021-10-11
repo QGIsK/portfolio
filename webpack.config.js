@@ -206,6 +206,24 @@ config.infrastructureLogging = {
 config.stats = 'errors-warnings'
 
 Encore.addPlugin(new VuetifyLoaderPlugin())
+
+// Encore.addLoader({
+//   rule: 'md',
+//   test: /\.md$/,
+//   use: [
+//     {
+//       loader: 'html-loader',
+//     },
+//     {
+//       loader: 'markdown-loader',
+//       options: {
+//         pedantic: true,
+//         renderer: new Renderer(),
+//       },
+//     },
+//   ],
+// })
+
 /*
 |--------------------------------------------------------------------------
 | Export config

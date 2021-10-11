@@ -13,8 +13,6 @@
 <script>
 import FloatingHomeBTN from './FloatingHomeButton'
 
-
-
 export default {
   name: 'Readme',
   components: {

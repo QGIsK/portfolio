@@ -18,9 +18,7 @@
 |
 */
 import Route from '@ioc:Adonis/Core/Route'
-import Env from '@ioc:Adonis/Core/Env'
 
-import './routes/policies'
-import './routes/auth'
+import './routes/api'
 
-Route.on('/').render('index')
+Route.on('*').render('index')

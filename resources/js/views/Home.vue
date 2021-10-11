@@ -29,8 +29,6 @@
 </template>
 
 <script>
-
-
 import Navbar from '../components/Navbar'
 import Header from '../components/Header.vue'
 import Portfolio from '../components/Portfolio.vue'

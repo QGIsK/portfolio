@@ -9,12 +9,13 @@
 </template>
 
 <script>
-import { VFabTransition } from 'vuetify/lib'
+import { VFabTransition, VBtn } from 'vuetify/lib'
 
 export default {
   name: 'FloatingHomeBTN',
   components: {
     VFabTransition,
+    VBtn,
   },
   methods: {
     redirect(path) {

@@ -98,6 +98,7 @@ import {
   VTextarea,
   VSubheader,
   VCardActions,
+  VDivider,
   VSlider,
 } from 'vuetify/lib'
 
@@ -118,6 +119,7 @@ export default {
     VTextarea,
     VSubheader,
     VCardActions,
+    VDivider,
     VSlider,
   },
   data: () => ({
@@ -128,7 +130,6 @@ export default {
     contacted: false,
     from: '',
     email: '',
-    subject: '',
     text: '',
     sending: false,
   }),
@@ -145,7 +146,6 @@ export default {
     resetForm() {
       this.from = ''
       this.email = ''
-      this.subject = ''
       this.text = ''
       this.time = this.timeTicks[0]
 
