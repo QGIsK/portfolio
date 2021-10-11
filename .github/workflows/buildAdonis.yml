@@ -30,7 +30,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: Demian
-          author_email: devaccdemiann@gmail.com
+          author_name: Github Actions
+          author_email: no-reply@demiann.dev
           message: 'Rebuild'
           add: 'build'
