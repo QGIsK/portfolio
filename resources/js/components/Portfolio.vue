@@ -6,7 +6,7 @@
           <v-col
             v-for="(item, index) in items"
             :key="index"
-            :cols="$vuetify.breakpoint.mdAndDown ? `${item.size.mdDown}` : `${item.size.mdUp}`"
+            :cols="$vuetify.breakpoint.mdAndDown ? `${item.md_down}` : `${item.md_up}`"
             class="mx-auto"
             style="margin-bottom: 10vh; z-index: 6"
           >

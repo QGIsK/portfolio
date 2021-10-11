@@ -1,3 +1,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.post('/api/contact', 'ContactController.store')
+Route.group(() => {
+  Route.post('/contact', 'ContactController.store')
+  Route.get('/portfolio-items', 'PortfolioController.index')
+}).prefix('/api')

@@ -20,11 +20,11 @@ export default new Vuex.Store({
         text,
       })
     },
-    getGeneralSettings({ commit }) {
+    getPortfolioItems({ commit }) {
       commit('setStatus', 'loading')
-      Axios.get('/settings')
+      Axios.get('/portfolio-items')
         .then((res) => {
-          commit('setSettings', { items: res.data.items })
+          commit('setItems', { items: res.data })
           commit('setStatus', 'success')
         })
         .catch(() => {
@@ -39,7 +39,7 @@ export default new Vuex.Store({
     setStatus(state, status) {
       state.status = status
     },
-    setSettings(state, { items }) {
+    setItems(state, { items }) {
       state.items = items
     },
     toggleSnackBar(state, { type, text }) {

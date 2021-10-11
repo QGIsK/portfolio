@@ -50,7 +50,7 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('getGeneralSettings')
+    this.$store.dispatch('getPortfolioItems')
   },
 
   computed: {
