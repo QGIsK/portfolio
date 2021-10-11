@@ -28,7 +28,7 @@ const authConfig = {
                 driver: 'lucid',
                 identifierKey: 'id',
                 uids: ['email'],
-                model: () => Promise.resolve().then(() => __importStar(global[Symbol.for('ioc.use')]('App/Models/user'))),
+                model: () => Promise.resolve().then(() => __importStar(global[Symbol.for('ioc.use')]('App/Models/User'))),
             },
         },
         api: {
@@ -43,7 +43,7 @@ const authConfig = {
                 driver: 'lucid',
                 identifierKey: 'id',
                 uids: ['email'],
-                model: () => Promise.resolve().then(() => __importStar(global[Symbol.for('ioc.use')]('App/Models/user'))),
+                model: () => Promise.resolve().then(() => __importStar(global[Symbol.for('ioc.use')]('App/Models/User'))),
             },
         },
     },

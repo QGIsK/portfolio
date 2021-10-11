@@ -53,4 +53,4 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], User, "hashPassword", null);
 exports.default = User;
-//# sourceMappingURL=user.js.map
+//# sourceMappingURL=User.js.map
