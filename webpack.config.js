@@ -80,7 +80,7 @@ Encore.addEntry('app', './resources/js/app.js')
 | https://webpack.js.org/plugins/split-chunks-plugin/
 |
 */
-// Encore.splitEntryChunks()
+Encore.splitEntryChunks()
 
 /*
 |--------------------------------------------------------------------------
