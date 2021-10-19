@@ -20,5 +20,11 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 import './routes/api'
+import './routes/auth'
+import './routes/dashboard'
+
+Route.get('robots.txt', () => {
+  return `User-agent: *\nAllow: /\nAllow: /policy/cookie-statement\nAllow: /policy/disclaimer\nAllow: /policy/privacy-policy`
+})
 
 Route.on('*').render('index')

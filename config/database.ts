@@ -41,7 +41,7 @@ const databaseConfig: DatabaseConfig = {
         user: Env.get('MYSQL_USER'),
         password: Env.get('MYSQL_PASSWORD', ''),
         database: Env.get('MYSQL_DB_NAME'),
-        ssl: true,
+        ssl: Env.get('DB_SSL', false),
       },
       migrations: {
         naturalSort: true,

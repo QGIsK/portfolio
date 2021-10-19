@@ -22,6 +22,9 @@ export default Env.rules({
   DRIVE_DISK: Env.schema.enum(['local', 's3'] as const),
   NODE_ENV: Env.schema.enum(['development', 'production', 'testing'] as const),
 
+  ADMIN_EMAIL: Env.schema.string(),
+  ADMIN_PASSWORD: Env.schema.string(),
+
   MAIL_FROM: Env.schema.string({ format: 'email' }),
   MAIL_TO: Env.schema.string({ format: 'email' }),
   SMTP_HOST: Env.schema.string({ format: 'host' }),
@@ -34,6 +37,7 @@ export default Env.rules({
   MYSQL_USER: Env.schema.string(),
   MYSQL_PASSWORD: Env.schema.string(),
   MYSQL_DB_NAME: Env.schema.string(),
+  DB_SSL: Env.schema.boolean(),
 
   S3_KEY: Env.schema.string(),
   S3_SECRET: Env.schema.string(),
