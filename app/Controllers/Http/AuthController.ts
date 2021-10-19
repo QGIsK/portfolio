@@ -5,10 +5,12 @@ export default class AuthController {
     const email = request.input('email')
     const password = request.input('password')
 
+    console.log(email, password)
+
     try {
-      await auth.use('web').attempt(email, password, true)
+      await auth.use('web').attempt(email, password)
       response.redirect('/dashboard')
-    } catch {
+    } catch (e) {
       return response.badRequest('Invalid credentials')
     }
   }

@@ -52,6 +52,7 @@ if (Encore.isProduction()) {
 |
 */
 Encore.addEntry('app', './resources/js/app.js')
+Encore.addEntry('dashboard', './resources/dashboard.js')
 
 /*
 |--------------------------------------------------------------------------
@@ -175,7 +176,7 @@ Encore.enableSassLoader()
 | PostCSS or CSS.
 |
 */
-// Encore.enablePostCssLoader()
+Encore.enablePostCssLoader()
 // Encore.configureCssLoader(() => {})
 
 /*
@@ -209,23 +210,6 @@ config.infrastructureLogging = {
 config.stats = 'errors-warnings'
 
 Encore.addPlugin(new VuetifyLoaderPlugin())
-
-// Encore.addLoader({
-//   rule: 'md',
-//   test: /\.md$/,
-//   use: [
-//     {
-//       loader: 'html-loader',
-//     },
-//     {
-//       loader: 'markdown-loader',
-//       options: {
-//         pedantic: true,
-//         renderer: new Renderer(),
-//       },
-//     },
-//   ],
-// })
 
 /*
 |--------------------------------------------------------------------------

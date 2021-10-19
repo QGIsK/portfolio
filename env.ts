@@ -22,6 +22,8 @@ export default Env.rules({
   DRIVE_DISK: Env.schema.enum(['local', 's3'] as const),
   NODE_ENV: Env.schema.enum(['development', 'production', 'testing'] as const),
 
+  SESSION_DRIVER: Env.schema.string(),
+
   ADMIN_EMAIL: Env.schema.string(),
   ADMIN_PASSWORD: Env.schema.string(),
 
