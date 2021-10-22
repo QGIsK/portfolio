@@ -12,13 +12,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Prettier
-        run: npm run prettier
+        run: npm run format
 
       - name: Run eslint
         run: npm run lint

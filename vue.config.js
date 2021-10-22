@@ -1,6 +1,6 @@
-const marked = require('marked');
+const marked = require('marked')
 
-const renderer = new marked.Renderer();
+const renderer = new marked.Renderer()
 
 module.exports = {
   transpileDependencies: ['vuetify'],
@@ -15,15 +15,15 @@ module.exports = {
       .loader('markdown-loader')
       .tap((options) => {
         // eslint-disable-next-line no-param-reassign
-        options = { pedantic: true, renderer };
+        options = { pedantic: true, renderer }
 
-        return options;
+        return options
       })
-      .end();
+      .end()
     config.plugin('html').tap((args) => {
       // eslint-disable-next-line no-param-reassign
-      args[0].title = 'Demiann || Portfolio';
-      return args;
-    });
+      args[0].title = 'Demiann || Portfolio'
+      return args
+    })
   },
-};
+}
