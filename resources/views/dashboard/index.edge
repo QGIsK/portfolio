@@ -1,1 +1,3 @@
-xx
+@if(auth.isLoggedIn)
+<p> Hello {{ auth.user.email }} </p>
+@endif

@@ -6,7 +6,7 @@ export default class AuthController {
     const password = request.input('password')
 
     try {
-      await auth.use('web').attempt(email, password)
+      await auth.attempt(email, password)
       response.redirect('/dashboard')
     } catch (e) {
       session.flash({
