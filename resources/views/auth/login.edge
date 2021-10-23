@@ -4,6 +4,11 @@
 
 @section('body')
 
+@if (flashMessages.has('errors.email'))
+<div class="alert alert-danger" role="alert">
+  {{ flashMessages.get('errors.email') }}
+</div>
+@endif
 <div class="min-full d-flex justify-content-center align-items-center">
   <div class="w-50">
     <h1 class="text-center mb-3">Authenticate</h1>

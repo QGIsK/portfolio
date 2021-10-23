@@ -1,7 +1,7 @@
 // import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class AuthController {
-  public async login({ auth, request, response }) {
+  public async login({ auth, request, session, response }) {
     const email = request.input('email')
     const password = request.input('password')
 
@@ -9,7 +9,13 @@ export default class AuthController {
       await auth.use('web').attempt(email, password)
       response.redirect('/dashboard')
     } catch (e) {
-      return response.badRequest('Invalid credentials')
+      session.flash({
+        errors: {
+          email: "Seems that isn't quite correct. Try again.",
+        },
+      })
+
+      return response.redirect('/auth/login')
     }
   }
 
