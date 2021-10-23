@@ -1,2 +1,10 @@
-@import 'tailwind';
 @import 'variables';
+
+body {
+  font-family: 'Comfortaa', sans-serif !important;
+  position: relative;
+}
+
+.min-full {
+  min-height: 100vh;
+}
