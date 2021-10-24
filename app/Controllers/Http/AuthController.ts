@@ -1,7 +1,7 @@
-// import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class AuthController {
-  public async login({ auth, request, session, response }) {
+  public async login({ auth, request, session, response }: HttpContextContract) {
     const email = request.input('email')
     const password = request.input('password')
 
@@ -19,8 +19,10 @@ export default class AuthController {
     }
   }
 
-  public async logout({ auth, response }) {
-    await auth.use('web').logout()
-    response.redirect('/login')
+  public async destroy({ auth, response }: HttpContextContract) {
+    await auth.logout()
+    console.log(auth.isLoggedIn)
+
+    response.redirect('/auth/login')
   }
 }

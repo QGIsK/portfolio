@@ -8,3 +8,16 @@ body {
 .min-full {
   min-height: 100vh;
 }
+
+.portfolio-item {
+  // max-height: 240px;
+  margin: 1.5rem 0 !important;
+}
+
+.portfolio-image {
+  width: auto;
+}
+
+.btn:not(:last-child) {
+  margin-right: 1rem;
+}
