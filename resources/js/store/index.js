@@ -3,9 +3,13 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Axios from 'axios'
 
+import Authentication from './modules/Authentication'
+
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  modules: { Authentication },
+
   state: {
     snackbarActive: false,
     snackbarText: '',

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from '../store'
 
 import Home from '../views/Home.vue'
 
@@ -14,6 +15,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home,
+  },
+  {
+    path: '/auth',
+    name: 'AuthenticationLogin',
+    component: () => import('../views/auth/Login.vue'),
   },
   {
     path: '/policy/cookie-statement',
@@ -40,6 +46,15 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   routes,
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.ensureAuthenticated)) {
+    if (store.getters['Authentication/isLoggedIn']) return next()
+
+    return next({ path: '/auth', query: { redirect: to.fullPath } })
+  }
+  next()
 })
 
 export default router

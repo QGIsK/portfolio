@@ -1,14 +1,12 @@
-/* eslint-disable no-return-assign */
-/* eslint-disable no-undef */
 /**
  * @param {string} name
- * @returns
+ * @returns {string | undefined}
  */
 export const getCookie = (name) => {
   const value = `; ${document.cookie}`
   const parts = value.split(`; ${name}=`)
 
-  return parts.length === 2 ? parts.pop().split(';').shift() : false
+  return parts.length === 2 ? parts.pop()?.split(';').shift() : undefined
 }
 
 /**
@@ -19,7 +17,7 @@ export const getCookie = (name) => {
  * @returns
  */
 export const setCookie = (name, value, ttl) =>
-  (document.cookie = `${name}=${value}; path=/; max-age=${ttl}; secure; samesite=strict;`)
+  (document.cookie = `${name}=${value}; path=/; max-age=${ttl}, tagname = test; samesite=strict; secure`)
 
 /**
  *
