@@ -12,6 +12,6 @@ export default class Guest {
       return
     }
 
-    response.redirect('/dashboard')
+    response.redirect('/')
   }
 }

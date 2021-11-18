@@ -52,7 +52,6 @@ if (Encore.isProduction()) {
 |
 */
 Encore.addEntry('app', './resources/js/app.js')
-Encore.addEntry('dashboard', './resources/dashboard.js')
 
 /*
 |--------------------------------------------------------------------------
@@ -176,7 +175,7 @@ Encore.enableSassLoader()
 | PostCSS or CSS.
 |
 */
-Encore.enablePostCssLoader()
+// Encore.enablePostCssLoader()
 // Encore.configureCssLoader(() => {})
 
 /*
