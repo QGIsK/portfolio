@@ -7,4 +7,7 @@ export default class PortfolioController {
 
     return items
   }
+  public async update({ params }) {
+    const item = await PortfolioItem.findByOrFail('id', params.id)
+  }
 }

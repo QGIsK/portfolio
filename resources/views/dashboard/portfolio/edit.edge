@@ -4,6 +4,13 @@
 
 @section('body')
 
-{{item}}
+<div class="row container mx-auto">
+    <div class="card col-8 mx-auto bg-secondary p-0 border-0">
+        <img src="{{item.image}}" alt="{{item.name}}" class="img-fluid">
+        <form action="{{route('PortfolioController.update', [item.id])}}">
+            <input type="text">
+        </form>
+    </div>
+</div>
 
 @end
