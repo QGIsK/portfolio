@@ -1,17 +1,29 @@
-## Stack used
-  NodeJS
-  Express
-  Mongoose
-  VueJS
+# Nuxt 3 Minimal Starter
 
-## Hosted on Digital Ocean App platform 
+We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
-  Frontend on a static site backed by cdn
-  
-  API on a basic app
+## Setup
 
+Make sure to install the dependencies
 
+```bash
+yarn install
+```
 
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=4b3af3f7aabc&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+## Development
 
-^Affiliate link
+Start the development server on http://localhost:3000
+
+```bash
+yarn dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+yarn build
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).

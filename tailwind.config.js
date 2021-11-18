@@ -1,6 +1,13 @@
 module.exports = {
-  purge: ['resources/views/*.edge', 'resources/views/**/*.edge'],
-  darkMode: 'class', // or 'media' or 'class'
+  mode: "jit",
+  purge: [
+    "./components/**/*.{vue,js}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+  ],
+  darkMode: true, // or 'media' or 'class'
   theme: {
     extend: {},
   },
@@ -8,4 +15,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
