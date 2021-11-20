@@ -1,18 +1,19 @@
 <template>
   <v-app dark>
-    <v-card>
-      <v-snackbar
-        v-model="show"
-        color="blue-grey"
-        shaped
-        :timeout="-1"
-        right="right"
-      >
+    <v-snackbar
+      v-model="show"
+      color="blue-grey"
+      fixed
+      bottom
+      shaped
+      :timeout="-1"
+    >
+      <div class="text-center mx-auto">
         This website may use cookies.
         <v-btn text to="/policy/cookie-statement">Read More</v-btn>
         <v-btn color text @click="toggleSnackBar">Close</v-btn>
-      </v-snackbar>
-    </v-card>
+      </div>
+    </v-snackbar>
     <Snackbar />
     <Nuxt />
   </v-app>
@@ -20,7 +21,10 @@
 
 <script>
 export default {
-  data: () => ({ show: true }),
+  data: () => ({ show: false }),
+  mounted() {
+    setTimeout(() => (this.show = true), 2500)
+  },
   methods: {
     toggleSnackBar() {
       this.show = !this.show

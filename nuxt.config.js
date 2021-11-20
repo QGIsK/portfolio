@@ -22,9 +22,12 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86',
+      },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
       {
         name: 'keywords',
         content:
