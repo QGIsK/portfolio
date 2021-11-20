@@ -93,7 +93,7 @@ We use the open source Plausible Analytics self-hosted through our
 analytics.demiann.dev domain to count website visits, downloads, etc. No
 cookies are used and no personal data—not even an IP address or browser user
 agent—is stored. For more information, see the
-<a href="https://plausible.io/data-policy">Plausible Data Policy</a>
+<a href="https://plausible.io/data-policy" rel="noopener noreferrer">Plausible Data Policy</a>
 
 <h4>Storing data</h4>
 The personal data that are collected on the website are used mainly by the
@@ -157,9 +157,7 @@ means. Your consent is valid for a period of thirteen months.
 
 Stores cookies to log behavioral elements and analyze potential threats. For
 more information, see the
-<a href="https://www.cloudflare.com/privacypolicy/"
-
-> Cloudflare Privacy & Security Policy</a
+<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer"> Cloudflare Privacy & Security Policy</a
 
 <h4>Functional cookies</h4>
 like session and login cookies to collect session and login information.
@@ -169,10 +167,7 @@ parties may be installed on your equipment.
 <h4>For more information</h4>
 about using, managing and deleting cookies for each electronic device we
 invite you to consult the following
-<a
-  href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies<h3>faq"
-  >link</a
->
+<a rel="noopener noreferrer" href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies<h3>faq">link</a>
 
 <h3>Article 12 - Imagery and products offered</h3>
 

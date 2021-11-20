@@ -10,11 +10,9 @@
           <v-hover v-slot="{ hover }" close-delay="175" open-delay="175">
             <v-btn
               color="white"
-              rel="noreferrer"
               text
               rounded
               class="my-2 mx-1"
-              target="_blank"
               href="#"
             >
               <v-expand-transition>
@@ -33,11 +31,12 @@
             v-for="link in socialLinks"
             :key="link.name"
             color="white"
-            rel="noreferrer"
             text
             rounded
             class="my-2 mx-1"
             target="_blank"
+                                      rel="noopener noreferrer"
+
             :href="link.path"
             >{{ link.name }}</v-btn
           >

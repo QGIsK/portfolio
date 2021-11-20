@@ -6,11 +6,7 @@
           <v-col
             v-for="(item, index) in items"
             :key="index"
-            :cols="
-              $vuetify.breakpoint.mdAndDown
-                ? `${item.md_down}`
-                : `${item.md_up}`
-            "
+            :cols="$vuetify.breakpoint.mdAndDown ? item.md_down : item.md_up"
             class="mx-auto"
             style="margin-bottom: 10vh; z-index: 6"
           >
@@ -25,7 +21,10 @@
                     ></v-img>
                     <v-fade-transition>
                       <v-overlay v-if="hover" absolute color="grey darken">
-                        <v-btn :href="item.url" target="_blank"
+                        <v-btn
+                          :href="item.url"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Website</v-btn
                         >
                       </v-overlay>
