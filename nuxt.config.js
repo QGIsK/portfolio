@@ -2,6 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  generate: { fallback: '404.html' },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s | Demian - Full-stack Web Developer',
@@ -85,7 +87,6 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
     },
