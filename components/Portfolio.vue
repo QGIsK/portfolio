@@ -45,15 +45,40 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'Portfolio',
   components: {},
-  computed: {
-    ...mapGetters({
-      items: 'items',
-    }),
+  data: () => {
+    return {
+      items: [
+        {
+          md_up: 8,
+          md_down: 10,
+          name: 'Bassen Met Lasse',
+          about: 'Website for Bassen Met Lasse, Made with VueJS and NodeJS',
+          image: 'https://cdn.demiann.dev/images/portfolio/BassenMetLasse.WebP',
+          url: 'https://bassenmetlasse.nl',
+        },
+        {
+          md_up: 7,
+          md_down: 10,
+          name: 'Reviews By Me',
+          about:
+            'Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and MongoDB',
+          image: 'https://cdn.demiann.dev/images/portfolio/ReviewsByMe.WebP',
+          url: 'https://reviewsbyme.demiann.dev',
+        },
+        {
+          md_up: 4,
+          md_down: 10,
+          name: 'Shadow Bot',
+          about:
+            'Website for the Shadow Discord bot <br />Made with Vue and NodeJS',
+          image: 'https://cdn.demiann.dev/images/portfolio/ShadowBot.WebP',
+          url: 'https://shadowbot.demiann.dev',
+        },
+      ],
+    }
   },
 }
 </script>
