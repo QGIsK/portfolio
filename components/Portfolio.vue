@@ -47,7 +47,6 @@
 <script>
 export default {
   name: 'Portfolio',
-  components: {},
   data: () => {
     return {
       items: [

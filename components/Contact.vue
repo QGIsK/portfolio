@@ -68,9 +68,6 @@
 <script>
 export default {
   name: 'Contact',
-  components: {},
-  data: () => ({}),
-  mounted() {},
 }
 </script>
 

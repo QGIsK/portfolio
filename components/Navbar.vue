@@ -4,8 +4,6 @@
       flat
       style="cursor: pointer; background: transparent; z-index: 10"
     >
-      <!-- <v-app-bar-nav-icon class="ml-2"></v-app-bar-nav-icon> -->
-
       <v-toolbar-title
         style="margin-left: 7.5vh"
         class="headline"

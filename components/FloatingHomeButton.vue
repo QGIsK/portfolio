@@ -13,7 +13,5 @@
 <script>
 export default {
   name: 'FloatingHomeBTN',
-  components: {},
-  methods: {},
 }
 </script>
