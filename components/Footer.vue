@@ -72,18 +72,6 @@ export default {
           name: 'Github',
           path: 'https://github.com/qgisk',
         },
-        {
-          name: 'Instagram',
-          path: '#',
-        },
-        {
-          name: 'Telegram',
-          path: '#',
-        },
-        {
-          name: 'LinkedIn',
-          path: '#',
-        },
       ],
       legalLinks: [
         {
