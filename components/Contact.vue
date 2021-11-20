@@ -20,12 +20,12 @@
                 $vuetify.breakpoint.mdAndDown ? 'mx-auto text-center' : ''
               "
             >
+              <h4 class="mb-3">Send me an email</h4>
               <a href="mailto:qgisk@pm.me" style="text-decoration: none">
                 <v-card elevation="0">
                   <v-card-text>
                     <i class="fa fa-envelope fa-lg mx-3"></i>
 
-                    Send me an email
                     <span class="underline"> qgisk@pm.me </span>
                   </v-card-text>
                 </v-card>
@@ -33,7 +33,7 @@
             </v-col>
           </v-row>
 
-          <h3 class="my-5">Prefer something a little less formal?</h3>
+          <h4 class="my-5">Prefer something a little less formal?</h4>
           <v-row>
             <v-col
               :cols="$vuetify.breakpoint.mdAndDown ? 8 : 6"
