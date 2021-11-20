@@ -16,7 +16,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items style="margin-right: 7.5vh">
         <v-btn v-scroll-to="'#portfolio'" text rounded>Home</v-btn>
-        <v-btn v-scroll-to="'#footer'" text rounded>Contact</v-btn>
+        <v-btn v-scroll-to="'#contact'" text rounded>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
   </div>

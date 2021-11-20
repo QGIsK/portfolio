@@ -46,7 +46,12 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {
+      src: '~/plugins/particles.js',
+      mode: 'client',
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -65,6 +70,11 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+
+    [
+      'vue-scrollto/nuxt',
+      { duration: 750, easing: 'ease', force: true, cancelable: true },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
