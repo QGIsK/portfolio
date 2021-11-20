@@ -2,7 +2,11 @@
   <div id="footer" class="bg-dark">
     <v-footer class="mt-3 pb-5" color="transparent" padless>
       <v-row justify="center" no-gutters class="mt-4">
-        <v-col cols="12" style="display: flex; justify-content: center">
+        <v-col
+          cols="12"
+          class="d-sm-flex text-center"
+          style="justify-content: center"
+        >
           <v-hover v-slot="{ hover }" close-delay="175" open-delay="175">
             <v-btn
               color="white"
