@@ -28,7 +28,7 @@ banner.
 
 Stores cookies to log behavioral elements and analyze potential threats. For
 more information, see the
-<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy & Security Policy</a>
+<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer">Cloudflare Privacy & Security Policy</a>
 
 <h4>Functional cookies</h4>
 like session and login cookies to collect session and login information. When
@@ -63,11 +63,11 @@ longer tailored to your interests and can therefore be repeated more often.
 How you can adjust your settings differs per browser. Please refer to the help
 function of your browsing or click on one of the links below to go directly to
 the manual of your browser. ·
-<a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox">Firefox</a>·
-<a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=en" >Google Chrome</a>·
-<a href="https://support.microsoft.com/en-gb/kb/278835">Internet Explorer</a>·
-<a href="https://support.apple.com/en-en/HT201265">Safari on smart phone</a>·
-<a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac">Safari on Mac</a>
+<a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" rel="noopener noreferrer">Firefox</a>·
+<a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=en" rel="noopener noreferrer">Google Chrome</a>·
+<a href="https://support.microsoft.com/en-gb/kb/278835" rel="noopener noreferrer">Internet Explorer</a>·
+<a href="https://support.apple.com/en-en/HT201265" rel="noopener noreferrer">Safari on smart phone</a>·
+<a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" rel="noopener noreferrer">Safari on Mac</a>
 
 <h3>6. New developments and unforeseen cookies</h3>
 
