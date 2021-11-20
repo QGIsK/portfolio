@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+description: Privacy Policy for demiann.dev
 ---
 
 Demian Mooibroek respects the privacy of its website visitors, in particular

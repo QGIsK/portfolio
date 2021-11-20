@@ -1,5 +1,6 @@
 ---
 title: Cookie Statement
+description: Cookie statement for demiann.dev
 ---
 
 <h3>1. The use of cookies</h3>

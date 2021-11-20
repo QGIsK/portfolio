@@ -1,5 +1,6 @@
 ---
 title: Disclaimer
+description: Disclaimer for demiann.dev
 ---
 
 Op het gebruik van deze website (demiann.dev) zijn onderstaande
