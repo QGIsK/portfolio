@@ -44,7 +44,11 @@
             {{ new Date().getFullYear() }}
           </strong>
         </v-col>
-        <v-col cols="12" style="display: flex; justify-content: center">
+        <v-col
+          cols="12"
+          class="d-sm-flex text-center"
+          style="justify-content: center"
+        >
           <v-btn
             v-for="link in legalLinks"
             :key="link.name"
