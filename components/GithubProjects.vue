@@ -26,8 +26,13 @@
                   <v-card-text>
                     <h4 class="mb-2">
                       <i
-                        class="fab fa-lg mx-3"
-                        :class="`fa-${icons[item.language]}`"
+                        class="fab fa-lg ml-3 mr-2"
+                        :class="`${
+                          icons[item.language]
+                            ? `fab fa-${icons[item.language]}`
+                            : 'fa fa-code'
+                        }`"
+                        :style="{ color: item.languageColor }"
                       ></i>
                       {{ item.repo }}
                     </h4>
@@ -53,6 +58,10 @@ export default {
       icons: {
         Vue: 'vuejs',
         JavaScript: 'js',
+        CSS: 'css3',
+        PHP: 'php',
+        SCSS: 'sass',
+        HTML: 'html5',
       },
     }
   },
