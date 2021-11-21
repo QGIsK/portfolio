@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <div id="contact" class="bg-dark">
     <v-container>
       <v-row>
         <v-col
@@ -71,8 +71,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 span.underline {
   text-decoration: underline;
+}
+
+.fa-discord {
+  color: #7289da;
+}
+
+.fa-telegram {
+  color: #0088cc;
 }
 </style>

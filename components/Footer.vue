@@ -1,5 +1,5 @@
 <template>
-  <div id="footer" class="bg-dark">
+  <div id="footer">
     <v-footer class="mt-3 pb-5" color="transparent" padless>
       <v-row justify="center" no-gutters class="mt-4">
         <v-col
@@ -8,13 +8,7 @@
           style="justify-content: center"
         >
           <v-hover v-slot="{ hover }" close-delay="175" open-delay="175">
-            <v-btn
-              color="white"
-              text
-              rounded
-              class="my-2 mx-1"
-              href="#"
-            >
+            <v-btn color="white" text rounded class="my-2 mx-1" href="#">
               <v-expand-transition>
                 <div
                   v-if="hover"
@@ -35,8 +29,7 @@
             rounded
             class="my-2 mx-1"
             target="_blank"
-                                      rel="noopener noreferrer"
-
+            rel="noopener noreferrer"
             :href="link.path"
             >{{ link.name }}</v-btn
           >
