@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <div id="contact" class="bg-dark">
     <v-container>
       <v-row>
         <v-col

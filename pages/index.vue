@@ -6,6 +6,7 @@
       <Navbar />
       <Header />
       <Portfolio />
+      <GithubProjects />
       <Contact />
       <Footer />
     </div>
