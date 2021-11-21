@@ -16,7 +16,7 @@ export default {
         async: true,
         defer: true,
         'data-domain': 'demiann.dev',
-        src: 'https://analytics.demiann.dev/js/plausible.js',
+        src: 'https://uwu.demiann.dev/js/script.js',
       },
     ],
     meta: [
