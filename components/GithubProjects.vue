@@ -8,7 +8,7 @@
           :class="$vuetify.breakpoint.mdAndDown ? ' text-center' : ''"
         >
           <h1 class="display-1 mb-3">Github Projects</h1>
-          <h3 class="mb-5">These are some of my github projects.</h3>
+          <h3 class="mb-5">These are some of my recent github projects.</h3>
 
           <v-row>
             <v-col
@@ -26,7 +26,7 @@
                   <v-card-text>
                     <h4 class="mb-2">
                       <i
-                        class="fab fa-lg ml-3 mr-2"
+                        class="fa-lg ml-3 mr-2"
                         :class="`${
                           icons[item.language]
                             ? `fab fa-${icons[item.language]}`

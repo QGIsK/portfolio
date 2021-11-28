@@ -32,7 +32,17 @@
                   </div>
                 </template>
               </v-hover>
-              <v-card-title>{{ item.name }}</v-card-title>
+              <v-card-title
+                >{{ item.name }} <v-spacer></v-spacer>
+                <i
+                  v-for="icon in item.icons"
+                  :key="icon"
+                  :class="icon"
+                  class="fab mx-2"
+                  hint="hi"
+                ></i>
+                {{ icons }}</v-card-title
+              >
               <!-- eslint-disable-next-line vue/no-v-html -->
               <v-card-text v-html="item.about"></v-card-text>
             </v-card>
@@ -52,28 +62,40 @@ export default {
         {
           md_up: 8,
           md_down: 10,
-          name: 'Bassen Met Lasse',
-          about: 'Website for Bassen Met Lasse, Made with VueJS and NodeJS',
-          image: 'https://cdn.demiann.dev/images/portfolio/BassenMetLasse.WebP',
-          url: 'https://bassenmetlasse.nl',
+          name: 'Groene Marketeers',
+          icons: [
+            'fa-laravel',
+            'fa-php',
+            'fa-vuejs',
+            'fa-sass',
+            'fa-bootstrap',
+          ],
+          about:
+            'I worked on the team that created the new website for Groene Marketeers, Made with a PHP/Laravel + MySQL Backend, vite-plugin-ssr vue frontend',
+          image:
+            'https://cdn.demiann.dev/images/portfolio/GroeneMarketeers.WebP',
+          // TODO
+          url: '#',
         },
         {
           md_up: 7,
           md_down: 10,
-          name: 'Reviews By Me',
+          name: 'Bassen Met Lasse',
+          icons: ['fa-vuejs', 'fa-sass', 'fa-node'],
           about:
-            'Reviews By Me is a Blog Application <br />Made with Vue, Express, NodeJS and MongoDB',
-          image: 'https://cdn.demiann.dev/images/portfolio/ReviewsByMe.WebP',
-          url: 'https://reviewsbyme.demiann.dev',
+            'Simple portfolio website for Lasse, Made with Vue & Vuetify and a Express/NodeJS backend.',
+          image: 'https://cdn.demiann.dev/images/portfolio/BassenMetLasse.WebP',
+          url: 'https://bassenmetlasse.nl',
         },
         {
           md_up: 4,
           md_down: 10,
-          name: 'Shadow Bot',
+          name: 'Reviews By Me',
+          icons: ['fa-vuejs', 'fa-node', 'fa-css3'],
           about:
-            'Website for the Shadow Discord bot <br />Made with Vue and NodeJS',
-          image: 'https://cdn.demiann.dev/images/portfolio/ShadowBot.WebP',
-          url: 'https://shadowbot.demiann.dev',
+            'Reviews by me was initially made as a practice project but has also been used for real-world purposes since.',
+          image: 'https://cdn.demiann.dev/images/portfolio/ReviewsByMe.WebP',
+          url: 'https://reviewsbyme.demiann.dev',
         },
       ],
     }
