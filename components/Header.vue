@@ -1,11 +1,13 @@
 <template>
   <div>
-    <particles-bg
-      type="cobweb"
-      :bg="true"
-      num="100"
-      style="z-index: 1; max-height: 80vh"
-    />
+    <ClientOnly>
+      <particles-bg
+        type="cobweb"
+        :bg="true"
+        num="100"
+        style="z-index: 1; max-height: 80vh"
+      />
+    </ClientOnly>
     <v-container my-5>
       <v-row>
         <v-col :cols="$vuetify.breakpoint.sm ? 6 : 12">
