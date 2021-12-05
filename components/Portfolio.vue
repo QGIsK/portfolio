@@ -69,7 +69,7 @@ export default {
             'fa-bootstrap',
           ],
           about:
-            'I worked on the team that created the new website for Groene Marketeers, Made with a PHP/Laravel + MySQL Backend, vite-plugin-ssr vue frontend',
+            'I worked on the team that created the new website for Groene Marketeers, Made with a PHP/Laravel + MySQL Backend, vite-plugin-ssr Vue on the  frontend',
           image:
             'https://cdn.demiann.dev/images/portfolio/GroeneMarketeers.WebP',
           // TODO
