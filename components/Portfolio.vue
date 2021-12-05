@@ -39,10 +39,8 @@
                   :key="icon"
                   :class="icon"
                   class="fab mx-2"
-                  hint="hi"
                 ></i>
-                {{ icons }}</v-card-title
-              >
+              </v-card-title>
               <!-- eslint-disable-next-line vue/no-v-html -->
               <v-card-text v-html="item.about"></v-card-text>
             </v-card>
