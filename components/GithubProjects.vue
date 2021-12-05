@@ -18,7 +18,7 @@
               class="mx-auto"
             >
               <a
-                :href="item.link"
+                :href="item.repository"
                 rel="noopener norefrerrer"
                 style="text-decoration: none"
               >
@@ -34,9 +34,9 @@
                         }`"
                         :style="{ color: item.languageColor }"
                       ></i>
-                      {{ item.repo }}
+                      {{ item.name }}
                     </h4>
-                    <p class="text-muted px-4">{{ item.description }}</p>
+                    <p class="text-muted px-4">{{ item.about }}</p>
                   </v-card-text>
                 </v-card>
               </a>
@@ -67,7 +67,7 @@ export default {
   },
   async mounted() {
     const items = await this.$axios.$get(
-      'https://gh-pinned-repos.egoist.sh/?username=qgisk'
+      'https://api.demiann.dev/gh/pinned?username=qgisk'
     )
 
     this.items = items
