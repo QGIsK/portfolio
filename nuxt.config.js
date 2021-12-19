@@ -91,6 +91,16 @@ export default {
         },
     },
 
+    hooks: {
+        'content:file:beforeInsert': document => {
+            if (document.extension === '.md') {
+                const {minutes} = require('reading-time')(document.text);
+
+                document.readingTime = minutes;
+            }
+        },
+    },
+
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
 };

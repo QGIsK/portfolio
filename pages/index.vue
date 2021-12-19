@@ -5,7 +5,7 @@
       </ClientOnly>
       <Navbar />
       <Header />
-      <Portfolio />
+      <Portfolio :items="items" />
       <GithubProjects />
       <Contact />
       <Footer />
@@ -16,6 +16,19 @@
 <script>
 export default {
   name: 'Home',
+  async asyncData({$content, error}) {
+        const items = await $content('projects')
+            .limit(5)
+            .sortBy('order')
+            .fetch()
+            .catch(_err => {
+                error({statusCode: 404, message: 'Page not found'});
+            });
+
+        return {
+            items,
+        };
+    },
 }
 </script>
 
