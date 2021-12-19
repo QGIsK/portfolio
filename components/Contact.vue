@@ -5,7 +5,7 @@
                 <v-col
                     :cols="$vuetify.breakpoint.mdAndDown ? 12 : 8"
                     class="mx-auto mt-10 mb-15"
-                    :class="$vuetify.breakpoint.mdAndDown ? ' text-center' : ''"
+                    :class="{'text-center': $vuetify.breakpoint.mdAndDown}"
                 >
                     <h1 class="display-1 mb-3">Contact</h1>
                     <h3 class="mb-5">
@@ -15,7 +15,7 @@
                     <v-row>
                         <v-col
                             :cols="$vuetify.breakpoint.mdAndDown ? 8 : 6"
-                            :class="$vuetify.breakpoint.mdAndDown ? 'mx-auto text-center' : ''"
+                            :class="{'text-center mx-auto': $vuetify.breakpoint.mdAndDown}"
                         >
                             <h4 class="mb-3">Send me an email</h4>
                             <a href="mailto:hello@demiann.dev" style="text-decoration: none">

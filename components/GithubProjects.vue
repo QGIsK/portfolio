@@ -5,7 +5,7 @@
                 <v-col
                     :cols="$vuetify.breakpoint.mdAndDown ? 12 : 8"
                     class="mx-auto mt-10 mb-15"
-                    :class="$vuetify.breakpoint.mdAndDown ? ' text-center' : ''"
+                    :class="{'text-center': $vuetify.breakpoint.mdAndDown}"
                 >
                     <h1 class="display-1 mb-3">Github Projects</h1>
                     <h3 class="mb-5">These are some of my recent github projects.</h3>
