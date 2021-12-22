@@ -47,3 +47,5 @@ toestemming voor heeft gegeven.
 <h3>Toeschrijving</h3>
 Deze disclaimer is gemaakt met behulp van Rocket Lawyer
 (https://www.rocketlawyer.com/nl/nl).
+
+### Last updated 22 December, 2021.

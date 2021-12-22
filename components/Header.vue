@@ -1,23 +1,12 @@
 <template>
     <div>
         <ClientOnly>
-            <particles-bg type="cobweb" :bg="true" num="100" style="z-index: 1; max-height: 80vh" />
+            <particles-bg type="cobweb" :bg="true" num="100" class="bg-particles" />
         </ClientOnly>
         <v-container my-5>
             <v-row>
                 <v-col :cols="$vuetify.breakpoint.sm ? 6 : 12">
-                    <v-card
-                        class="ml-5"
-                        style="
-                            z-index: 2;
-                            margin-top: 27.5vh;
-                            margin-bottom: 15vh;
-                            background: transparent;
-                            font-size: 2em;
-                            line-height: 1.5em;
-                        "
-                        flat
-                    >
+                    <v-card class="ml-5 content-card" style="" flat>
                         I'm a
                         <b>Web Developer</b>
                         <br />
@@ -35,3 +24,19 @@ export default {
     name: 'Header',
 };
 </script>
+
+<style lang="scss" scoped>
+.bg-particles {
+    z-index: 1;
+    max-height: 80vh;
+}
+
+.content-card {
+    z-index: 2;
+    margin-top: 27.5vh;
+    margin-bottom: 15vh;
+    background: transparent;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+</style>

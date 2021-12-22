@@ -2,13 +2,11 @@
     <div id="footer">
         <v-footer class="mt-3 pb-5" color="transparent" padless>
             <v-row justify="center" no-gutters class="mt-4">
-                <v-col cols="12" class="d-sm-flex text-center" style="justify-content: center">
+                <v-col cols="12" class="d-sm-flex text-center justify-center">
                     <v-hover v-slot="{hover}" close-delay="175" open-delay="175">
                         <v-btn color="white" text rounded class="my-2 mx-1">
                             <v-expand-transition>
-                                <div v-if="hover" class="d-flex darken-2 white--text" style="height: 100%">
-                                    Demian#6666
-                                </div>
+                                <div v-if="hover" class="d-flex darken-2 white--text">Demian#6666</div>
                                 <div v-else>Discord</div>
                             </v-expand-transition>
                         </v-btn>
@@ -33,7 +31,7 @@
                         {{ new Date().getFullYear() }}
                     </strong>
                 </v-col>
-                <v-col cols="12" class="d-sm-flex text-center" style="justify-content: center">
+                <v-col cols="12" class="d-sm-flex text-center justify-center">
                     <v-btn
                         v-for="link in legalLinks"
                         :key="link.name"

@@ -92,3 +92,5 @@ adjust our website or change the rules regarding cookies. You can consult this
 webpage for the latest version. If you have any questions or comments, please
 contact hello@demiann.dev. This cookie statement was created using a document
 from Rocket Lawyer (https://www.rocketlawyer.com/nl/nl).
+
+### Last updated 22 December, 2021.

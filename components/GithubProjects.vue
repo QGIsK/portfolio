@@ -15,9 +15,9 @@
                             v-for="item in items"
                             :key="item.repo"
                             :cols="$vuetify.breakpoint.mdAndDown ? 8 : 6"
-                            class="mx-auto"
+                            class="mx-auto github-project-card"
                         >
-                            <a :href="item.repository" rel="noopener norefrerrer" style="text-decoration: none">
+                            <a :href="item.repository" rel="noopener norefrerrer" class="text-decoration-none">
                                 <v-card elevation="0">
                                     <v-card-text>
                                         <h4 class="mb-2">
@@ -69,8 +69,18 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 span.underline {
     text-decoration: underline;
+}
+
+.github-project-card,
+.github-project-card >>> .v-card {
+    height: 140px !important;
+    margin-bottom: 1rem;
+
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 </style>

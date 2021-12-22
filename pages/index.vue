@@ -22,7 +22,7 @@ export default {
             .sortBy('order')
             .fetch()
             .catch(_err => {
-                error({statusCode: 404, message: 'Page not found'});
+                error({statusCode: 500, message: 'Server error occured, please try again later.'});
             });
 
         return {

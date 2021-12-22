@@ -1,19 +1,18 @@
 <template>
-    <div class="bg-dark" style="margin-top: 17.5vh">
+    <div class="bg-dark portfolio">
         <v-container class="my-5 fill-height">
             <v-fade-transition mode="out-in" appear>
-                <v-row style="margin-top: -17.5vh">
+                <v-row class="portfolio-items">
                     <v-col
                         v-for="(item, index) in items"
                         :key="index"
                         :cols="$vuetify.breakpoint.mdAndDown ? item.size.down : item.size.up"
-                        class="mx-auto"
-                        style="margin-bottom: 10vh; z-index: 6"
+                        class="mx-auto portfolio-col"
                     >
-                        <v-card style="background: transparent" flat>
+                        <v-card flat class="portfolio-card">
                             <v-hover>
                                 <template #default="{hover}">
-                                    <div style="position: relative">
+                                    <div class="position-relative">
                                         <v-img
                                             :src="item.images.desktop"
                                             class="grey darken-4"
@@ -58,3 +57,21 @@ export default {
     },
 };
 </script>
+
+<style lang="scss">
+.portfolio {
+    margin-top: 17.5vh;
+}
+
+.portfolio-items {
+    margin-top: -17.5vh;
+}
+
+.portfolio-col {
+    z-index: 6;
+    margin-bottom: 10vh;
+}
+.position-relative {
+    position: relative;
+}
+</style>

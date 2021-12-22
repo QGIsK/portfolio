@@ -157,7 +157,7 @@ means. Your consent is valid for a period of thirteen months.
 
 Stores cookies to log behavioral elements and analyze potential threats. For
 more information, see the
-<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer"> Cloudflare Privacy & Security Policy</a
+<a href="https://www.cloudflare.com/privacypolicy/" rel="noopener noreferrer"> Cloudflare Privacy & Security Policy</a>
 
 <h4>Functional cookies</h4>
 like session and login cookies to collect session and login information.
@@ -167,7 +167,7 @@ parties may be installed on your equipment.
 <h4>For more information</h4>
 about using, managing and deleting cookies for each electronic device we
 invite you to consult the following
-<a rel="noopener noreferrer" href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies<h3>faq">link</a>
+<a rel="noopener noreferrer" href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies#faq">link</a>
 
 <h3>Article 12 - Imagery and products offered</h3>
 
@@ -184,3 +184,5 @@ regarding these conditions may arise, save when a legal exception applies.
 
 For questions, product information or information about the website itself,
 please contact: Demian, hello@demiann.dev.
+
+### Last updated 22 December, 2021.
