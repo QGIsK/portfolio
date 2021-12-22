@@ -54,19 +54,21 @@ export default {
 };
 </script>
 
-<style>
-h2 {
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-}
+<style lang="scss">
+.nuxt-content {
+    h2 {
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+    }
 
-h3 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
+    h3 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 
-h4 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    h4 {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
 }
 </style>
