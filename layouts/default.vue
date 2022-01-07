@@ -3,7 +3,7 @@
         <v-snackbar v-model="show" color="blue-grey" fixed bottom shaped :timeout="-1">
             <div class="text-center mx-auto">
                 This website uses functionality cookies.
-                <v-btn text to="/policy/cookie-statement">Read More</v-btn>
+                <v-btn text to="/policy/cookie-statement">Cookie statement</v-btn>
                 <v-btn color text @click="toggleSnackBar">Close</v-btn>
             </div>
         </v-snackbar>
