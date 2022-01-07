@@ -26,7 +26,11 @@ export default {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86',
             },
-            {hid: 'description', name: 'description', content: ''},
+            {
+                hid: 'description',
+                name: 'description',
+                content: 'Full stack web developer, I make modern web applications.',
+            },
             {
                 name: 'keywords',
                 content:
