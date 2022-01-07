@@ -60,7 +60,7 @@ export default {
 }
 
 .portfolio-items {
-    margin-top: -17.5vh;
+    margin-top: -17.5vh !important;
 }
 
 .portfolio-col {
