@@ -15,9 +15,9 @@
                                     <v-img :src="item.images.desktop" class="grey darken-4" :alt="item.title"></v-img>
                                     <v-fade-transition>
                                         <v-overlay v-if="hover" absolute color="grey darken">
-                                            <NuxtLink :to="item.path">
+                                            <a :href="item.url" rel="noopener noreferrer">
                                                 <v-btn>More information</v-btn>
-                                            </NuxtLink>
+                                            </a>
                                         </v-overlay>
                                     </v-fade-transition>
                                 </div>

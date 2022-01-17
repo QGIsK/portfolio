@@ -32,7 +32,9 @@
                                             ></i>
                                             {{ item.name }}
                                         </h4>
-                                        <p class="text-muted px-4">{{ item.about }}</p>
+                                        <div class="text-muted px-4">
+                                            {{ item.about }}
+                                        </div>
                                     </v-card-text>
                                 </v-card>
                             </a>
