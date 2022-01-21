@@ -14,8 +14,8 @@
         "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
         "prepare": "husky install",
         "lint": "npm run lint:js",
-        "deploy:dev": "wrangler publish -e development",
-        "deploy:prod": "wrangler publish -e production"
+        "deploy:dev": "npm run generate && wrangler publish -e development",
+        "deploy:prod": "npm run generate && wrangler publish -e production"
     },
     "prettier": "@qgisk/prettier-config",
     "lint-staged": {
