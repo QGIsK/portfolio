@@ -28,22 +28,22 @@ async function handleEvent(event) {
     const options = {};
 
     try {
-        if (DEBUG) {
-            // customize caching
-            options.cacheControl = {
-                bypassCache: true,
-            };
+        const cache = caches.default;
+        let response = await cache.match(event.request);
+
+        if (!response) {
+            const page = await getAssetFromKV(event, options);
+
+            // allow headers to be altered
+            response = new Response(page.body, page);
+
+            response.headers.set('X-XSS-Protection', '1; mode=block');
+            response.headers.set('X-Content-Type-Options', 'nosniff');
+            response.headers.set('X-Frame-Options', 'DENY');
+            response.headers.set('Referrer-Policy', 'unsafe-url');
+            response.headers.set('Feature-Policy', 'none');
+            event.waitUntil(cache.put(event.request, response.clone()));
         }
-        const page = await getAssetFromKV(event, options);
-
-        // allow headers to be altered
-        const response = new Response(page.body, page);
-
-        response.headers.set('X-XSS-Protection', '1; mode=block');
-        response.headers.set('X-Content-Type-Options', 'nosniff');
-        response.headers.set('X-Frame-Options', 'DENY');
-        response.headers.set('Referrer-Policy', 'unsafe-url');
-        response.headers.set('Feature-Policy', 'none');
 
         return response;
     } catch (e) {

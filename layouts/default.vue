@@ -14,7 +14,7 @@
 
 <script>
 export default {
-    data: () => ({show: false}),
+    data: () => ({ show: false }),
     mounted() {
         setTimeout(() => (this.show = true), 1500);
     },
@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
 .theme--dark.v-application {
     background: #171717 !important;
-    font-family: 'Comfortaa' !important;
+    font-family: "Comfortaa", sans-serif !important;
 }
 .fade-enter-active,
 .fade-leave-active {

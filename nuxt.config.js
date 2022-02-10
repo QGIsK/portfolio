@@ -11,6 +11,9 @@ export default {
         htmlAttrs: {
             lang: 'en',
         },
+        base: {
+            href: '/',
+        },
         script: [
             {
                 async: true,
@@ -41,11 +44,11 @@ export default {
             {rel: 'preconnect', href: 'https://cdn.demiannn.dev'},
             {
                 rel: 'stylesheet',
-                href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
+                href: 'https://cdn.demiann.dev/font-awesome/v5/css/all.min.css',
             },
             {
                 rel: 'stylesheet',
-                href: 'https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap',
+                href: 'https://cdn.demiann.dev/fonts/Comfortaa/index.css',
             },
         ],
     },
@@ -95,15 +98,7 @@ export default {
         },
     },
 
-    hooks: {
-        'content:file:beforeInsert': document => {
-            if (document.extension === '.md') {
-                const {minutes} = require('reading-time')(document.text);
-
-                document.readingTime = minutes;
-            }
-        },
-    },
+    hooks: {},
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},

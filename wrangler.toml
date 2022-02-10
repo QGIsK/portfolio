@@ -9,12 +9,10 @@ bucket = "./dist"
 
 [env.production]
 name="portfolio"
-route = ''
-workers_dev = false
+workers_dev = true
 ENVIRONMENT = 'production'
 
 [env.development]
 name = "portfolio-dev"
-route = ''
 workers_dev = true
 ENVIRONMENT = 'development'
