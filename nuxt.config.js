@@ -16,10 +16,9 @@ export default {
         },
         script: [
             {
-                async: true,
                 defer: true,
-                'data-website-id': '1fa4fbc3-8ce8-4fec-bfe8-7b30d81c747c',
-                src: 'https://media.demiann.dev/umami.js',
+                'data-website': 'demiann.dev',
+                src: 'https://media.demiann.dev/js/script.js',
             },
         ],
         meta: [
