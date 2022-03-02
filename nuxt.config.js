@@ -47,7 +47,7 @@ export default {
             },
             {
                 rel: 'stylesheet',
-                href: 'https://cdn.demiann.dev/fonts/Comfortaa/index.css',
+                href: 'https://fonts.demiann.dev/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap',
             },
         ],
     },
