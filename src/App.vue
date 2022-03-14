@@ -18,11 +18,20 @@ onMounted(() => {
 <template>
   <router-view v-slot="{ Component }">
     <Transition name="fade" mode="out-in">
-      <component :is="Component" />
+      <div>
+        <component :is="Component" />
+      </div>
     </Transition>
   </router-view>
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.75s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

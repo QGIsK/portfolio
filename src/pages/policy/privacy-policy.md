@@ -1,7 +1,9 @@
 ---
-title: Privacy Policy
+title: Privacy Policy | Demian - Full stack web developer
 description: Privacy Policy for demiann.dev
 ---
+
+<h1>Privacy Policy</h1>
 
 Demian Mooibroek respects the privacy of its website visitors, in particular
 their rights regarding the automatic processing of personal data. We have
@@ -186,3 +188,8 @@ For questions, product information or information about the website itself,
 please contact: Demian, hello@demiann.dev.
 
 ### Last updated 22 December, 2021.
+
+<route lang="yaml">
+meta:
+  layout: policy
+</route>

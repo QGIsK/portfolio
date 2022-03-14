@@ -1,7 +1,10 @@
 ---
-title: Disclaimer
+title: Disclaimer | Demian - Full stack web developer
 description: Disclaimer for demiann.dev
 ---
+
+<h1>Disclaimer</h1>
+
 
 Op het gebruik van deze website (demiann.dev) zijn onderstaande
 gebruiksvoorwaarden van toepassing. Door gebruik te maken van deze website,
@@ -49,3 +52,8 @@ Deze disclaimer is gemaakt met behulp van Rocket Lawyer
 (https://www.rocketlawyer.com/nl/nl).
 
 ### Last updated 22 December, 2021.
+
+<route lang="yaml">
+meta:
+  layout: policy
+</route>

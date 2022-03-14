@@ -19,7 +19,6 @@ const doRequest = async(config: AxiosRequestConfig) => {
     return data
   }
   catch (e) {
-    // @ts-expect-error Cant define in catch
     const error: AxiosError = e
 
     // eslint-disable-next-line no-console

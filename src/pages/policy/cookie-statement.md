@@ -1,7 +1,9 @@
 ---
-title: Cookie Statement
+title: Cookie Statement | Demian - Full stack web developer
 description: Cookie statement for demiann.dev
 ---
+
+<h1>Cookie Statement</h1>
 
 <h3>1. The use of cookies</h3>
 
@@ -94,3 +96,8 @@ contact hello@demiann.dev. This cookie statement was created using a document
 from Rocket Lawyer (https://www.rocketlawyer.com/nl/nl).
 
 ### Last updated 22 December, 2021.
+
+<route lang="yaml">
+meta:
+  layout: policy
+</route>

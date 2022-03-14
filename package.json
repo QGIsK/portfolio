@@ -11,6 +11,7 @@
   "dependencies": {
     "@vueuse/core": "^7.6.1",
     "@vueuse/head": "^0.7.5",
+    "aos": "^2.3.4",
     "axios": "^0.26.0",
     "moment": "^2.29.1",
     "nprogress": "^0.2.0",
@@ -25,8 +26,13 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.16.1",
     "@iconify-json/carbon": "^1.0.15",
+    "@iconify-json/cib": "^1.1.1",
+    "@iconify-json/eva": "^1.1.1",
     "@iconify-json/fa-brands": "^1.1.0",
+    "@iconify-json/la": "^1.1.1",
+    "@iconify-json/line-md": "^1.1.1",
     "@iconify-json/noto": "^1.1.0",
+    "@iconify-json/ph": "^1.1.1",
     "@iconify-json/uil": "^1.1.0",
     "@intlify/vite-plugin-vue-i18n": "^3.2.2",
     "@types/markdown-it-link-attributes": "^3.0.1",

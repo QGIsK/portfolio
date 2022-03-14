@@ -1,3 +1,5 @@
+export const INSTAGRAM = 'https://instagram.com/demiann.dev'
+export const GITHUB = 'https://github.com/QGIsK'
 export const TWITTER = 'https://twitter.com/qgisk_dev'
-export const DISCORD_INVITE = 'https://discord.gg/aY8fNPYp7s'
-export const COPYRIGHT_EMAIL = 'copyright@discounted.gg'
+
+export const CONTACT_EMAIL = 'hello@demiann.dev'

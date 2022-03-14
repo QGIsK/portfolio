@@ -1,13 +1,12 @@
 <script setup lang="ts">
-
 const navItems: { name: string; href: string }[] = [
   {
     name: 'portfolio',
     href: '#portfolio',
   },
   {
-    name: 'services',
-    href: '#services',
+    name: 'recent projects',
+    href: '#recent-projects',
   },
   {
     name: 'contact',
@@ -15,42 +14,35 @@ const navItems: { name: string; href: string }[] = [
   },
 ]
 
+const goTo = (hash) => {
+  const el = document.querySelector(hash).offsetTop
+  window.scrollTo({ top: el - 60, behavior: 'smooth' })
+}
 </script>
 <template>
+  <div display="hidden md:block" pos="fixed left-5" z="50">
+    <RouterLink to="/">
+      <img src="/logo.png" h="16" w="16" border="rounded-lg" shadow="xl">
+    </RouterLink>
+  </div>
   <Container>
-    <div mt="4" border="b gray-200" pb="3" flex="~" justify="between">
-      <div w="full md:6/12">
-        <div text="2xl" font="semibold">
-          Demiann
-          <br>
-          <span ml="6">
-            web development
-          </span>
-        </div>
+    <div mt="2 md:8" border="0 gray-300" pb="3" flex="sm:~" justify="center sm:between" align="sm:items-center">
+      <div h="12 sm:16" w="12 sm:16" mx="auto" display="block md:hidden">
+        <RouterLink to="/">
+          <img src="/logo.png" h="12 sm:16" w="12 sm:16" border="rounded-lg" shadow="xl">
+        </RouterLink>
       </div>
-      <div w="full md:6/12" flex="~" justify="end" space="x-12" align="items-center">
-        <a
-          v-for="item in navItems" :key="item.href" :href="item.href" class="lowercase text-gray-700 hover:text-black "
+      <div w="full" mt="4 sm:0" flex="~" justify="center sm:end" space="x-4 sm:x-12">
+        <button
+          v-for="item in navItems"
+          :key="item.href"
+          :href="item.href"
+          class="nav-link lowercase text-gray-600 hover:text-black"
+          @click="goTo(item.href)"
         >
           {{ item.name }}
-        </a>
+        </button>
       </div>
     </div>
   </Container>
 </template>
-
-<style lang="scss" scoped>
-a {
-background:
-  linear-gradient(to right, rgb(27, 24, 77), rgba(0, 100, 200, 1));
-  background-size: 0 0.1em;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: all 400ms;
-}
-
-a:hover,
-a:focus {
-  background-size:  100% 0.1em;
-}
-</style>
