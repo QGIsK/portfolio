@@ -30,7 +30,7 @@ const portfolioItems: { img: string; name: string; description?: string }[] = [
 
 <template>
   <!-- <Container> -->
-  <div class="h-80 sm:h-120 md:h-160 px-8" flex="~" justify="center" align="items-center">
+  <div class="h-80 sm:h-120 md:h-140 3xl:h-180 px-8" flex="~" justify="center" align="items-center">
     <div>
       <h1
         class="text-4xl sm:text-5xl md:text-7xl lg:text-9xl uppercase text-gr-purple-dark"

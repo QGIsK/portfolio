@@ -23,7 +23,7 @@ import { CONTACT_EMAIL } from '~/constants'
       text="2xl xl:4xl xs:right"
       class="text-gr-purple-dark"
       data-aos="fade-left"
-      data-aos-delay="350"
+      data-aos-delay="300"
     >
       or a recruiter, trying to recruit?
     </h2>
@@ -34,7 +34,7 @@ import { CONTACT_EMAIL } from '~/constants'
       text="xl"
       class="text-gr-dark-purple"
       data-aos="fade-left"
-      data-aos-delay="600"
+      data-aos-delay="300"
     >
       You can reach me via these channels
     </h2>
@@ -53,7 +53,7 @@ import { CONTACT_EMAIL } from '~/constants'
       align="items-center"
       font="semibold"
       data-aos="fade-right"
-      data-aos-delay="250"
+      data-aos-delay="350"
     >
       <EmailIcon w="16" h="6" />hello@demiann.dev
     </a>
@@ -69,7 +69,7 @@ import { CONTACT_EMAIL } from '~/constants'
       align="items-center"
       font="semibold"
       data-aos="fade-right"
-      data-aos-delay="250"
+      data-aos-delay="350"
     >
       <TelegramIcon w="16" h="6" />Demiann
     </div>
@@ -85,7 +85,7 @@ import { CONTACT_EMAIL } from '~/constants'
       align="items-center"
       font="semibold"
       data-aos="fade-right"
-      data-aos-delay="250"
+      data-aos-delay="350"
     >
       <DiscordIcon w="16" h="6" />Demian#6666
     </div>
