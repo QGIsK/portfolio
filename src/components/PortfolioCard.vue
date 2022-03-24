@@ -1,4 +1,5 @@
-<script setup>
+<script setup lang="ts">
+
 defineProps({
   img: {
     type: String,
@@ -7,6 +8,11 @@ defineProps({
   name: {
     type: String,
     required: true,
+  },
+  href: {
+    type: String,
+    required: false,
+    default: () => '#',
   },
   description: {
     type: String,
@@ -17,7 +23,7 @@ defineProps({
 })
 </script>
 <template>
-  <div my="14" w="full" flex="lg:~" space="x-4 lg:x-8">
+  <a :href="href" target="_blank" rel="noopener noreferrer" my="14" w="full" flex="lg:~" space="x-4 lg:x-8">
     <div
       h="auto" w="w-full lg:90rem"
       data-aos="fade-right"
@@ -41,5 +47,5 @@ defineProps({
         {{ description }}
       </p>
     </div>
-  </div>
+  </a>
 </template>

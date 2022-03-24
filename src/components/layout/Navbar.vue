@@ -5,6 +5,10 @@ const navItems: { name: string; href: string }[] = [
     href: '#portfolio',
   },
   {
+    name: 'documentation',
+    href: '#documentation',
+  },
+  {
     name: 'recent projects',
     href: '#recent-projects',
   },

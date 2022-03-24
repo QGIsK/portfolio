@@ -4,25 +4,41 @@ useHead({
   title: 'Home | Demian - Full stack web developer',
 })
 
-const portfolioItems: { img: string; name: string; description?: string }[] = [
+const portfolioItems: { img: string; name: string; href?: string; description?: string }[] = [
   {
     img: '/images/GroeneMarketeers.WebP',
     name: 'Groene Marketeers',
+    href: 'https:/groenemarketeers.nl',
   },
 
   {
     img: '/images/BassenMetLasse.WebP',
     name: 'Bassen met lasse',
+    href: 'https://bassenmetlasse.nl',
   },
 
   {
     img: '/images/Discounted.WebP',
     name: 'Discounted.gg',
+    href: 'https://discounted.gg',
   },
+]
 
+const documentationItems: { name: string; description: string; href: string }[] = [
   {
-    img: '/images/ReviewsByMe.WebP',
-    name: 'ReviewsByMe',
+    name: 'API',
+    description: 'Documentation for api.demiann.dev',
+    href: 'https://api.docs.demiann.dev',
+  },
+  {
+    name: 'Joke Wrapper',
+    description: 'API Wrapper for jokeapi.dev',
+    href: 'https://jokewrapper.docs.demiann.dev',
+  },
+  {
+    name: 'Steam Resolver',
+    description: 'Documentation for steamResolver',
+    href: 'https://api.docs.demiann.dev',
   },
 ]
 
@@ -61,8 +77,20 @@ const portfolioItems: { img: string; name: string; description?: string }[] = [
         :key="item.name"
         :img="item.img"
         :name="item.name"
+        :href="item.href"
         :description="item.description"
       />
+    </div>
+  </Container>
+
+  <Container id="documentation">
+    <div class="min-h-80">
+      <SectionHeader text="center">
+        Documentation
+      </SectionHeader>
+      <div grid="~ cols-1 md:cols-3 gap-8" my="12">
+        <DocumentationCard v-for="doc in documentationItems" :key="doc.name" :doc="doc" />
+      </div>
     </div>
   </Container>
 
