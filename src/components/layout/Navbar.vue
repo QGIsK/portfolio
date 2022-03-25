@@ -4,10 +4,10 @@ const navItems: { name: string; href: string }[] = [
     name: 'portfolio',
     href: '#portfolio',
   },
-  {
-    name: 'recent projects',
-    href: '#recent-projects',
-  },
+  // {
+  //   name: 'recent projects',
+  //   href: '#recent-projects',
+  // },
   {
     name: 'contact',
     href: '#contact',

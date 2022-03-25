@@ -94,7 +94,7 @@ const documentationItems: { name: string; description: string; href: string }[] 
     </div>
   </Container> -->
 
-  <Container id="recent-projects">
+  <!-- <Container id="recent-projects">
     <div class="min-h-80">
       <SectionHeader text="center">
         Recent Projects
@@ -102,7 +102,7 @@ const documentationItems: { name: string; description: string; href: string }[] 
 
       <GithubProjects />
     </div>
-  </Container>
+  </Container> -->
 
   <Container id="contact">
     <div class="min-h-80">

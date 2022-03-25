@@ -8,7 +8,7 @@ const toastMessages: Ref<ToastMessage[]> = ref([])
 /**
  * The default duration for a toast message.
  */
-const defaultToastMessageDuration = 20000
+const defaultToastMessageDuration = 5000
 
 /**
  * Hide the toast message after a timeout and delete it from toastMessages
@@ -52,7 +52,7 @@ const eventApp = defineComponent({
       h(
         'div',
         {
-          class: 'toast-container fixed top-0 right-0 p-2 w-full sm:max-w-sm lg:max-w-1xl',
+          class: 'toast-container fixed top-[1rem] right-0 p-2 w-full sm:max-w-sm lg:max-w-1xl',
           style: 'z-index:9999;',
         },
         toasts,

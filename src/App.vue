@@ -9,8 +9,8 @@ useHead({
 
 onMounted(() => {
   setTimeout(() => {
-    // createToastMessage('This site uses functionality cookies.', 'info')
-  }, 5000,
+    createToastMessage('This site uses functionality cookies. <br/>By continuing you agree to our <a href="/policy/cookie-statement">Cookie Policy</a>', 'info', 60000)
+  }, 2500,
   )
 })
 </script>

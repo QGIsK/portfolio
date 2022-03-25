@@ -81,7 +81,7 @@ onMounted(async() => {
         p="4"
         border="~ gray-300 rounded-md "
         shadow="~ hover:lg"
-        transition="~ duration-300"
+        class="transition-all duration-300"
         h="full"
         text="gray-600"
       >
