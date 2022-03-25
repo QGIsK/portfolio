@@ -23,29 +23,31 @@ defineProps({
 })
 </script>
 <template>
-  <a :href="href" target="_blank" rel="noopener noreferrer" my="14" w="full" flex="lg:~" space="x-4 lg:x-8">
-    <div
-      h="auto" w="w-full lg:90rem"
-      data-aos="fade-right"
-      data-aos-delay="100"
-    >
-      <img w="full" mb="6 lg:0" h="auto" :src="img" :alt="name" border="rounded sm:rounded-lg" shadow="sm:lg">
-    </div>
-    <div>
-      <h4
-        text="xl lowercase" font="bold" mb="4"
-        data-aos="fade-left"
-        data-aos-delay="300"
+  <div class="my-14">
+    <a :href="href" target="_blank" rel="noopener noreferrer" w="full" flex="lg:~" space="lg:x-8">
+      <div
+        h="auto" w="w-full lg:90rem"
+        data-aos="fade-right"
+        data-aos-delay="100"
       >
-        {{ name }}
-      </h4>
-      <p
-        text="lowercase"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        {{ description }}
-      </p>
-    </div>
-  </a>
+        <img w="full" mb="6 lg:0" h="auto" :src="img" :alt="name" border="rounded sm:rounded-lg" shadow="sm:lg">
+      </div>
+      <div>
+        <h4
+          text="xl lowercase" font="bold" mb="4"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
+          {{ name }}
+        </h4>
+        <p
+          text="lowercase"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          {{ description }}
+        </p>
+      </div>
+    </a>
+  </div>
 </template>

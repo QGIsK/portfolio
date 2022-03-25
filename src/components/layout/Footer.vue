@@ -23,22 +23,25 @@ const policyItems: { name: string; href: string }[] = [
 
 <template>
   <div border="t gray-200" flex="sm:~" justify="sm:between" mt="24" p="4 sm:12">
-    <h5 font="semibold text-center sm:text-left">
+    <h5 font="semibold text-center xs:text-left">
       Demian &copy; {{ new Date().getFullYear() }}
     </h5>
 
     <div mt="4 sm:0">
-      <div class="flex justify-center space-x-6">
-        <RouterLink
+      <div class="xs:flex xs:justify-center xs:space-x-6 space-y-2 sm:space-y-0">
+        <div
           v-for="policy in policyItems"
           :key="policy.name"
-          :to="policy.href"
-          class="nav-link"
         >
-          {{ policy.name }}
-        </RouterLink>
+          <RouterLink
+            :to="policy.href"
+            class="nav-link"
+          >
+            {{ policy.name }}
+          </RouterLink>
+        </div>
       </div>
-      <div class="flex space-x-6 sm:space-x-12" justify="center sm:end" mt="4">
+      <div class="flex space-x-6 xs:space-x-12" justify="xs:end" mt="4">
         <a
           :href="INSTAGRAM"
           target="_blank"
