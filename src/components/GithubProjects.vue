@@ -79,9 +79,8 @@ onMounted(async() => {
     >
       <div
         p="4"
-        border="rounded-lg"
-        bg="gray-100"
-        shadow="md hover:xl"
+        border="~ gray-300 rounded-md "
+        shadow="~ hover:lg"
         transition="~ duration-300"
         h="full"
         text="gray-600"
@@ -95,7 +94,7 @@ onMounted(async() => {
             border="rounded-full"
             shadow="md"
             text="sm white lowercase"
-            class="bg-dark-200"
+            class="bg-gray-600"
           >{{ language }}</span>
         </div>
       </div>

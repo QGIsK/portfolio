@@ -16,7 +16,7 @@ import { CONTACT_EMAIL } from '~/constants'
       data-aos-delay="300"
     >
       Looking for a developer for your next project?
-      <br>
+      <br />
     </h2>
     <h2
       leading="relaxed 2xl:loose"
@@ -24,9 +24,7 @@ import { CONTACT_EMAIL } from '~/constants'
       class="text-gr-purple-dark"
       data-aos="fade-left"
       data-aos-delay="300"
-    >
-      or a recruiter, trying to recruit?
-    </h2>
+    >or a recruiter, trying to recruit?</h2>
 
     <h2
       mt="2"
@@ -35,19 +33,16 @@ import { CONTACT_EMAIL } from '~/constants'
       class="text-gr-dark-purple"
       data-aos="fade-left"
       data-aos-delay="300"
-    >
-      You can reach me via these channels
-    </h2>
+    >You can reach me via these channels</h2>
   </div>
 
   <div grid="~ cols-1 lg:cols-3 gap-8 md:gap-12" my="16">
     <a
       :href="CONTACT_EMAIL"
       transition="~ duration-300"
-      bg="gray-100"
       p="4"
-      border="rounded-lg"
-      shadow="md hover:lg"
+      border="~ gray-300 rounded-md"
+      shadow="~ hover:lg"
       flex="~"
       space="x-8"
       align="items-center"
@@ -61,9 +56,8 @@ import { CONTACT_EMAIL } from '~/constants'
       p="4"
       text="gray-600"
       transition="~ duration-300"
-      border="rounded-lg"
-      bg="gray-100"
-      shadow="md hover:lg"
+      border="~ gray-300 rounded-md"
+      shadow="~ hover:lg"
       flex="~"
       space="x-8"
       align="items-center"
@@ -77,9 +71,8 @@ import { CONTACT_EMAIL } from '~/constants'
       p="4"
       text="gray-600"
       transition="~ duration-300"
-      border="rounded-lg"
-      bg="gray-100"
-      shadow="md hover:lg"
+      border="~ gray-300 rounded-md"
+      shadow="~ hover:lg"
       flex="~"
       space="x-8"
       align="items-center"

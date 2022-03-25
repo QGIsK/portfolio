@@ -6,12 +6,6 @@ useHead({
 
 const portfolioItems: { img: string; name: string; href?: string; description?: string }[] = [
   {
-    img: '/images/GroeneMarketeers.WebP',
-    name: 'Groene Marketeers',
-    href: 'https:/groenemarketeers.nl',
-  },
-
-  {
     img: '/images/BassenMetLasse.WebP',
     name: 'Bassen met lasse',
     href: 'https://bassenmetlasse.nl',
@@ -21,6 +15,12 @@ const portfolioItems: { img: string; name: string; href?: string; description?: 
     img: '/images/Discounted.WebP',
     name: 'Discounted.gg',
     href: 'https://discounted.gg',
+  },
+
+  {
+    img: '/images/GroeneMarketeers.WebP',
+    name: 'Groene Marketeers',
+    href: 'https:/groenemarketeers.nl',
   },
 ]
 
@@ -83,7 +83,7 @@ const documentationItems: { name: string; description: string; href: string }[] 
     </div>
   </Container>
 
-  <Container id="documentation">
+  <!-- <Container id="documentation">
     <div class="min-h-80">
       <SectionHeader text="center">
         Documentation
@@ -92,7 +92,7 @@ const documentationItems: { name: string; description: string; href: string }[] 
         <DocumentationCard v-for="doc in documentationItems" :key="doc.name" :doc="doc" />
       </div>
     </div>
-  </Container>
+  </Container> -->
 
   <Container id="recent-projects">
     <div class="min-h-80">
