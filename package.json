@@ -4,6 +4,7 @@
     "build": "vite build",
     "dev": "vite --port 3000 --open",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
+    "lint:fix": "eslint \"**/*.{vue,ts,js}\" --fix",
     "test": "vitest",
     "test:unit": "vitest",
     "typecheck": "vue-tsc --noEmit"
