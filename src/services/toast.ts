@@ -52,7 +52,7 @@ const eventApp = defineComponent({
       h(
         'div',
         {
-          class: 'toast-container fixed top-[1rem] right-0 p-2 w-full sm:max-w-sm lg:max-w-1xl',
+          class: 'fixed bottom-0 left-0 md:top-[1rem] md:right-0 p-2 w-full sm:max-w-sm lg:max-w-1xl',
           style: 'z-index:9999;',
         },
         toasts,
