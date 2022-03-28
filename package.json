@@ -17,6 +17,7 @@
     "moment": "^2.29.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.11",
+    "plausible-tracker": "^0.3.5",
     "prism-theme-vars": "^0.2.2",
     "sass": "^1.49.7",
     "vue": "^3.2.30",
