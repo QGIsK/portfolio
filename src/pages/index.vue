@@ -9,6 +9,7 @@ const portfolioItems: { img: string; name: string; href?: string; description?: 
     img: '/images/BassenMetLasse.WebP',
     name: 'Bassen met lasse',
     href: 'https://bassenmetlasse.nl',
+    lazy: false,
   },
 
   {

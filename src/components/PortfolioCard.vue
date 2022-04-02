@@ -21,6 +21,11 @@ defineProps({
     default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati facere consectetur quis sequi necessitatibus rem, cum, dolor architecto illum minus accusamus, sed dicta corrupti distinctio? Ab numquam est enim consequatur ipsam ratione fugit nostrum aperiam qui libero consequuntur, quo asperiores sequi quidem delectus voluptatum perspiciatis repudiandae dicta commodi voluptates. Doloribus?',
   },
 
+  lazy: {
+    type: Boolean,
+    default: true,
+  },
+
 })
 </script>
 <template>
@@ -31,7 +36,7 @@ defineProps({
         data-aos="fade-right"
         data-aos-delay="100"
       >
-        <img w="full" mb="6 lg:0" h="auto" :src="img" :alt="name" border="rounded sm:rounded-lg" shadow="sm:lg" loading="lazy">
+        <img w="full" mb="6 lg:0" h="auto" :src="img" :alt="name" border="rounded sm:rounded-lg" shadow="sm:lg" :loading="{lazy}">
       </div>
       <div>
         <h4
