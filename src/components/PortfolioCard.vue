@@ -1,3 +1,4 @@
+
 <script setup lang="ts">
 
 defineProps({
@@ -30,7 +31,7 @@ defineProps({
         data-aos="fade-right"
         data-aos-delay="100"
       >
-        <img w="full" mb="6 lg:0" h="auto" :src="img" :alt="name" border="rounded sm:rounded-lg" shadow="sm:lg">
+        <img w="full" mb="6 lg:0" h="auto" :src="img" :alt="name" border="rounded sm:rounded-lg" shadow="sm:lg" loading="lazy">
       </div>
       <div>
         <h4

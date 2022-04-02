@@ -26,7 +26,7 @@ const goTo = (hash) => {
     data-aos-delay="300"
   >
     <RouterLink to="/">
-      <img src="/logo.png" h="16" w="16" border="rounded-lg" shadow="xl">
+      <img src="/logo.png" h="16" w="16" border="rounded-lg" shadow="xl" loading="lazy">
     </RouterLink>
   </div>
   <Container>
