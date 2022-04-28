@@ -42,7 +42,7 @@ import { CONTACT_EMAIL } from '~/constants'
 
   <div grid="~ cols-1 lg:cols-3 gap-8 md:gap-12" my="16">
     <a
-      :href="CONTACT_EMAIL"
+      :href="`mailto:${CONTACT_EMAIL}`"
       transition="~ duration-300"
       p="4"
       border="~ gray-300 rounded-md"
