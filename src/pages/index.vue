@@ -4,7 +4,7 @@ useHead({
   title: 'Home | Demian - Full stack web developer',
 })
 
-const portfolioItems: { img: string; name: string; href?: string; description?: string }[] = [
+const portfolioItems: { img: string; name: string; href?: string; description?: string; lazy?: boolean }[] = [
   {
     img: '/images/BassenMetLasse.WebP',
     name: 'Bassen met lasse',
