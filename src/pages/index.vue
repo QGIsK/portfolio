@@ -21,7 +21,7 @@ const portfolioItems: { img: string; name: string; href?: string; description?: 
   {
     img: '/images/GroeneMarketeers.WebP',
     name: 'Groene Marketeers',
-    href: 'https:/groenemarketeers.nl',
+    href: 'https://groenemarketeers.nl',
   },
 ]
 
