@@ -1,8 +1,4 @@
-.DS_Store
-*.local
-dist
-dist-ssr
+.cache
 node_modules
-.idea/
-*.log
-.env
+public/build
+build

@@ -1,0 +1,46 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - master
+      - development
+  workflow_dispatch:
+
+env:
+  WRANGLER_FILE: ${{ secrets.WRANGLER_FILE || 'wrangler.toml' }}
+
+jobs:
+  development:
+    runs-on: ubuntu-latest
+    name: Deploy development
+    if: github.ref == 'refs/heads/development'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          # No env for development
+          command: publish --config $WRANGLER_FILE
+  prod:
+    runs-on: ubuntu-latest
+    name: Deploy production
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: publish --env production --config $WRANGLER_FILE
