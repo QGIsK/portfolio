@@ -1,69 +1,37 @@
-# Portfolio with nuxt
+# Welcome to Remix!
 
-## Build Setup
+- [Remix Docs](https://remix.run/docs)
 
-```bash
-# install dependencies
-$ npm install
+## Development
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+You will be running two processes during development:
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+- The Miniflare server (miniflare is a local environment for Cloudflare Workers)
+- The Remix development server
 
-# generate static project
-$ npm run generate
+Both are started with one command:
+
+```sh
+npm run dev
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+Open up [http://127.0.0.1:8787](http://127.0.0.1:8787) and you should be ready to go!
 
-## Special Directories
+If you want to check the production build, you can stop the dev server and run following commands:
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+```sh
+npm run build
+npm start
+```
 
-### `assets`
+Then refresh the same URL in your browser (no live reload for production builds).
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+## Deployment
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+If you don't already have an account, then [create a cloudflare account here](https://dash.cloudflare.com/sign-up) and after verifying your email address with Cloudflare, go to your dashboard and set up your free custom Cloudflare Workers subdomain.
 
-### `components`
+Once that's done, you should be able to deploy your app:
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+```sh
+npm run deploy
+```

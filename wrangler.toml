@@ -1,18 +1,12 @@
-type = "webpack"
-account_id = "1bda26fe457ea7a9dcd193e268e07770"
-zone_id = ''
-compatibility_flags = []
-compatibility_date = "2022-01-07"
+name = "portfolio"
+
+workers_dev = true
+main = "./build/index.js"
+# https://developers.cloudflare.com/workers/platform/compatibility-dates
+compatibility_date = "2022-11-10"
 
 [site]
-bucket = "./dist"
+  bucket = "./public"
 
-[env.production]
-name="portfolio"
-workers_dev = true
-ENVIRONMENT = 'production'
-
-[env.development]
-name = "portfolio-dev"
-workers_dev = true
-ENVIRONMENT = 'development'
+[build]
+  command = "npm run build"

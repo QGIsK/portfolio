@@ -1,48 +1,39 @@
 {
-    "name": "portfolio",
-    "version": "1.0.0",
-    "private": true,
-    "engines": {
-        "node": ">=16.12.0",
-        "npm": ">=8.1.0"
-    },
-    "scripts": {
-        "dev": "nuxt",
-        "build": "nuxt build",
-        "start": "nuxt start",
-        "generate": "nuxt generate",
-        "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-        "prepare": "husky install",
-        "lint": "npm run lint:js",
-        "deploy:dev": "npm run generate && wrangler publish -e development",
-        "deploy:prod": "npm run generate && wrangler publish -e production"
-    },
-    "prettier": "@qgisk/prettier-config",
-    "lint-staged": {
-        "*.{js,vue}": "eslint"
-    },
-    "dependencies": {
-        "@nuxt/content": "^1.14.0",
-        "@nuxtjs/axios": "^5.13.6",
-        "@qgisk/prettier-config": "^0.0.1",
-        "core-js": "^3.15.1",
-        "nuxt": "^2.15.7",
-        "particles-bg-vue": "^1.3.5",
-        "sass": "^1.43.4",
-        "vue-scrollto": "^2.20.0",
-        "vuetify": "2.6"
-    },
-    "devDependencies": {
-        "@babel/eslint-parser": "^7.14.7",
-        "@nuxtjs/eslint-config": "^6.0.1",
-        "@nuxtjs/eslint-module": "^3.0.2",
-        "@nuxtjs/vuetify": "^1.12.1",
-        "eslint": "^7.29.0",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-nuxt": "^2.0.0",
-        "eslint-plugin-vue": "^7.12.1",
-        "husky": "^6.0.0",
-        "lint-staged": "^10.5.4",
-        "prettier": "^2.3.2"
-    }
+  "private": true,
+  "sideEffects": false,
+  "scripts": {
+    "deploy": "wrangler publish",
+    "dev:miniflare": "cross-env NODE_ENV=development miniflare ./build/index.js --watch",
+    "dev": "remix build && run-p \"dev:*\"",
+    "start": "cross-env NODE_ENV=production miniflare ./build/index.js",
+    "build": "run-s \"build:*\"",
+    "build:css": "npm run generate:css -- --minify",
+    "build:remix": "remix build",
+    "dev:css": "npm run generate:css -- --watch",
+    "generate:css": "npx tailwindcss -o ./app/tailwind.css"
+  },
+  "dependencies": {
+    "@remix-run/cloudflare": "^1.7.5",
+    "@remix-run/cloudflare-workers": "^1.7.5",
+    "@remix-run/react": "^1.7.5",
+    "cross-env": "^7.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^3.14.1",
+    "@remix-run/dev": "^1.7.5",
+    "@remix-run/eslint-config": "^1.7.5",
+    "@types/react": "^17.0.47",
+    "@types/react-dom": "^17.0.17",
+    "eslint": "^8.23.1",
+    "miniflare": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.7.4",
+    "wrangler": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=16.13"
+  }
 }
