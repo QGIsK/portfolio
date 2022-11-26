@@ -24,8 +24,6 @@ export const loader: LoaderFunction = () => {
 const Projects = () => {
   const projects = useLoaderData<typeof loader>() as LoaderData
 
-  console.log(projects)
-
   return (<>
     {projects.map(project => (
       <Link key={project.title} to={project.slug}>{project.title} <img src={project.featured_image} /></Link>
