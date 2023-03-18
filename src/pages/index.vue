@@ -4,12 +4,12 @@ useHead({
   title: 'Home | Demian - Full stack web developer',
 })
 
-const portfolioItems: { img: string; name: string; href?: string; description?: string; lazy?: boolean }[] = [
+const portfolioItems: { img: string; name: string; href?: string; description?: string; lazy?: 'eager' | 'lazy' }[] = [
   {
     img: '/images/BassenMetLasse.WebP',
     name: 'Bassen met lasse',
     href: 'https://bassenmetlasse.nl',
-    lazy: false,
+    lazy: 'eager',
   },
 
   {
