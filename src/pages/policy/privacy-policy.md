@@ -90,12 +90,9 @@ includes the given name, email address, message and time.
 We use the given data to send an email.
 
 <h4>Analytics</h4>
-<h4>Plausible Analytics</h4>
-We use the open source Plausible Analytics self-hosted through our
-analytics.demiann.dev domain to count website visits, downloads, etc. No
-cookies are used and no personal data—not even an IP address or browser user
-agent—is stored. For more information, see the
-<a href="https://plausible.io/data-policy" rel="noopener noreferrer">Plausible Data Policy</a>
+<h4>Cloudflare analytics</h4>
+We use <a href="https://cloudflare.com" rel="noopener noreferrer">Cloudflare</a>
+'s privacy friendly web analytics 
 
 <h4>Storing data</h4>
 The personal data that are collected on the website are used mainly by the
